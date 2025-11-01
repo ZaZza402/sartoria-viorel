@@ -6,37 +6,43 @@ import { Button } from "../ui/Button";
 export const ContactSection: React.FC = () => {
   return (
     <section
-      className="py-32 relative overflow-hidden"
+      className="py-16 sm:py-24 md:py-32 relative overflow-hidden"
       style={{
         background: "linear-gradient(135deg, #1a2332 0%, #0f1419 100%)",
         color: "#fdfbf7",
       }}
     >
-      <div className="max-w-4xl mx-auto px-6 md:px-12 relative z-10">
+      <div className="max-w-4xl mx-auto px-4 sm:px-6 md:px-12 relative z-10">
         {/* Centered Content */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
-          className="text-center space-y-8"
+          className="text-center space-y-5 sm:space-y-6 md:space-y-8"
         >
           {/* Decorative Icon */}
           <div
             style={{
               display: "inline-flex",
-              padding: "20px",
-              borderRadius: "20px",
+              padding: "16px",
+              borderRadius: "18px",
               background: "linear-gradient(135deg, #d4af37 0%, #b8935f 100%)",
               boxShadow: "0 8px 32px rgba(212, 175, 55, 0.4)",
               animation: "float 4s ease-in-out infinite",
             }}
+            className="sm:p-5"
           >
-            <Calendar size={40} color="#0f1419" strokeWidth={2} />
+            <Calendar
+              size={32}
+              color="#0f1419"
+              strokeWidth={2}
+              className="sm:w-10 sm:h-10"
+            />
           </div>
 
           <h2
-            className="font-script text-5xl md:text-7xl leading-tight"
+            className="font-script text-3xl sm:text-4xl md:text-5xl lg:text-7xl leading-tight"
             style={{
               background: "linear-gradient(135deg, #d4af37 0%, #b8935f 100%)",
               WebkitBackgroundClip: "text",
@@ -48,14 +54,14 @@ export const ContactSection: React.FC = () => {
           </h2>
 
           <div
-            className="w-24 h-1 mx-auto"
+            className="w-16 sm:w-20 md:w-24 h-1 mx-auto"
             style={{
               background: "linear-gradient(90deg, #d4af37 0%, #b8935f 100%)",
             }}
           ></div>
 
           <p
-            className="text-xl leading-relaxed max-w-2xl mx-auto"
+            className="text-sm sm:text-base md:text-lg lg:text-xl leading-relaxed max-w-2xl mx-auto"
             style={{ color: "#fdfbf7" }}
           >
             Vieni a trovarci nella nostra sartoria nel cuore di Roma. Saremo
@@ -63,7 +69,7 @@ export const ContactSection: React.FC = () => {
             per te.
           </p>
 
-          <div className="pt-6">
+          <div className="pt-4 sm:pt-6">
             <Button
               variant="outline"
               size="lg"
@@ -73,9 +79,10 @@ export const ContactSection: React.FC = () => {
                 color: "#d4af37",
                 borderWidth: "2px",
                 background: "transparent",
-                padding: "16px 48px",
-                fontSize: "18px",
+                padding: "12px 32px",
+                fontSize: "16px",
               }}
+              data-mobile-responsive="true"
             >
               Contattaci Ora
             </Button>

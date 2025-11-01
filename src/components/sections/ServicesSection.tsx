@@ -35,21 +35,21 @@ export const ServicesSection: React.FC = () => {
 
   return (
     <section
-      className="py-24"
+      className="py-12 sm:py-16 md:py-24"
       style={{
         background: "linear-gradient(180deg, #fdfbf7 0%, #f5f1e8 100%)",
       }}
     >
-      <div className="max-w-7xl mx-auto px-6 md:px-12">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-12">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
-          className="text-center mb-16"
+          className="text-center mb-8 sm:mb-12 md:mb-16"
         >
           <h2
-            className="font-script text-5xl md:text-6xl mb-4"
+            className="font-script text-3xl sm:text-4xl md:text-5xl lg:text-6xl mb-3 sm:mb-4"
             style={{
               background: "linear-gradient(135deg, #d4af37 0%, #b8935f 100%)",
               WebkitBackgroundClip: "text",
@@ -60,14 +60,14 @@ export const ServicesSection: React.FC = () => {
             I Nostri Servizi
           </h2>
           <div
-            className="w-24 h-1 mx-auto"
+            className="w-16 sm:w-20 md:w-24 h-1 mx-auto"
             style={{
               background: "linear-gradient(90deg, #d4af37 0%, #b8935f 100%)",
             }}
           ></div>
         </motion.div>
 
-        <div className="space-y-24">
+        <div className="space-y-12 sm:space-y-16 md:space-y-24">
           {services.map((service, index) => (
             <motion.div
               key={index}
@@ -91,27 +91,30 @@ export const ServicesSection: React.FC = () => {
               </div>
 
               {/* Content */}
-              <div className="w-full md:w-1/2 space-y-6">
+              <div className="w-full md:w-1/2 space-y-3 sm:space-y-4 md:space-y-6">
                 {/* Icon with animation */}
                 <div
                   style={{
                     display: "inline-flex",
-                    padding: "16px",
-                    borderRadius: "16px",
-                    background: "linear-gradient(135deg, #d4af37 0%, #b8935f 100%)",
+                    padding: "12px",
+                    borderRadius: "14px",
+                    background:
+                      "linear-gradient(135deg, #d4af37 0%, #b8935f 100%)",
                     boxShadow: "0 4px 20px rgba(212, 175, 55, 0.3)",
                     animation: `${service.animation} 3s ease-in-out infinite`,
                   }}
+                  className="sm:p-4"
                 >
-                  <service.icon 
-                    size={32} 
-                    color="#0f1419" 
+                  <service.icon
+                    size={24}
+                    color="#0f1419"
                     strokeWidth={2}
+                    className="sm:w-8 sm:h-8"
                   />
                 </div>
 
                 <h3
-                  className="font-elegant text-3xl md:text-4xl"
+                  className="font-elegant text-2xl sm:text-3xl md:text-4xl"
                   style={{
                     background:
                       "linear-gradient(135deg, #1a2332 0%, #0f1419 100%)",
@@ -123,14 +126,14 @@ export const ServicesSection: React.FC = () => {
                   {service.title}
                 </h3>
                 <div
-                  className="w-16 h-0.5"
+                  className="w-12 sm:w-14 md:w-16 h-0.5"
                   style={{
                     background:
                       "linear-gradient(90deg, #d4af37 0%, #b8935f 100%)",
                   }}
                 ></div>
                 <p
-                  className="leading-relaxed text-lg"
+                  className="leading-relaxed text-sm sm:text-base md:text-lg"
                   style={{ color: "#2a2a2a" }}
                 >
                   {service.description}

@@ -1,15 +1,28 @@
-import React from "react";
-import { motion } from "framer-motion";
+import React, { useRef } from "react";
+import { motion, useScroll, useTransform } from "framer-motion";
 import { Button } from "../ui/Button";
 import suitWideImg from "../../assets/images/suit-2.jpg";
 import tailorHandsImg from "../../assets/images/tailor-hands.jpg";
 
 export const HeroSection: React.FC = () => {
+  const ref = useRef<HTMLElement>(null);
+  const { scrollYProgress } = useScroll({
+    target: ref,
+    offset: ["start start", "end start"],
+  });
+
+  // Parallax effect: background moves slower (0.5x speed)
+  const backgroundY = useTransform(scrollYProgress, [0, 1], ["0%", "50%"]);
+  const contentOpacity = useTransform(scrollYProgress, [0, 0.5, 1], [1, 0.8, 0]);
+
   return (
-    <section className="relative min-h-screen flex items-center pt-16">
-      {/* Background Image - Wide on Desktop */}
-      <div className="absolute inset-0 z-0">
-        <div className="hidden md:block absolute inset-0">
+    <section ref={ref} className="relative min-h-screen flex items-center pt-16 overflow-hidden">
+      {/* Background Image with Parallax - Wide on Desktop */}
+      <motion.div
+        className="absolute inset-0 z-0"
+        style={{ y: backgroundY }}
+      >
+        <div className="hidden md:block absolute inset-0 h-[120vh]">
           <img
             src={tailorHandsImg}
             alt="Master tailor at work"
@@ -18,8 +31,8 @@ export const HeroSection: React.FC = () => {
           <div className="absolute inset-0 bg-linear-to-r from-black/70 via-black/50 to-transparent" />
         </div>
 
-        {/* Vertical Image for Mobile */}
-        <div className="md:hidden absolute inset-0">
+        {/* Vertical Image for Mobile with Parallax */}
+        <div className="md:hidden absolute inset-0 h-[120vh]">
           <img
             src={suitWideImg}
             alt="Elegant tailored suit"
@@ -27,10 +40,13 @@ export const HeroSection: React.FC = () => {
           />
           <div className="absolute inset-0 bg-black/60" />
         </div>
-      </div>
+      </motion.div>
 
-      {/* Content */}
-      <div className="relative z-10 w-full px-6 md:px-12 lg:px-24">
+      {/* Content with Parallax Fade */}
+      <motion.div
+        className="relative z-10 w-full px-4 sm:px-6 md:px-12 lg:px-24"
+        style={{ opacity: contentOpacity }}
+      >
         <motion.div
           initial={{ opacity: 0, x: -50 }}
           animate={{ opacity: 1, x: 0 }}
@@ -41,7 +57,7 @@ export const HeroSection: React.FC = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, delay: 0.3 }}
-            className="font-script text-5xl md:text-7xl lg:text-8xl mb-4 leading-tight"
+            className="font-script text-4xl sm:text-5xl md:text-7xl lg:text-8xl mb-3 sm:mb-4 leading-tight"
             style={{
               background:
                 "linear-gradient(135deg, #fdfbf7 0%, #d4af37 50%, #b8935f 100%)",
@@ -58,17 +74,17 @@ export const HeroSection: React.FC = () => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 1, delay: 0.6 }}
-            className="space-y-6"
+            className="space-y-4 sm:space-y-6"
           >
             <h2
-              className="font-elegant text-xl md:text-2xl tracking-wide"
+              className="font-elegant text-lg sm:text-xl md:text-2xl tracking-wide"
               style={{ color: "#fdfbf7" }}
             >
               Maestro Sarto & Alta Moda su Misura
             </h2>
 
             <p
-              className="text-base md:text-lg leading-relaxed max-w-xl"
+              className="text-sm sm:text-base md:text-lg leading-relaxed max-w-xl"
               style={{ color: "#f5f1e8" }}
             >
               L'arte della sartoria tradizionale incontra l'eleganza moderna.
@@ -76,7 +92,7 @@ export const HeroSection: React.FC = () => {
               artigianale.
             </p>
 
-            <div className="flex flex-col sm:flex-row gap-4 pt-4">
+            <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 pt-2 sm:pt-4">
               <Button
                 variant="primary"
                 size="lg"
@@ -103,7 +119,7 @@ export const HeroSection: React.FC = () => {
             </div>
           </motion.div>
         </motion.div>
-      </div>
+      </motion.div>
     </section>
   );
 };
