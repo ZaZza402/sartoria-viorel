@@ -5,7 +5,12 @@ import sleeveButtonImg from "../../assets/images/sleeve-button-suit.jpg";
 
 export const WelcomeSection: React.FC = () => {
   return (
-    <section className="py-24 bg-brand-base relative">
+    <section
+      className="py-24 relative"
+      style={{
+        background: "linear-gradient(180deg, #f5f1e8 0%, #fdfbf7 100%)",
+      }}
+    >
       <div className="max-w-7xl mx-auto px-6 md:px-12">
         <div className="grid md:grid-cols-2 gap-16 items-center">
           {/* Text Content */}
@@ -16,20 +21,33 @@ export const WelcomeSection: React.FC = () => {
             viewport={{ once: true }}
             className="space-y-6"
           >
-            <h2 className="font-script text-5xl md:text-6xl text-brand-primary leading-tight">
+            <h2
+              className="font-script text-5xl md:text-6xl leading-tight"
+              style={{
+                background: "linear-gradient(135deg, #d4af37 0%, #b8935f 100%)",
+                WebkitBackgroundClip: "text",
+                WebkitTextFillColor: "transparent",
+                backgroundClip: "text",
+              }}
+            >
               L'Arte della Sartoria
             </h2>
 
-            <div className="w-20 h-1 bg-brand-primary"></div>
+            <div
+              className="w-20 h-1"
+              style={{
+                background: "linear-gradient(90deg, #d4af37 0%, #b8935f 100%)",
+              }}
+            ></div>
 
-            <p className="text-brand-text text-lg leading-relaxed">
+            <p className="text-lg leading-relaxed" style={{ color: "#2a2a2a" }}>
               Nel cuore di Roma, la nostra sartoria rappresenta l'eccellenza
               della tradizione artigianale italiana. Ogni capo è un'opera unica,
               creata con passione e dedizione per soddisfare i più elevati
               standard di qualità.
             </p>
 
-            <p className="text-brand-text text-lg leading-relaxed">
+            <p className="text-lg leading-relaxed" style={{ color: "#2a2a2a" }}>
               Con decenni di esperienza, il Maestro Viorel Danalache unisce
               tecniche sartoriali tradizionali a un'attenzione moderna per il
               dettaglio, garantendo vestibilità perfetta ed eleganza senza

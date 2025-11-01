@@ -16,8 +16,19 @@ export const MobileNav: React.FC<MobileNavProps> = ({
   className = "",
 }) => {
   const [isOpen, setIsOpen] = useState(false);
+  const [isClosing, setIsClosing] = useState(false);
 
-  const toggleMenu = () => setIsOpen(!isOpen);
+  const toggleMenu = () => {
+    if (isOpen) {
+      setIsClosing(true);
+      setTimeout(() => {
+        setIsOpen(false);
+        setIsClosing(false);
+      }, 300); // Match animation duration
+    } else {
+      setIsOpen(true);
+    }
+  };
 
   return (
     <>
@@ -70,7 +81,9 @@ export const MobileNav: React.FC<MobileNavProps> = ({
               right: 0,
               bottom: 0,
               zIndex: 9999,
-              animation: "fadeIn 0.3s ease-out",
+              animation: isClosing
+                ? "fadeOut 0.3s ease-out"
+                : "fadeIn 0.3s ease-out",
             }}
           >
             {/* Backdrop */}
@@ -84,7 +97,9 @@ export const MobileNav: React.FC<MobileNavProps> = ({
                 bottom: 0,
                 backgroundColor: "rgba(0,0,0,0.7)",
                 zIndex: 1,
-                animation: "fadeIn 0.3s ease-out",
+                animation: isClosing
+                  ? "fadeOut 0.3s ease-out"
+                  : "fadeIn 0.3s ease-out",
               }}
             />
 
@@ -96,12 +111,14 @@ export const MobileNav: React.FC<MobileNavProps> = ({
                 top: 0,
                 bottom: 0,
                 width: "280px",
-                backgroundColor: "#014421",
+                background: "linear-gradient(180deg, #0f1419 0%, #1a2332 100%)",
                 zIndex: 2,
                 padding: "80px 24px 24px 24px",
                 boxShadow: "-4px 0 20px rgba(0,0,0,0.8)",
                 overflowY: "auto",
-                animation: "slideInRight 0.3s ease-out",
+                animation: isClosing
+                  ? "slideOutRight 0.3s ease-out"
+                  : "slideInRight 0.3s ease-out",
               }}
             >
               {/* Close Button */}
@@ -128,13 +145,17 @@ export const MobileNav: React.FC<MobileNavProps> = ({
                 style={{
                   marginBottom: "32px",
                   paddingBottom: "24px",
-                  borderBottom: "2px solid rgba(255,255,255,0.3)",
+                  borderBottom: "2px solid rgba(212, 175, 55, 0.3)",
                 }}
               >
                 <h2
                   className="font-elegant"
                   style={{
-                    color: "#ffffff",
+                    background:
+                      "linear-gradient(135deg, #d4af37 0%, #b8935f 100%)",
+                    WebkitBackgroundClip: "text",
+                    WebkitTextFillColor: "transparent",
+                    backgroundClip: "text",
                     fontWeight: 600,
                     fontSize: "1.5rem",
                     margin: 0,

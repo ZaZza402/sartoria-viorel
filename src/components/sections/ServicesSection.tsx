@@ -27,7 +27,12 @@ export const ServicesSection: React.FC = () => {
   ];
 
   return (
-    <section className="py-24 bg-white">
+    <section
+      className="py-24"
+      style={{
+        background: "linear-gradient(180deg, #fdfbf7 0%, #f5f1e8 100%)",
+      }}
+    >
       <div className="max-w-7xl mx-auto px-6 md:px-12">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -36,10 +41,23 @@ export const ServicesSection: React.FC = () => {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="font-script text-5xl md:text-6xl text-brand-primary mb-4">
+          <h2
+            className="font-script text-5xl md:text-6xl mb-4"
+            style={{
+              background: "linear-gradient(135deg, #d4af37 0%, #b8935f 100%)",
+              WebkitBackgroundClip: "text",
+              WebkitTextFillColor: "transparent",
+              backgroundClip: "text",
+            }}
+          >
             I Nostri Servizi
           </h2>
-          <div className="w-24 h-1 bg-brand-primary mx-auto"></div>
+          <div
+            className="w-24 h-1 mx-auto"
+            style={{
+              background: "linear-gradient(90deg, #d4af37 0%, #b8935f 100%)",
+            }}
+          ></div>
         </motion.div>
 
         <div className="space-y-24">
@@ -67,11 +85,29 @@ export const ServicesSection: React.FC = () => {
 
               {/* Content */}
               <div className="w-full md:w-1/2 space-y-4">
-                <h3 className="font-elegant text-3xl md:text-4xl text-brand-primary">
+                <h3
+                  className="font-elegant text-3xl md:text-4xl"
+                  style={{
+                    background:
+                      "linear-gradient(135deg, #1a2332 0%, #0f1419 100%)",
+                    WebkitBackgroundClip: "text",
+                    WebkitTextFillColor: "transparent",
+                    backgroundClip: "text",
+                  }}
+                >
                   {service.title}
                 </h3>
-                <div className="w-16 h-0.5 bg-brand-primary"></div>
-                <p className="text-brand-text leading-relaxed text-lg">
+                <div
+                  className="w-16 h-0.5"
+                  style={{
+                    background:
+                      "linear-gradient(90deg, #d4af37 0%, #b8935f 100%)",
+                  }}
+                ></div>
+                <p
+                  className="leading-relaxed text-lg"
+                  style={{ color: "#2a2a2a" }}
+                >
                   {service.description}
                 </p>
               </div>

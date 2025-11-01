@@ -25,9 +25,13 @@ export const Header: React.FC<HeaderProps> = ({ className }) => {
         animate={{ y: 0, opacity: 1 }}
         transition={{ duration: 0.5 }}
         className={cn(
-          "header fixed top-0 left-0 right-0 z-50 bg-brand-primary backdrop-blur-md border-b border-brand-primary-light shadow-lg",
+          "header fixed top-0 left-0 right-0 z-50 backdrop-blur-md shadow-lg",
           className
         )}
+        style={{
+          background: "linear-gradient(135deg, #0f1419 0%, #1a2332 100%)",
+          borderBottom: "1px solid rgba(212, 175, 55, 0.2)",
+        }}
       >
         <nav className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="flex h-16 items-center justify-between">

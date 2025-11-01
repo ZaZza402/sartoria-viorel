@@ -41,7 +41,15 @@ export const HeroSection: React.FC = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, delay: 0.3 }}
-            className="font-script text-5xl md:text-7xl lg:text-8xl text-white mb-4 leading-tight"
+            className="font-script text-5xl md:text-7xl lg:text-8xl mb-4 leading-tight"
+            style={{
+              background:
+                "linear-gradient(135deg, #fdfbf7 0%, #d4af37 50%, #b8935f 100%)",
+              WebkitBackgroundClip: "text",
+              WebkitTextFillColor: "transparent",
+              backgroundClip: "text",
+              filter: "drop-shadow(2px 2px 8px rgba(0,0,0,0.8))",
+            }}
           >
             Sartoria Viorel Danalache
           </motion.h1>
@@ -52,21 +60,44 @@ export const HeroSection: React.FC = () => {
             transition={{ duration: 1, delay: 0.6 }}
             className="space-y-6"
           >
-            <h2 className="font-elegant text-xl md:text-2xl text-gray-200 tracking-wide">
+            <h2
+              className="font-elegant text-xl md:text-2xl tracking-wide"
+              style={{ color: "#fdfbf7" }}
+            >
               Maestro Sarto & Alta Moda su Misura
             </h2>
 
-            <p className="text-base md:text-lg text-gray-300 leading-relaxed max-w-xl">
+            <p
+              className="text-base md:text-lg leading-relaxed max-w-xl"
+              style={{ color: "#f5f1e8" }}
+            >
               L'arte della sartoria tradizionale incontra l'eleganza moderna.
               Ogni capo è un'opera d'arte realizzata con passione e precisione
               artigianale.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 pt-4">
-              <Button variant="primary" size="lg">
+              <Button
+                variant="primary"
+                size="lg"
+                style={{
+                  background:
+                    "linear-gradient(135deg, #d4af37 0%, #b8935f 100%)",
+                  color: "#0f1419",
+                  fontWeight: 600,
+                }}
+              >
                 Prenota un Appuntamento
               </Button>
-              <Button variant="outline" size="lg">
+              <Button
+                variant="outline"
+                size="lg"
+                style={{
+                  borderColor: "#d4af37",
+                  color: "#d4af37",
+                  borderWidth: "2px",
+                }}
+              >
                 Scopri di Più
               </Button>
             </div>

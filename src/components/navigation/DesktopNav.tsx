@@ -20,7 +20,10 @@ export const DesktopNav: React.FC<DesktopNavProps> = ({
         <a
           key={link.href}
           href={link.href}
-          className="text-white hover:text-gray-300 transition-colors duration-200 font-medium"
+          className="transition-colors duration-200 font-medium"
+          style={{ color: "#fdfbf7" }}
+          onMouseEnter={(e) => (e.currentTarget.style.color = "#d4af37")}
+          onMouseLeave={(e) => (e.currentTarget.style.color = "#fdfbf7")}
         >
           {link.label}
         </a>
