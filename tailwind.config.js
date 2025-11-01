@@ -46,7 +46,8 @@ export default {
       fontFamily: {
         sans: ["Inter", "system-ui", "sans-serif"],
         serif: ["Playfair Display", "Georgia", "serif"],
-        script: ["Italianno", "cursive"],
+        elegant: ["Cinzel", "serif"],
+        script: ["Great Vibes", "cursive"],
       },
       backgroundImage: {
         "subtle-gradient": "linear-gradient(180deg, #f5f5f5, #EFEFEF)",

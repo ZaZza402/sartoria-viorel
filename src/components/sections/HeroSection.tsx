@@ -1,47 +1,77 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { Container } from "../ui/Container";
 import { Button } from "../ui/Button";
+import suitWideImg from "../../assets/images/suit-2.jpg";
+import tailorHandsImg from "../../assets/images/tailor-hands.jpg";
 
 export const HeroSection: React.FC = () => {
   return (
-    <section className="pt-24 pb-16 md:pt-32 md:pb-24 bg-subtle-gradient">
-      <Container>
+    <section className="relative min-h-screen flex items-center pt-16">
+      {/* Background Image - Wide on Desktop */}
+      <div className="absolute inset-0 z-0">
+        <div className="hidden md:block absolute inset-0">
+          <img
+            src={suitWideImg}
+            alt="Elegant tailored suit"
+            className="w-full h-full object-cover"
+          />
+          <div className="absolute inset-0 bg-linear-to-r from-black/70 via-black/50 to-transparent" />
+        </div>
+        
+        {/* Vertical Image for Mobile */}
+        <div className="md:hidden absolute inset-0">
+          <img
+            src={tailorHandsImg}
+            alt="Master tailor at work"
+            className="w-full h-full object-cover"
+          />
+          <div className="absolute inset-0 bg-black/60" />
+        </div>
+      </div>
+
+      {/* Content */}
+      <div className="relative z-10 w-full px-6 md:px-12 lg:px-24">
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          className="text-center"
+          initial={{ opacity: 0, x: -50 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 1, ease: "easeOut" }}
+          className="max-w-2xl"
         >
-          {/* Main Brand Name with Gradient */}
-          <div className="mb-6">
-            <h1 className="font-script text-6xl md:text-8xl bg-linear-to-r from-secondary-400 via-secondary-600 to-secondary-700 bg-clip-text text-transparent leading-tight">
-              Sartoria Viorel Danalache
-            </h1>
-          </div>
-
-          {/* Subtitle */}
-          <h2 className="text-xl md:text-2xl text-brand-text font-semibold mb-8">
-            Maestro Sarto & Alta Moda su Misura
-          </h2>
-
-          {/* Description */}
-          <p className="text-lg text-brand-text mb-12 max-w-2xl mx-auto leading-relaxed">
-            Creazione di capi sartoriali eccezionali su misura con precisione,
-            passione e decenni di esperienza nella sartoria di alta qualità.
-          </p>
-
-          {/* Call to Action Buttons */}
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button variant="primary" size="lg">
-              Prenota Appuntamento
-            </Button>
-            <Button variant="outline" size="lg">
-              Vedi Galleria
-            </Button>
-          </div>
+          <motion.h1
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1, delay: 0.3 }}
+            className="font-script text-5xl md:text-7xl lg:text-8xl text-white mb-4 leading-tight"
+          >
+            Sartoria Viorel Danalache
+          </motion.h1>
+          
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 1, delay: 0.6 }}
+            className="space-y-6"
+          >
+            <h2 className="font-elegant text-xl md:text-2xl text-gray-200 tracking-wide">
+              Maestro Sarto & Alta Moda su Misura
+            </h2>
+            
+            <p className="text-base md:text-lg text-gray-300 leading-relaxed max-w-xl">
+              L'arte della sartoria tradizionale incontra l'eleganza moderna. 
+              Ogni capo è un'opera d'arte realizzata con passione e precisione artigianale.
+            </p>
+            
+            <div className="flex flex-col sm:flex-row gap-4 pt-4">
+              <Button variant="primary" size="lg">
+                Prenota un Appuntamento
+              </Button>
+              <Button variant="outline" size="lg">
+                Scopri di Più
+              </Button>
+            </div>
+          </motion.div>
         </motion.div>
-      </Container>
+      </div>
     </section>
   );
 };

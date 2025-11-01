@@ -24,7 +24,7 @@ export const MobileNav: React.FC<MobileNavProps> = ({
       {/* Hamburger Button */}
       <button
         onClick={toggleMenu}
-        className="text-brand-base hover:text-brand-accent p-2 transition-colors"
+        className="text-white hover:text-gray-300 p-2 transition-colors"
         aria-label="Toggle menu"
       >
         <svg
@@ -78,7 +78,7 @@ export const MobileNav: React.FC<MobileNavProps> = ({
                     key={link.href}
                     href={link.href}
                     onClick={toggleMenu}
-                    className="text-brand-base hover:text-brand-accent transition-colors duration-200 text-lg font-medium py-2"
+                    className="text-white hover:text-gray-300 transition-colors duration-200 text-lg font-medium py-2"
                   >
                     {link.label}
                   </a>

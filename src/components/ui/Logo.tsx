@@ -15,7 +15,8 @@ export const Logo: React.FC<LogoProps> = ({ className = "", size = "md" }) => {
 
   return (
     <h1
-      className={`font-script text-brand-accent drop-shadow-sm ${sizes[size]} ${className}`}
+      className={`font-script text-white drop-shadow-lg ${sizes[size]} ${className}`}
+      style={{ textShadow: "2px 2px 4px rgba(0,0,0,0.3)" }}
     >
       Sartoria Viorel Danalache
     </h1>

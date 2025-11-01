@@ -8,7 +8,7 @@ import {
 
 function App() {
   return (
-    <div className="min-h-screen bg-subtle-gradient text-brand-text">
+    <div className="min-h-screen text-brand-text">
       <Header />
       <HeroSection />
       <WelcomeSection />

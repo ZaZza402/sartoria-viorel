@@ -1,60 +1,84 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { Container } from "../ui/Container";
+import suit1Img from "../../assets/images/suit-1.jpg";
+import suit3Img from "../../assets/images/suit-3.jpg";
+import suit4Img from "../../assets/images/suit-4.jpg";
 
 export const ServicesSection: React.FC = () => {
   const services = [
     {
       title: "Abiti su Misura",
       description:
-        "Realizziamo abiti su misura per ogni occasione, utilizzando solo tessuti di alta qualità.",
+        "Creazione completa di abiti su misura per ogni occasione. Dalla selezione dei tessuti pregiati alla vestibilità perfetta, ogni dettaglio è curato con maestria artigianale.",
+      image: suit1Img,
     },
     {
-      title: "Modifiche e Aggiustamenti",
+      title: "Modifiche Sartoriali",
       description:
-        "Servizio professionale di modifiche per adattare perfettamente i vostri capi.",
+        "Servizio professionale di modifiche e aggiustamenti per garantire la perfetta vestibilità dei vostri capi. Precisione e attenzione ai dettagli per risultati impeccabili.",
+      image: suit3Img,
     },
     {
-      title: "Consulenza Stile",
+      title: "Consulenza & Stile",
       description:
-        "Vi aiutiamo a scegliere il look perfetto per ogni evento importante.",
+        "Consulenza personalizzata per la scelta di tessuti, colori e stili. Vi guidiamo nella creazione del guardaroba perfetto per ogni evento importante.",
+      image: suit4Img,
     },
   ];
 
   return (
-    <section className="py-16 bg-brand-base">
-      <Container>
+    <section className="py-24 bg-white">
+      <div className="max-w-7xl mx-auto px-6 md:px-12">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
+          transition={{ duration: 0.8 }}
           viewport={{ once: true }}
+          className="text-center mb-16"
         >
-          <h2 className="text-4xl font-serif font-bold text-brand-primary text-center mb-12">
+          <h2 className="font-script text-5xl md:text-6xl text-brand-primary mb-4">
             I Nostri Servizi
           </h2>
+          <div className="w-24 h-1 bg-brand-accent mx-auto"></div>
+        </motion.div>
 
-          <div className="grid md:grid-cols-3 gap-8">
-            {services.map((service, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow"
-              >
-                <h3 className="text-2xl font-serif font-bold text-brand-primary mb-3">
+        <div className="space-y-24">
+          {services.map((service, index) => (
+            <motion.div
+              key={index}
+              initial={{ opacity: 0, y: 40 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: index * 0.2 }}
+              viewport={{ once: true }}
+              className={`flex flex-col ${
+                index % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse"
+              } gap-12 items-center`}
+            >
+              {/* Image */}
+              <div className="w-full md:w-1/2">
+                <div className="relative overflow-hidden">
+                  <img
+                    src={service.image}
+                    alt={service.title}
+                    className="w-full h-[400px] object-cover"
+                  />
+                </div>
+              </div>
+
+              {/* Content */}
+              <div className="w-full md:w-1/2 space-y-4">
+                <h3 className="font-elegant text-3xl md:text-4xl text-brand-primary">
                   {service.title}
                 </h3>
-                <p className="text-brand-text leading-relaxed">
+                <div className="w-16 h-0.5 bg-brand-accent"></div>
+                <p className="text-brand-text leading-relaxed text-lg">
                   {service.description}
                 </p>
-              </motion.div>
-            ))}
-          </div>
-        </motion.div>
-      </Container>
+              </div>
+            </motion.div>
+          ))}
+        </div>
+      </div>
     </section>
   );
 };

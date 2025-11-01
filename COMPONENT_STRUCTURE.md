@@ -1,6 +1,7 @@
 # Component Structure Documentation
 
 ## Overview
+
 This document outlines the modular component architecture of the Sartoria Viorel website. Each component is designed to be easily editable and maintainable.
 
 ---
@@ -8,9 +9,11 @@ This document outlines the modular component architecture of the Sartoria Viorel
 ## Component Hierarchy
 
 ### Layout Components
+
 Located in: `src/components/layout/`
 
 #### Header (`Header.tsx`)
+
 - **Purpose**: Main navigation header, fixed at the top
 - **Key Features**:
   - Responsive design (desktop/mobile)
@@ -21,6 +24,7 @@ Located in: `src/components/layout/`
 - **Animation**: Slides down on mount with Framer Motion
 
 #### Footer (`Footer.tsx`)
+
 - **Purpose**: Site footer with contact info and links
 - **Key Features**:
   - Three-column grid layout (responsive)
@@ -32,9 +36,11 @@ Located in: `src/components/layout/`
 ---
 
 ### UI Components
+
 Located in: `src/components/ui/`
 
 #### Logo (`Logo.tsx`)
+
 - **Purpose**: Reusable brand logo component
 - **Props**:
   - `size`: "sm" | "md" | "lg" | "xl" (default: "lg")
@@ -48,6 +54,7 @@ Located in: `src/components/ui/`
   ```
 
 #### Button (`Button.tsx`)
+
 - **Purpose**: Reusable button component
 - **Props**:
   - `variant`: "primary" | "outline" (default: "primary")
@@ -63,6 +70,7 @@ Located in: `src/components/ui/`
   ```
 
 #### Container (`Container.tsx`)
+
 - **Purpose**: Responsive container wrapper
 - **Features**:
   - Max width: 1280px
@@ -70,17 +78,17 @@ Located in: `src/components/ui/`
   - Centers content
 - **Usage**:
   ```tsx
-  <Container>
-    {/* Your content */}
-  </Container>
+  <Container>{/* Your content */}</Container>
   ```
 
 ---
 
 ### Navigation Components
+
 Located in: `src/components/navigation/`
 
 #### DesktopNav (`DesktopNav.tsx`)
+
 - **Purpose**: Desktop navigation menu
 - **Features**:
   - Hidden on mobile (`hidden md:flex`)
@@ -90,6 +98,7 @@ Located in: `src/components/navigation/`
 - **Links**: Chi Siamo, Servizi, Galleria, Contatti
 
 #### MobileNav (`MobileNav.tsx`)
+
 - **Purpose**: Mobile hamburger menu
 - **Features**:
   - Hamburger icon button (visible on mobile only)
@@ -102,9 +111,11 @@ Located in: `src/components/navigation/`
 ---
 
 ### Section Components
+
 Located in: `src/components/sections/`
 
 #### HeroSection (`HeroSection.tsx`)
+
 - **Purpose**: Main hero section with CTA
 - **Content**:
   - Large script brand name with gradient text
@@ -118,6 +129,7 @@ Located in: `src/components/sections/`
 - **Spacing**: Extra top padding for fixed header
 
 #### WelcomeSection (`WelcomeSection.tsx`)
+
 - **Purpose**: Welcome message introducing the sartoria
 - **Content**:
   - Heading: "Benvenuti nella Nostra Sartoria"
@@ -129,6 +141,7 @@ Located in: `src/components/sections/`
 - **Layout**: Single column, max-width content
 
 #### ServicesSection (`ServicesSection.tsx`)
+
 - **Purpose**: Display main services offered
 - **Content**:
   - Section heading: "I Nostri Servizi"
@@ -144,6 +157,7 @@ Located in: `src/components/sections/`
 - **Animation**: Staggered fade-in on scroll
 
 #### ContactSection (`ContactSection.tsx`)
+
 - **Purpose**: Contact information and CTA
 - **Content**:
   - Section heading: "Contattateci"
@@ -164,24 +178,27 @@ Located in: `src/components/sections/`
 ## Color System
 
 ### Brand Colors
+
 Defined in `src/index.css` as CSS variables:
 
 ```css
 :root {
-  --color-primary: #014421;    /* Deep Forest Green */
-  --color-base: #efefef;       /* Light Cool Gray */
-  --color-accent: #bdbdbd;     /* Silver */
-  --color-text: #333333;       /* Charcoal */
+  --color-primary: #014421; /* Deep Forest Green */
+  --color-base: #efefef; /* Light Cool Gray */
+  --color-accent: #bdbdbd; /* Silver */
+  --color-text: #333333; /* Charcoal */
 }
 ```
 
 ### Tailwind Classes
+
 - `bg-brand-primary`: #014421 (Dark green)
 - `bg-brand-base`: #EFEFEF (Light gray)
 - `text-brand-accent`: #BDBDBD (Silver)
 - `text-brand-text`: #333333 (Charcoal)
 
 ### Contrast Guidelines
+
 - **Dark backgrounds**: Use `text-brand-base` or `text-brand-accent`
 - **Light backgrounds**: Use `text-brand-primary` or `text-brand-text`
 
@@ -190,11 +207,13 @@ Defined in `src/index.css` as CSS variables:
 ## Typography
 
 ### Font Families
+
 1. **Inter** (Default): Clean, modern sans-serif for body text
 2. **Playfair Display** (Serif): Elegant serif for headings
 3. **Italianno** (Script): Decorative script for brand name
 
 ### Usage
+
 - Body text: Default Inter font
 - Headings (h1-h6): `font-serif` (Playfair Display)
 - Brand name: `font-script` (Italianno)
@@ -206,7 +225,9 @@ Defined in `src/index.css` as CSS variables:
 All animations use **Framer Motion**:
 
 ### Common Patterns
+
 1. **Fade in on mount**:
+
    ```tsx
    initial={{ opacity: 0, y: 20 }}
    animate={{ opacity: 1, y: 0 }}
@@ -214,6 +235,7 @@ All animations use **Framer Motion**:
    ```
 
 2. **Fade in on scroll**:
+
    ```tsx
    initial={{ opacity: 0 }}
    whileInView={{ opacity: 1 }}
@@ -261,37 +283,44 @@ src/
 ## Editing Guide
 
 ### To Edit Header/Footer
+
 - **File**: `src/components/layout/Header.tsx` or `Footer.tsx`
 - **What to change**: Text, links, colors, layout
 - **Note**: Header uses separate Logo, DesktopNav, MobileNav components
 
 ### To Edit Navigation
+
 - **Desktop**: `src/components/navigation/DesktopNav.tsx`
 - **Mobile**: `src/components/navigation/MobileNav.tsx`
 - **Change**: Update the `links` array to add/remove menu items
 
 ### To Edit Logo
+
 - **File**: `src/components/ui/Logo.tsx`
 - **Change**: Text, font size, colors
 - **Usage**: Import and use with different `size` props
 
 ### To Edit Sections
+
 - **Hero**: `src/components/sections/HeroSection.tsx`
 - **Welcome**: `src/components/sections/WelcomeSection.tsx`
 - **Services**: `src/components/sections/ServicesSection.tsx`
 - **Contact**: `src/components/sections/ContactSection.tsx`
 
 ### To Add New Section
+
 1. Create new file in `src/components/sections/`
 2. Export from `src/components/sections/index.ts`
 3. Import in `App.tsx`
 4. Add to JSX between Header and Footer
 
 ### To Edit Colors
+
 - **Global**: `src/index.css` (`:root` variables)
 - **Tailwind**: `tailwind.config.js` (extend theme colors)
 
 ### To Edit Fonts
+
 - **Add font**: `index.html` (Google Fonts link)
 - **Configure**: `tailwind.config.js` (fontFamily)
 - **Use**: Apply with `font-serif`, `font-script`, etc.
@@ -313,6 +342,7 @@ src/
 ## Next Steps
 
 ### Planned Enhancements
+
 1. Add Gallery section with image grid
 2. Implement About (Chi Siamo) section with story
 3. Add testimonials section
@@ -322,6 +352,7 @@ src/
 7. Implement language switcher (IT/EN)
 
 ### Performance Optimizations
+
 1. Add image optimization with lazy loading
 2. Implement code splitting for sections
 3. Add Progressive Web App (PWA) features
