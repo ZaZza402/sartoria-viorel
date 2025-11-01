@@ -1,5 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
+import { Award, TrendingUp, Users } from "lucide-react";
 import rawSuitImg from "../../assets/images/raw-suit-1.jpg";
 import sleeveButtonImg from "../../assets/images/sleeve-button-suit.jpg";
 
@@ -53,6 +54,58 @@ export const WelcomeSection: React.FC = () => {
               dettaglio, garantendo vestibilità perfetta ed eleganza senza
               tempo.
             </p>
+
+            {/* Feature Icons */}
+            <div className="grid grid-cols-3 gap-4 pt-6">
+              <div className="text-center space-y-2">
+                <div
+                  style={{
+                    display: "inline-flex",
+                    padding: "12px",
+                    borderRadius: "12px",
+                    background: "rgba(212, 175, 55, 0.1)",
+                    animation: "shimmer 3s ease-in-out infinite",
+                  }}
+                >
+                  <Award size={24} style={{ color: "#d4af37" }} strokeWidth={2} />
+                </div>
+                <p style={{ fontSize: "13px", color: "#666666", fontWeight: 500 }}>
+                  Dal 1995
+                </p>
+              </div>
+              <div className="text-center space-y-2">
+                <div
+                  style={{
+                    display: "inline-flex",
+                    padding: "12px",
+                    borderRadius: "12px",
+                    background: "rgba(212, 175, 55, 0.1)",
+                    animation: "shimmer 3s ease-in-out infinite 0.5s",
+                  }}
+                >
+                  <Users size={24} style={{ color: "#d4af37" }} strokeWidth={2} />
+                </div>
+                <p style={{ fontSize: "13px", color: "#666666", fontWeight: 500 }}>
+                  Clienti Soddisfatti
+                </p>
+              </div>
+              <div className="text-center space-y-2">
+                <div
+                  style={{
+                    display: "inline-flex",
+                    padding: "12px",
+                    borderRadius: "12px",
+                    background: "rgba(212, 175, 55, 0.1)",
+                    animation: "shimmer 3s ease-in-out infinite 1s",
+                  }}
+                >
+                  <TrendingUp size={24} style={{ color: "#d4af37" }} strokeWidth={2} />
+                </div>
+                <p style={{ fontSize: "13px", color: "#666666", fontWeight: 500 }}>
+                  Eccellenza
+                </p>
+              </div>
+            </div>
           </motion.div>
 
           {/* Images */}

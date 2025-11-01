@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { Phone, Mail, MessageCircle, MapPin, Clock } from "lucide-react";
 
 export const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear();
@@ -27,7 +28,7 @@ export const Footer: React.FC = () => {
 
         setIsOpen(
           (currentTime >= morningStart && currentTime < morningEnd) ||
-          (currentTime >= afternoonStart && currentTime < afternoonEnd)
+            (currentTime >= afternoonStart && currentTime < afternoonEnd)
         );
         return;
       }
@@ -103,7 +104,7 @@ export const Footer: React.FC = () => {
           {/* Address & Status */}
           <div>
             <h4
-              className="text-lg font-elegant font-semibold mb-4"
+              className="text-lg font-elegant font-semibold mb-4 flex items-center gap-2"
               style={{
                 background: "linear-gradient(135deg, #d4af37 0%, #b8935f 100%)",
                 WebkitBackgroundClip: "text",
@@ -111,6 +112,7 @@ export const Footer: React.FC = () => {
                 backgroundClip: "text",
               }}
             >
+              <MapPin size={20} style={{ color: "#d4af37" }} />
               Indirizzo
             </h4>
             <div className="space-y-2" style={{ color: "#fdfbf7" }}>
@@ -120,15 +122,17 @@ export const Footer: React.FC = () => {
               <p style={{ fontSize: "15px", color: "#f5f1e8" }}>
                 00168 Roma, RM
               </p>
-              
+
               {/* Live Open/Closed Indicator */}
               <div
                 className="mt-4 inline-flex items-center gap-2 px-4 py-2"
                 style={{
-                  background: isOpen 
-                    ? "rgba(34, 197, 94, 0.15)" 
+                  background: isOpen
+                    ? "rgba(34, 197, 94, 0.15)"
                     : "rgba(239, 68, 68, 0.15)",
-                  border: `1px solid ${isOpen ? "rgba(34, 197, 94, 0.3)" : "rgba(239, 68, 68, 0.3)"}`,
+                  border: `1px solid ${
+                    isOpen ? "rgba(34, 197, 94, 0.3)" : "rgba(239, 68, 68, 0.3)"
+                  }`,
                   borderRadius: "8px",
                 }}
               >
@@ -138,8 +142,8 @@ export const Footer: React.FC = () => {
                     height: "8px",
                     borderRadius: "50%",
                     background: isOpen ? "#22c55e" : "#ef4444",
-                    boxShadow: isOpen 
-                      ? "0 0 8px rgba(34, 197, 94, 0.6)" 
+                    boxShadow: isOpen
+                      ? "0 0 8px rgba(34, 197, 94, 0.6)"
                       : "0 0 8px rgba(239, 68, 68, 0.6)",
                     animation: "pulse 2s infinite",
                   }}
@@ -162,7 +166,7 @@ export const Footer: React.FC = () => {
           {/* Working Hours */}
           <div>
             <h4
-              className="text-lg font-elegant font-semibold mb-4"
+              className="text-lg font-elegant font-semibold mb-4 flex items-center gap-2"
               style={{
                 background: "linear-gradient(135deg, #d4af37 0%, #b8935f 100%)",
                 WebkitBackgroundClip: "text",
@@ -170,9 +174,13 @@ export const Footer: React.FC = () => {
                 backgroundClip: "text",
               }}
             >
+              <Clock size={20} style={{ color: "#d4af37" }} />
               Orari di Apertura
             </h4>
-            <div className="space-y-2" style={{ color: "#fdfbf7", fontSize: "15px" }}>
+            <div
+              className="space-y-2"
+              style={{ color: "#fdfbf7", fontSize: "15px" }}
+            >
               <p style={{ fontWeight: 500 }}>Lunedì - Venerdì</p>
               <p style={{ color: "#f5f1e8", marginBottom: "8px" }}>
                 08:30 - 13:00 / 16:00 - 20:00
@@ -203,34 +211,64 @@ export const Footer: React.FC = () => {
             <div className="space-y-3" style={{ fontSize: "15px" }}>
               <a
                 href="tel:+393277985312"
-                className="flex items-center gap-2 transition-colors"
+                className="flex items-center gap-3 transition-colors group"
                 style={{ color: "#fdfbf7", textDecoration: "none" }}
                 onMouseEnter={(e) => (e.currentTarget.style.color = "#d4af37")}
                 onMouseLeave={(e) => (e.currentTarget.style.color = "#fdfbf7")}
               >
-                <span style={{ fontSize: "18px" }}>📞</span>
+                <div
+                  style={{
+                    padding: "8px",
+                    borderRadius: "8px",
+                    background: "rgba(212, 175, 55, 0.1)",
+                    transition: "all 0.3s ease",
+                  }}
+                  className="group-hover:bg-[rgba(212,175,55,0.2)]"
+                >
+                  <Phone size={18} style={{ color: "#d4af37" }} />
+                </div>
                 <span style={{ fontWeight: 500 }}>+39 327 798 5312</span>
               </a>
               <a
                 href="https://wa.me/393277985312"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-2 transition-colors"
+                className="flex items-center gap-3 transition-colors group"
                 style={{ color: "#fdfbf7", textDecoration: "none" }}
                 onMouseEnter={(e) => (e.currentTarget.style.color = "#25D366")}
                 onMouseLeave={(e) => (e.currentTarget.style.color = "#fdfbf7")}
               >
-                <span style={{ fontSize: "18px" }}>💬</span>
+                <div
+                  style={{
+                    padding: "8px",
+                    borderRadius: "8px",
+                    background: "rgba(37, 211, 102, 0.1)",
+                    transition: "all 0.3s ease",
+                  }}
+                  className="group-hover:bg-[rgba(37,211,102,0.2)]"
+                >
+                  <MessageCircle size={18} style={{ color: "#25D366" }} />
+                </div>
                 <span style={{ fontWeight: 500 }}>WhatsApp</span>
               </a>
               <a
                 href="mailto:info@viorelsartoria.com"
-                className="flex items-center gap-2 transition-colors"
+                className="flex items-center gap-3 transition-colors group"
                 style={{ color: "#fdfbf7", textDecoration: "none" }}
                 onMouseEnter={(e) => (e.currentTarget.style.color = "#d4af37")}
                 onMouseLeave={(e) => (e.currentTarget.style.color = "#fdfbf7")}
               >
-                <span style={{ fontSize: "18px" }}>✉️</span>
+                <div
+                  style={{
+                    padding: "8px",
+                    borderRadius: "8px",
+                    background: "rgba(212, 175, 55, 0.1)",
+                    transition: "all 0.3s ease",
+                  }}
+                  className="group-hover:bg-[rgba(212,175,55,0.2)]"
+                >
+                  <Mail size={18} style={{ color: "#d4af37" }} />
+                </div>
                 <span style={{ fontWeight: 500 }}>info@viorelsartoria.com</span>
               </a>
             </div>

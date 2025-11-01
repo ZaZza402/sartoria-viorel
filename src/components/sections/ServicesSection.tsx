@@ -1,5 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
+import { Scissors, Ruler, Sparkles } from "lucide-react";
 import suit1Img from "../../assets/images/suit-1.jpg";
 import suit3Img from "../../assets/images/suit-3.jpg";
 import suit4Img from "../../assets/images/suit-4.jpg";
@@ -11,18 +12,24 @@ export const ServicesSection: React.FC = () => {
       description:
         "Creazione completa di abiti su misura per ogni occasione. Dalla selezione dei tessuti pregiati alla vestibilità perfetta, ogni dettaglio è curato con maestria artigianale.",
       image: suit1Img,
+      icon: Scissors,
+      animation: "float",
     },
     {
       title: "Modifiche Sartoriali",
       description:
         "Servizio professionale di modifiche e aggiustamenti per garantire la perfetta vestibilità dei vostri capi. Precisione e attenzione ai dettagli per risultati impeccabili.",
       image: suit3Img,
+      icon: Ruler,
+      animation: "shimmer",
     },
     {
       title: "Consulenza & Stile",
       description:
         "Consulenza personalizzata per la scelta di tessuti, colori e stili. Vi guidiamo nella creazione del guardaroba perfetto per ogni evento importante.",
       image: suit4Img,
+      icon: Sparkles,
+      animation: "shimmer",
     },
   ];
 
@@ -84,7 +91,25 @@ export const ServicesSection: React.FC = () => {
               </div>
 
               {/* Content */}
-              <div className="w-full md:w-1/2 space-y-4">
+              <div className="w-full md:w-1/2 space-y-6">
+                {/* Icon with animation */}
+                <div
+                  style={{
+                    display: "inline-flex",
+                    padding: "16px",
+                    borderRadius: "16px",
+                    background: "linear-gradient(135deg, #d4af37 0%, #b8935f 100%)",
+                    boxShadow: "0 4px 20px rgba(212, 175, 55, 0.3)",
+                    animation: `${service.animation} 3s ease-in-out infinite`,
+                  }}
+                >
+                  <service.icon 
+                    size={32} 
+                    color="#0f1419" 
+                    strokeWidth={2}
+                  />
+                </div>
+
                 <h3
                   className="font-elegant text-3xl md:text-4xl"
                   style={{

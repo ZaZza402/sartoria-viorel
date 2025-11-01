@@ -1,5 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
+import { Calendar } from "lucide-react";
 import { Button } from "../ui/Button";
 
 export const ContactSection: React.FC = () => {
@@ -20,6 +21,20 @@ export const ContactSection: React.FC = () => {
           viewport={{ once: true }}
           className="text-center space-y-8"
         >
+          {/* Decorative Icon */}
+          <div
+            style={{
+              display: "inline-flex",
+              padding: "20px",
+              borderRadius: "20px",
+              background: "linear-gradient(135deg, #d4af37 0%, #b8935f 100%)",
+              boxShadow: "0 8px 32px rgba(212, 175, 55, 0.4)",
+              animation: "float 4s ease-in-out infinite",
+            }}
+          >
+            <Calendar size={40} color="#0f1419" strokeWidth={2} />
+          </div>
+
           <h2
             className="font-script text-5xl md:text-7xl leading-tight"
             style={{
