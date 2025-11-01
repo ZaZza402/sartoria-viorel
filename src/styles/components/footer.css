@@ -1,0 +1,60 @@
+/* ========================================
+   Footer Component Styles
+   ======================================== */
+
+.footer {
+  background-color: var(--color-primary);
+  color: var(--color-base);
+}
+
+.footer-title {
+  color: var(--color-accent);
+  font-weight: 700;
+}
+
+.footer-heading {
+  color: var(--color-accent);
+  font-weight: 600;
+}
+
+.footer-text,
+.footer p,
+.footer li,
+.footer span {
+  color: var(--color-base);
+}
+
+.footer-link {
+  color: var(--color-base);
+  transition: color 0.2s ease;
+}
+
+.footer-link:hover {
+  color: var(--color-accent);
+}
+
+.footer-divider {
+  border-color: var(--color-primary-light);
+}
+
+.footer-copyright {
+  color: var(--color-accent);
+}
+
+/* Footer specific overrides for dark background */
+.footer h1,
+.footer h2,
+.footer h3,
+.footer h4,
+.footer h5,
+.footer h6 {
+  color: var(--color-accent);
+}
+
+.footer a {
+  color: var(--color-base);
+}
+
+.footer a:hover {
+  color: var(--color-accent);
+}

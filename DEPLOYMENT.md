@@ -34,15 +34,18 @@ git push -u origin main
 ### Opzione A: Deploy Automatico (Consigliato)
 
 1. **Vai su Vercel:**
+
    - Apri [https://vercel.com](https://vercel.com)
    - Fai login con GitHub
 
 2. **Importa Repository:**
+
    - Click "Add New Project"
    - Click "Import Git Repository"
    - Seleziona `ZaZza402/sartoria-viorel`
 
 3. **Configura Progetto:**
+
    - **Project Name:** `sartoria-viorel`
    - **Framework Preset:** Vite
    - **Root Directory:** `./`
@@ -83,6 +86,7 @@ Se hai un dominio personalizzato:
 ## 📱 Step 4: Verifica Social Sharing
 
 ### Test WhatsApp:
+
 1. Invia il link `https://sartoria-viorel.vercel.app` su WhatsApp
 2. Verifica che appaia:
    - ✅ Titolo: "Sartoria Viorel Danalache"
@@ -90,28 +94,33 @@ Se hai un dominio personalizzato:
    - ✅ Immagine anteprima (quando aggiungerai l'immagine)
 
 ### Test Facebook:
+
 1. Usa [Facebook Sharing Debugger](https://developers.facebook.com/tools/debug/)
 2. Inserisci URL: `https://sartoria-viorel.vercel.app`
 3. Click "Scrape Again" per aggiornare cache
 
 ### Test Twitter:
+
 1. Usa [Twitter Card Validator](https://cards-dev.twitter.com/validator)
 2. Inserisci URL e verifica l'anteprima
 
 ## 📸 Step 5: Aggiungi Immagine Open Graph
 
 1. **Crea l'immagine:**
+
    - Dimensione consigliata: 1200x630px
    - Formato: JPG o PNG
    - Nome file: `og-image.jpg`
 
 2. **Aggiungi al progetto:**
+
    ```bash
    # Copia la tua immagine nella cartella public
    cp path/to/your-image.jpg public/og-image.jpg
    ```
 
 3. **Commit e Push:**
+
    ```bash
    git add public/og-image.jpg
    git commit -m "Add Open Graph image"
@@ -146,6 +155,7 @@ Dopo il deployment, il sito sarà disponibile a:
 ## 📊 Monitoraggio
 
 ### Dashboard Vercel:
+
 - **Analytics:** Visualizzazioni, performance
 - **Logs:** Errori e debug
 - **Deployments:** Storico dei deployment
@@ -154,6 +164,7 @@ Dopo il deployment, il sito sarà disponibile a:
 ## ⚡ Performance Tips
 
 Vercel ottimizzerà automaticamente:
+
 - ✅ Caching dei file statici
 - ✅ CDN globale
 - ✅ Compressione Gzip/Brotli
@@ -163,16 +174,19 @@ Vercel ottimizzerà automaticamente:
 ## 🆘 Troubleshooting
 
 ### Build Failure:
+
 ```bash
 # Testa il build localmente prima di pushare
 npm run build
 ```
 
 ### 404 Error:
+
 - Verifica che `vercel.json` sia presente
 - Controlla la configurazione rewrites
 
 ### Deployment Lento:
+
 - Controlla dimensione node_modules
 - Verifica che .gitignore contenga node_modules
 
@@ -188,6 +202,7 @@ npm run build
 ## 📞 Support
 
 Per problemi con Vercel:
+
 - [Vercel Documentation](https://vercel.com/docs)
 - [Vercel Support](https://vercel.com/support)
 

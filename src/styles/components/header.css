@@ -1,0 +1,49 @@
+/* ========================================
+   Header Component Styles
+   ======================================== */
+
+.header {
+  background-color: var(--color-primary);
+  border-bottom-color: var(--color-primary-light);
+}
+
+.header-logo {
+  color: var(--color-accent);
+  font-weight: 700;
+}
+
+.header-nav a {
+  color: var(--color-base);
+  transition: color 0.2s ease;
+}
+
+.header-nav a:hover {
+  color: var(--color-accent);
+}
+
+.header-mobile-button {
+  color: var(--color-base);
+}
+
+.header-mobile-button:hover {
+  color: var(--color-accent);
+}
+
+/* Header specific overrides for dark background */
+.header * {
+  /* Ensure all text in header is readable on dark green */
+}
+
+.header h1,
+.header h2,
+.header h3,
+.header h4,
+.header h5,
+.header h6 {
+  color: var(--color-accent);
+}
+
+.header p,
+.header span {
+  color: var(--color-base);
+}

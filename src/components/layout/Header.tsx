@@ -13,44 +13,46 @@ export const Header: React.FC<HeaderProps> = ({ className }) => {
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 0.5 }}
       className={cn(
-        "fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-md border-b border-gray-200",
+        "header fixed top-0 left-0 right-0 z-50 bg-brand-primary backdrop-blur-md border-b border-brand-primary-light",
         className
       )}
     >
       <nav className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="flex h-16 items-center justify-between">
           <div className="flex items-center">
-            <h1 className="text-2xl font-serif font-bold">Viorel Danalache</h1>
+            <h1 className="header-logo text-2xl font-serif font-bold text-brand-accent">
+              Sartoria Viorel Danalache
+            </h1>
           </div>
 
-          <div className="hidden md:flex items-center space-x-8">
+          <div className="header-nav hidden md:flex items-center space-x-8">
             <a
               href="#home"
-              className="text-gray-700 hover:text-gray-900 transition-colors"
+              className="text-brand-base hover:text-brand-accent transition-colors"
             >
               Home
             </a>
             <a
               href="#about"
-              className="text-gray-700 hover:text-gray-900 transition-colors"
+              className="text-brand-base hover:text-brand-accent transition-colors"
             >
               Chi Siamo
             </a>
             <a
               href="#services"
-              className="text-gray-700 hover:text-gray-900 transition-colors"
+              className="text-brand-base hover:text-brand-accent transition-colors"
             >
               Servizi
             </a>
             <a
               href="#gallery"
-              className="text-gray-700 hover:text-gray-900 transition-colors"
+              className="text-brand-base hover:text-brand-accent transition-colors"
             >
               Galleria
             </a>
             <a
               href="#contact"
-              className="text-gray-700 hover:text-gray-900 transition-colors"
+              className="text-brand-base hover:text-brand-accent transition-colors"
             >
               Contatti
             </a>
@@ -58,7 +60,7 @@ export const Header: React.FC<HeaderProps> = ({ className }) => {
 
           {/* Mobile menu button */}
           <div className="md:hidden">
-            <button className="text-gray-700 hover:text-gray-900">
+            <button className="header-mobile-button text-brand-base hover:text-brand-accent">
               <svg
                 className="h-6 w-6"
                 fill="none"

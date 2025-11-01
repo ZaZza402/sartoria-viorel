@@ -11,8 +11,9 @@ Website ufficiale della Sartoria Viorel Danalache - Sartoria artigianale di alta
 ## 📖 About
 
 Sito web moderno e responsivo per la sartoria di Viorel Danalache, specializzata in:
+
 - ✂️ Abiti su misura
-- 🧵 Riparazioni sartoriali  
+- 🧵 Riparazioni sartoriali
 - 👔 Creazioni personalizzate
 - 🎩 Alta moda artigianale
 
@@ -91,11 +92,13 @@ src/
 ### Deploy to Vercel
 
 1. **Connect GitHub Repository:**
+
    - Go to [Vercel](https://vercel.com)
    - Click "Add New Project"
    - Import `https://github.com/ZaZza402/sartoria-viorel`
 
 2. **Configure Project:**
+
    - Framework Preset: **Vite**
    - Build Command: `npm run build`
    - Output Directory: `dist`
@@ -129,6 +132,7 @@ vercel
 ## 📱 Social Sharing
 
 Il sito è ottimizzato per la condivisione sui social media con:
+
 - **Open Graph tags** per Facebook e LinkedIn
 - **Twitter Cards** per Twitter
 - **Meta tags** per WhatsApp e Telegram

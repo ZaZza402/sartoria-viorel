@@ -1,15 +1,148 @@
 @import "tailwindcss";
 
+/* ========================================
+   CSS Variables - Brand Color Palette
+   ======================================== */
+:root {
+  --color-primary: #014421;  /* Deep Forest Green */
+  --color-base: #EFEFEF;     /* Light Cool Gray */
+  --color-accent: #BDBDBD;   /* Silver */
+  --color-text: #333333;     /* Charcoal */
+  
+  /* Derived Colors for Better UX */
+  --color-primary-hover: #012f17;
+  --color-primary-light: #015829;
+  --color-accent-dark: #9e9e9e;
+  --color-text-light: #666666;
+}
+
 @layer base {
+  /* Body and Background */
+  html,
   body {
     @apply font-sans antialiased;
+    background-color: var(--color-base);
+    color: var(--color-text);
+  }
+
+  /* Typography */
+  h1,
+  h2 {
+    color: var(--color-primary);
+    font-weight: 700;
+  }
+
+  h3,
+  h4,
+  h5,
+  h6 {
+    color: var(--color-text);
+    font-weight: 600;
+  }
+
+  p,
+  li,
+  span {
+    color: var(--color-text);
+  }
+
+  /* Links */
+  a {
+    color: var(--color-primary);
+    transition: color 0.2s ease;
+  }
+
+  a:hover {
+    color: var(--color-primary-hover);
+  }
+
+  /* Buttons */
+  button {
+    background-color: var(--color-primary);
+    color: var(--color-base);
+    transition: all 0.2s ease;
+  }
+
+  button:hover {
+    background-color: var(--color-primary-hover);
   }
 }
 
 @layer components {
-  /* Custom component styles will go here */
+  /* Header Component Styles */
+  .header {
+    background-color: var(--color-primary);
+  }
+
+  .header-logo {
+    color: var(--color-accent);
+  }
+
+  /* Footer Component Styles */
+  .footer {
+    background-color: var(--color-primary);
+  }
+
+  .footer-title,
+  .footer-heading {
+    color: var(--color-accent);
+  }
+
+  .footer-text {
+    color: var(--color-base);
+  }
+
+  /* Button Component Styles */
+  .btn {
+    transition: all 0.3s ease;
+  }
+
+  .btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(1, 68, 33, 0.3);
+  }
+
+  /* Container Component Styles */
+  .container {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
 }
 
 @layer utilities {
-  /* Custom utility classes will go here */
+  /* Utility classes for brand colors */
+  .text-primary {
+    color: var(--color-primary);
+  }
+
+  .text-accent {
+    color: var(--color-accent);
+  }
+
+  .text-base {
+    color: var(--color-base);
+  }
+
+  .bg-primary {
+    background-color: var(--color-primary);
+  }
+
+  .bg-base {
+    background-color: var(--color-base);
+  }
+
+  .bg-accent {
+    background-color: var(--color-accent);
+  }
+
+  .border-primary {
+    border-color: var(--color-primary);
+  }
+
+  .border-accent {
+    border-color: var(--color-accent);
+  }
 }
