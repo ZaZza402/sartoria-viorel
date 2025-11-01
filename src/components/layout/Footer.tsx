@@ -115,11 +115,11 @@ export const Footer: React.FC = () => {
               <MapPin size={20} style={{ color: "#d4af37" }} />
               Indirizzo
             </h4>
-            <div className="space-y-2" style={{ color: "#fdfbf7" }}>
-              <p style={{ fontSize: "16px", fontWeight: 500 }}>
+            <div className="space-y-2" style={{ color: "#d1d5db" }}>
+              <p style={{ fontSize: "16px", fontWeight: 500, color: "#d1d5db" }}>
                 Via Simone Mosca, 16
               </p>
-              <p style={{ fontSize: "15px", color: "#f5f1e8" }}>
+              <p style={{ fontSize: "15px", color: "#9ca3af" }}>
                 00168 Roma, RM
               </p>
 
@@ -179,14 +179,14 @@ export const Footer: React.FC = () => {
             </h4>
             <div
               className="space-y-2"
-              style={{ color: "#fdfbf7", fontSize: "15px" }}
+              style={{ color: "#d1d5db", fontSize: "15px" }}
             >
-              <p style={{ fontWeight: 500 }}>Lunedì - Venerdì</p>
-              <p style={{ color: "#f5f1e8", marginBottom: "8px" }}>
+              <p style={{ fontWeight: 500, color: "#d1d5db" }}>Lunedì - Venerdì</p>
+              <p style={{ color: "#9ca3af", marginBottom: "8px" }}>
                 08:30 - 13:00 / 16:00 - 20:00
               </p>
-              <p style={{ fontWeight: 500 }}>Sabato</p>
-              <p style={{ color: "#f5f1e8", marginBottom: "8px" }}>
+              <p style={{ fontWeight: 500, color: "#d1d5db" }}>Sabato</p>
+              <p style={{ color: "#9ca3af", marginBottom: "8px" }}>
                 09:00 - 13:30
               </p>
               <p style={{ fontWeight: 500, color: "#ef4444" }}>
@@ -212,9 +212,9 @@ export const Footer: React.FC = () => {
               <a
                 href="tel:+393277985312"
                 className="flex items-center gap-3 transition-colors group"
-                style={{ color: "#fdfbf7", textDecoration: "none" }}
+                style={{ color: "#d1d5db", textDecoration: "none" }}
                 onMouseEnter={(e) => (e.currentTarget.style.color = "#d4af37")}
-                onMouseLeave={(e) => (e.currentTarget.style.color = "#fdfbf7")}
+                onMouseLeave={(e) => (e.currentTarget.style.color = "#d1d5db")}
               >
                 <div
                   style={{
@@ -227,16 +227,16 @@ export const Footer: React.FC = () => {
                 >
                   <Phone size={18} style={{ color: "#d4af37" }} />
                 </div>
-                <span style={{ fontWeight: 500 }}>+39 327 798 5312</span>
+                <span style={{ fontWeight: 500, color: "#d1d5db" }}>+39 327 798 5312</span>
               </a>
               <a
                 href="https://wa.me/393277985312"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center gap-3 transition-colors group"
-                style={{ color: "#fdfbf7", textDecoration: "none" }}
+                style={{ color: "#d1d5db", textDecoration: "none" }}
                 onMouseEnter={(e) => (e.currentTarget.style.color = "#25D366")}
-                onMouseLeave={(e) => (e.currentTarget.style.color = "#fdfbf7")}
+                onMouseLeave={(e) => (e.currentTarget.style.color = "#d1d5db")}
               >
                 <div
                   style={{
@@ -249,14 +249,14 @@ export const Footer: React.FC = () => {
                 >
                   <MessageCircle size={18} style={{ color: "#25D366" }} />
                 </div>
-                <span style={{ fontWeight: 500 }}>WhatsApp</span>
+                <span style={{ fontWeight: 500, color: "#d1d5db" }}>WhatsApp</span>
               </a>
               <a
                 href="mailto:info@viorelsartoria.com"
                 className="flex items-center gap-3 transition-colors group"
-                style={{ color: "#fdfbf7", textDecoration: "none" }}
+                style={{ color: "#d1d5db", textDecoration: "none" }}
                 onMouseEnter={(e) => (e.currentTarget.style.color = "#d4af37")}
-                onMouseLeave={(e) => (e.currentTarget.style.color = "#fdfbf7")}
+                onMouseLeave={(e) => (e.currentTarget.style.color = "#d1d5db")}
               >
                 <div
                   style={{
@@ -269,7 +269,7 @@ export const Footer: React.FC = () => {
                 >
                   <Mail size={18} style={{ color: "#d4af37" }} />
                 </div>
-                <span style={{ fontWeight: 500 }}>info@viorelsartoria.com</span>
+                <span style={{ fontWeight: 500, color: "#d1d5db" }}>info@viorelsartoria.com</span>
               </a>
             </div>
           </div>
@@ -373,6 +373,34 @@ export const Footer: React.FC = () => {
                 </a>
               </li>
             </ul>
+            
+            {/* Designer Signature */}
+            <div className="mt-6 pt-4" style={{ borderTop: "1px solid rgba(212, 175, 55, 0.15)" }}>
+              <p style={{ color: "#9ca3af", fontSize: "14px" }}>
+                Designed By{" "}
+                <a
+                  href="https://www.alecsdesign.xyz"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  style={{
+                    color: "#d4af37",
+                    textDecoration: "none",
+                    fontWeight: 600,
+                    transition: "all 0.3s ease",
+                  }}
+                  onMouseEnter={(e) => {
+                    e.currentTarget.style.color = "#b8935f";
+                    e.currentTarget.style.textDecoration = "underline";
+                  }}
+                  onMouseLeave={(e) => {
+                    e.currentTarget.style.color = "#d4af37";
+                    e.currentTarget.style.textDecoration = "none";
+                  }}
+                >
+                  Alex
+                </a>
+              </p>
+            </div>
           </div>
         </div>
 
