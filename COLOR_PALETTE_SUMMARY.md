@@ -3,6 +3,7 @@
 ## 🎨 **New Brand Colors Applied**
 
 ### Color Palette:
+
 ```css
 --color-primary: #014421   /* Deep Forest Green */
 --color-base: #EFEFEF      /* Light Cool Gray */
@@ -13,18 +14,22 @@
 ## 📝 **Changes Implemented:**
 
 ### 1. **CSS Variables System** ✅
+
 - Created `:root` variables in `src/index.css`
 - Added derived colors for hover states and variants
 - Implemented CSS custom properties for consistent theming
 
 ### 2. **Component-Specific CSS Files** ✅
+
 Created organized CSS structure:
+
 - `src/styles/components/header.css`
 - `src/styles/components/footer.css`
 - `src/styles/components/buttons.css`
 - `src/styles/components/container.css`
 
 ### 3. **Tailwind Config Updated** ✅
+
 - Added `brand` color palette to Tailwind
 - Extended theme with custom colors
 - Configured `backgroundColor` and `textColor` utilities
@@ -32,24 +37,28 @@ Created organized CSS structure:
 ### 4. **Components Refactored** ✅
 
 #### **Header.tsx:**
+
 - Background: Deep Forest Green (`#014421`)
 - Logo text: Silver (`#BDBDBD`) - "Sartoria Viorel Danalache"
 - Navigation links: Light Gray (`#EFEFEF`)
 - Hover state: Silver accent
 
 #### **Footer.tsx:**
+
 - Background: Deep Forest Green (`#014421`)
 - Headings: Silver (`#BDBDBD`)
 - Text content: Light Gray (`#EFEFEF`)
 - Links: Light Gray with Silver hover
 
 #### **Button.tsx:**
+
 - Primary: Green background, Light Gray text
 - Outline: Green border with hover fill
 - Secondary: Silver background, Charcoal text
 - Ghost: Transparent with Silver hover
 
 #### **App.tsx:**
+
 - Main background: Light Cool Gray (`#EFEFEF`)
 - Hero section: Light gray background
 - H1/H2 headings: Deep Forest Green
@@ -57,6 +66,7 @@ Created organized CSS structure:
 - Content section: White background for contrast
 
 ### 5. **Typography & Readability** ✅
+
 - All body text: Charcoal (#333333) on light backgrounds
 - Dark sections (Header/Footer): Light Gray text for contrast
 - Headings: Deep Forest Green or Silver depending on background
@@ -75,15 +85,18 @@ Created organized CSS structure:
 ### **Next Steps:**
 
 1. **Go to Vercel:**
+
    - Visit: https://vercel.com
    - Login with GitHub account
 
 2. **Import Repository:**
+
    - Click "Add New Project"
    - Select `ZaZza402/sartoria-viorel`
    - Click "Import"
 
 3. **Deploy (No configuration needed!):**
+
    - Vercel will auto-detect Vite
    - Click "Deploy"
    - Wait 2-3 minutes
@@ -96,23 +109,27 @@ Created organized CSS structure:
 ### **When to Use Each Color:**
 
 **Deep Forest Green (#014421):**
+
 - Header/Footer backgrounds
 - Primary buttons
 - Main brand elements
 - Links on light backgrounds
 
 **Light Cool Gray (#EFEFEF):**
+
 - Main page background
 - Text on dark backgrounds (Header/Footer)
 - Button text on green buttons
 
 **Silver (#BDBDBD):**
+
 - Logo text / Brand name
 - Headings in dark sections
 - Accent elements
 - Secondary buttons
 
 **Charcoal (#333333):**
+
 - Body text on light backgrounds
 - Paragraph content
 - General readable text
@@ -155,7 +172,7 @@ src/
 
 /* Border Colors */
 .border-brand-primary
-.border-brand-accent
+.border-brand-accent;
 ```
 
 ## ✅ **Testing Checklist:**
@@ -173,12 +190,14 @@ src/
 ## 🌐 **Local Development:**
 
 Server is running at:
+
 - **Local:** http://localhost:5173/
 - **Network:** http://192.168.1.84:5173/
 
 ## 📱 **Ready for Production!**
 
 Your sartoria website now features:
+
 - ✅ Professional brand color palette
 - ✅ Excellent text readability
 - ✅ Consistent styling across components

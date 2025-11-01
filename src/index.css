@@ -4,11 +4,11 @@
    CSS Variables - Brand Color Palette
    ======================================== */
 :root {
-  --color-primary: #014421;  /* Deep Forest Green */
-  --color-base: #EFEFEF;     /* Light Cool Gray */
-  --color-accent: #BDBDBD;   /* Silver */
-  --color-text: #333333;     /* Charcoal */
-  
+  --color-primary: #014421; /* Deep Forest Green */
+  --color-base: #efefef; /* Light Cool Gray */
+  --color-accent: #bdbdbd; /* Silver */
+  --color-text: #333333; /* Charcoal */
+
   /* Derived Colors for Better UX */
   --color-primary-hover: #012f17;
   --color-primary-light: #015829;

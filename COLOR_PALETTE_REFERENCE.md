@@ -60,24 +60,25 @@ var(--color-text-light)       /* #666666 - Light Charcoal */
 
 ```tsx
 /* Backgrounds */
-className="bg-brand-primary"    // Deep Forest Green
-className="bg-brand-base"       // Light Cool Gray
-className="bg-brand-accent"     // Silver
+className = "bg-brand-primary"; // Deep Forest Green
+className = "bg-brand-base"; // Light Cool Gray
+className = "bg-brand-accent"; // Silver
 
 /* Text Colors */
-className="text-brand-primary"  // Deep Forest Green
-className="text-brand-base"     // Light Cool Gray
-className="text-brand-accent"   // Silver
-className="text-brand-text"     // Charcoal
+className = "text-brand-primary"; // Deep Forest Green
+className = "text-brand-base"; // Light Cool Gray
+className = "text-brand-accent"; // Silver
+className = "text-brand-text"; // Charcoal
 
 /* Borders */
-className="border-brand-primary"  // Deep Forest Green
-className="border-brand-accent"   // Silver
+className = "border-brand-primary"; // Deep Forest Green
+className = "border-brand-accent"; // Silver
 ```
 
 ## Component Examples
 
 ### Header
+
 ```tsx
 <header className="bg-brand-primary">
   <h1 className="text-brand-accent">Logo</h1>
@@ -86,13 +87,13 @@ className="border-brand-accent"   // Silver
 ```
 
 ### Button
+
 ```tsx
-<button className="bg-brand-primary text-brand-base">
-  Primary Button
-</button>
+<button className="bg-brand-primary text-brand-base">Primary Button</button>
 ```
 
 ### Content
+
 ```tsx
 <section className="bg-brand-base">
   <h2 className="text-brand-primary">Heading</h2>
@@ -104,12 +105,12 @@ className="border-brand-accent"   // Silver
 
 ✅ **WCAG AA Compliant Combinations:**
 
-| Background      | Text Color      | Contrast Ratio | Pass |
-|----------------|-----------------|----------------|------|
-| #EFEFEF (Base) | #333333 (Text)  | 11.4:1         | ✅ AAA |
-| #014421 (Primary) | #EFEFEF (Base) | 10.2:1      | ✅ AAA |
-| #014421 (Primary) | #BDBDBD (Accent) | 4.7:1       | ✅ AA  |
-| #FFFFFF (White)   | #014421 (Primary) | 12.1:1      | ✅ AAA |
+| Background        | Text Color        | Contrast Ratio | Pass   |
+| ----------------- | ----------------- | -------------- | ------ |
+| #EFEFEF (Base)    | #333333 (Text)    | 11.4:1         | ✅ AAA |
+| #014421 (Primary) | #EFEFEF (Base)    | 10.2:1         | ✅ AAA |
+| #014421 (Primary) | #BDBDBD (Accent)  | 4.7:1          | ✅ AA  |
+| #FFFFFF (White)   | #014421 (Primary) | 12.1:1         | ✅ AAA |
 
 ## Brand Mood
 

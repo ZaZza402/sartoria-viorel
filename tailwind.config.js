@@ -6,13 +6,13 @@ export default {
       colors: {
         // Brand Color Palette
         brand: {
-          primary: "#014421",      // Deep Forest Green
+          primary: "#014421", // Deep Forest Green
           "primary-hover": "#012f17",
           "primary-light": "#015829",
-          base: "#EFEFEF",         // Light Cool Gray
-          accent: "#BDBDBD",       // Silver
+          base: "#EFEFEF", // Light Cool Gray
+          accent: "#BDBDBD", // Silver
           "accent-dark": "#9e9e9e",
-          text: "#333333",         // Charcoal
+          text: "#333333", // Charcoal
           "text-light": "#666666",
         },
         // Keep existing for backward compatibility
@@ -46,6 +46,10 @@ export default {
       fontFamily: {
         sans: ["Inter", "system-ui", "sans-serif"],
         serif: ["Playfair Display", "Georgia", "serif"],
+        script: ["Italianno", "cursive"],
+      },
+      backgroundImage: {
+        'subtle-gradient': 'linear-gradient(180deg, #f5f5f5, #EFEFEF)',
       },
       backgroundColor: {
         base: "#EFEFEF",

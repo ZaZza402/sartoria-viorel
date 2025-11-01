@@ -4,11 +4,11 @@ import { Container, Button } from "./components/ui";
 
 function App() {
   return (
-    <div className="min-h-screen bg-brand-base">
+    <div className="min-h-screen bg-subtle-gradient text-brand-text">
       <Header />
 
       {/* Hero Section */}
-      <section className="pt-24 pb-16 md:pt-32 md:pb-24 bg-brand-base">
+      <section className="pt-24 pb-16 md:pt-32 md:pb-24">
         <Container>
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -16,7 +16,7 @@ function App() {
             transition={{ duration: 0.8 }}
             className="text-center"
           >
-            <h1 className="text-4xl md:text-6xl font-serif font-bold text-brand-primary mb-6">
+            <h1 className="font-script text-6xl md:text-8xl bg-linear-to-r from-secondary-200 via-secondary-500 to-secondary-600 bg-clip-text text-transparent mb-6">
               Sartoria Viorel Danalache
             </h1>
             <h2 className="text-xl md:text-2xl text-brand-text mb-8">
