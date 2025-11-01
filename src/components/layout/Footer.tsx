@@ -1,7 +1,51 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 
 export const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear();
+  const [isOpen, setIsOpen] = useState(false);
+
+  useEffect(() => {
+    const checkIfOpen = () => {
+      const now = new Date();
+      const day = now.getDay(); // 0 = Sunday, 1 = Monday, ..., 6 = Saturday
+      const hours = now.getHours();
+      const minutes = now.getMinutes();
+      const currentTime = hours * 60 + minutes;
+
+      // Sunday (0) - Closed
+      if (day === 0) {
+        setIsOpen(false);
+        return;
+      }
+
+      // Monday to Friday (1-5): 08:30-13:00 and 16:00-20:00
+      if (day >= 1 && day <= 5) {
+        const morningStart = 8 * 60 + 30; // 08:30
+        const morningEnd = 13 * 60; // 13:00
+        const afternoonStart = 16 * 60; // 16:00
+        const afternoonEnd = 20 * 60; // 20:00
+
+        setIsOpen(
+          (currentTime >= morningStart && currentTime < morningEnd) ||
+          (currentTime >= afternoonStart && currentTime < afternoonEnd)
+        );
+        return;
+      }
+
+      // Saturday (6): 09:00-13:30
+      if (day === 6) {
+        const saturdayStart = 9 * 60; // 09:00
+        const saturdayEnd = 13 * 60 + 30; // 13:30
+        setIsOpen(currentTime >= saturdayStart && currentTime < saturdayEnd);
+        return;
+      }
+    };
+
+    checkIfOpen();
+    const interval = setInterval(checkIfOpen, 60000); // Check every minute
+
+    return () => clearInterval(interval);
+  }, []);
 
   return (
     <footer
@@ -54,6 +98,146 @@ export const Footer: React.FC = () => {
           </div>
         </div>
 
+        {/* Contact Information Below Map */}
+        <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+          {/* Address & Status */}
+          <div>
+            <h4
+              className="text-lg font-elegant font-semibold mb-4"
+              style={{
+                background: "linear-gradient(135deg, #d4af37 0%, #b8935f 100%)",
+                WebkitBackgroundClip: "text",
+                WebkitTextFillColor: "transparent",
+                backgroundClip: "text",
+              }}
+            >
+              Indirizzo
+            </h4>
+            <div className="space-y-2" style={{ color: "#fdfbf7" }}>
+              <p style={{ fontSize: "16px", fontWeight: 500 }}>
+                Via Simone Mosca, 16
+              </p>
+              <p style={{ fontSize: "15px", color: "#f5f1e8" }}>
+                00168 Roma, RM
+              </p>
+              
+              {/* Live Open/Closed Indicator */}
+              <div
+                className="mt-4 inline-flex items-center gap-2 px-4 py-2"
+                style={{
+                  background: isOpen 
+                    ? "rgba(34, 197, 94, 0.15)" 
+                    : "rgba(239, 68, 68, 0.15)",
+                  border: `1px solid ${isOpen ? "rgba(34, 197, 94, 0.3)" : "rgba(239, 68, 68, 0.3)"}`,
+                  borderRadius: "8px",
+                }}
+              >
+                <span
+                  style={{
+                    width: "8px",
+                    height: "8px",
+                    borderRadius: "50%",
+                    background: isOpen ? "#22c55e" : "#ef4444",
+                    boxShadow: isOpen 
+                      ? "0 0 8px rgba(34, 197, 94, 0.6)" 
+                      : "0 0 8px rgba(239, 68, 68, 0.6)",
+                    animation: "pulse 2s infinite",
+                  }}
+                />
+                <span
+                  style={{
+                    fontSize: "14px",
+                    fontWeight: 600,
+                    color: isOpen ? "#22c55e" : "#ef4444",
+                    textTransform: "uppercase",
+                    letterSpacing: "0.5px",
+                  }}
+                >
+                  {isOpen ? "Aperto" : "Chiuso"}
+                </span>
+              </div>
+            </div>
+          </div>
+
+          {/* Working Hours */}
+          <div>
+            <h4
+              className="text-lg font-elegant font-semibold mb-4"
+              style={{
+                background: "linear-gradient(135deg, #d4af37 0%, #b8935f 100%)",
+                WebkitBackgroundClip: "text",
+                WebkitTextFillColor: "transparent",
+                backgroundClip: "text",
+              }}
+            >
+              Orari di Apertura
+            </h4>
+            <div className="space-y-2" style={{ color: "#fdfbf7", fontSize: "15px" }}>
+              <p style={{ fontWeight: 500 }}>Lunedì - Venerdì</p>
+              <p style={{ color: "#f5f1e8", marginBottom: "8px" }}>
+                08:30 - 13:00 / 16:00 - 20:00
+              </p>
+              <p style={{ fontWeight: 500 }}>Sabato</p>
+              <p style={{ color: "#f5f1e8", marginBottom: "8px" }}>
+                09:00 - 13:30
+              </p>
+              <p style={{ fontWeight: 500, color: "#ef4444" }}>
+                Domenica: Chiuso
+              </p>
+            </div>
+          </div>
+
+          {/* Contact Info */}
+          <div>
+            <h4
+              className="text-lg font-elegant font-semibold mb-4"
+              style={{
+                background: "linear-gradient(135deg, #d4af37 0%, #b8935f 100%)",
+                WebkitBackgroundClip: "text",
+                WebkitTextFillColor: "transparent",
+                backgroundClip: "text",
+              }}
+            >
+              Contatti
+            </h4>
+            <div className="space-y-3" style={{ fontSize: "15px" }}>
+              <a
+                href="tel:+393277985312"
+                className="flex items-center gap-2 transition-colors"
+                style={{ color: "#fdfbf7", textDecoration: "none" }}
+                onMouseEnter={(e) => (e.currentTarget.style.color = "#d4af37")}
+                onMouseLeave={(e) => (e.currentTarget.style.color = "#fdfbf7")}
+              >
+                <span style={{ fontSize: "18px" }}>📞</span>
+                <span style={{ fontWeight: 500 }}>+39 327 798 5312</span>
+              </a>
+              <a
+                href="https://wa.me/393277985312"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-2 transition-colors"
+                style={{ color: "#fdfbf7", textDecoration: "none" }}
+                onMouseEnter={(e) => (e.currentTarget.style.color = "#25D366")}
+                onMouseLeave={(e) => (e.currentTarget.style.color = "#fdfbf7")}
+              >
+                <span style={{ fontSize: "18px" }}>💬</span>
+                <span style={{ fontWeight: 500 }}>WhatsApp</span>
+              </a>
+              <a
+                href="mailto:info@viorelsartoria.com"
+                className="flex items-center gap-2 transition-colors"
+                style={{ color: "#fdfbf7", textDecoration: "none" }}
+                onMouseEnter={(e) => (e.currentTarget.style.color = "#d4af37")}
+                onMouseLeave={(e) => (e.currentTarget.style.color = "#fdfbf7")}
+              >
+                <span style={{ fontSize: "18px" }}>✉️</span>
+                <span style={{ fontWeight: 500 }}>info@viorelsartoria.com</span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        {/* Brand Description & Links */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           <div>
             <h3

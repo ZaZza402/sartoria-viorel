@@ -39,13 +39,13 @@ export const ContactSection: React.FC = () => {
             }}
           ></div>
 
-          <p 
-            className="text-xl leading-relaxed max-w-2xl mx-auto" 
+          <p
+            className="text-xl leading-relaxed max-w-2xl mx-auto"
             style={{ color: "#fdfbf7" }}
           >
             Vieni a trovarci nella nostra sartoria nel cuore di Roma. Saremo
-            lieti di discutere le tue esigenze e creare insieme il capo
-            perfetto per te.
+            lieti di discutere le tue esigenze e creare insieme il capo perfetto
+            per te.
           </p>
 
           <div className="pt-6">
