@@ -25,19 +25,14 @@ export const ContactSection: React.FC = () => {
           <div
             style={{
               display: "inline-flex",
-              padding: "16px",
-              borderRadius: "18px",
-              background: "linear-gradient(135deg, #d4af37 0%, #b8935f 100%)",
-              boxShadow: "0 8px 32px rgba(212, 175, 55, 0.4)",
               animation: "float 4s ease-in-out infinite",
             }}
-            className="sm:p-5"
           >
             <Calendar
-              size={32}
-              color="#0f1419"
+              size={40}
+              color="#d4af37"
               strokeWidth={2}
-              className="sm:w-10 sm:h-10"
+              className="sm:w-12 sm:h-12"
             />
           </div>
 

@@ -98,20 +98,14 @@ export const ServicesSection: React.FC = () => {
                 <div
                   style={{
                     display: "inline-flex",
-                    padding: "12px",
-                    borderRadius: "14px",
-                    background:
-                      "linear-gradient(135deg, #d4af37 0%, #b8935f 100%)",
-                    boxShadow: "0 4px 20px rgba(212, 175, 55, 0.3)",
                     animation: `${service.animation} 3s ease-in-out infinite`,
                   }}
-                  className="sm:p-4"
                 >
                   <service.icon
-                    size={24}
-                    color="#0f1419"
+                    size={28}
+                    color="#d4af37"
                     strokeWidth={2}
-                    className="sm:w-8 sm:h-8"
+                    className="sm:w-9 sm:h-9 md:w-10 md:h-10"
                   />
                 </div>
 

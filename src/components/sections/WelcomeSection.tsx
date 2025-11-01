@@ -73,9 +73,6 @@ export const WelcomeSection: React.FC = () => {
                 <div
                   style={{
                     display: "inline-flex",
-                    padding: "8px",
-                    borderRadius: "10px",
-                    background: "rgba(212, 175, 55, 0.1)",
                     animation: "shimmer 3s ease-in-out infinite",
                   }}
                 >
@@ -101,9 +98,6 @@ export const WelcomeSection: React.FC = () => {
                 <div
                   style={{
                     display: "inline-flex",
-                    padding: "8px",
-                    borderRadius: "10px",
-                    background: "rgba(212, 175, 55, 0.1)",
                     animation: "shimmer 3s ease-in-out infinite 0.5s",
                   }}
                 >
@@ -129,9 +123,6 @@ export const WelcomeSection: React.FC = () => {
                 <div
                   style={{
                     display: "inline-flex",
-                    padding: "8px",
-                    borderRadius: "10px",
-                    background: "rgba(212, 175, 55, 0.1)",
                     animation: "shimmer 3s ease-in-out infinite 1s",
                   }}
                 >
