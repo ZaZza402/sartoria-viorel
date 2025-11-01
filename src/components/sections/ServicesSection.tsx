@@ -39,7 +39,7 @@ export const ServicesSection: React.FC = () => {
           <h2 className="font-script text-5xl md:text-6xl text-brand-primary mb-4">
             I Nostri Servizi
           </h2>
-          <div className="w-24 h-1 bg-brand-accent mx-auto"></div>
+          <div className="w-24 h-1 bg-brand-primary mx-auto"></div>
         </motion.div>
 
         <div className="space-y-24">
@@ -70,7 +70,7 @@ export const ServicesSection: React.FC = () => {
                 <h3 className="font-elegant text-3xl md:text-4xl text-brand-primary">
                   {service.title}
                 </h3>
-                <div className="w-16 h-0.5 bg-brand-accent"></div>
+                <div className="w-16 h-0.5 bg-brand-primary"></div>
                 <p className="text-brand-text leading-relaxed text-lg">
                   {service.description}
                 </p>

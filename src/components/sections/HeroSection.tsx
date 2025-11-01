@@ -11,19 +11,19 @@ export const HeroSection: React.FC = () => {
       <div className="absolute inset-0 z-0">
         <div className="hidden md:block absolute inset-0">
           <img
-            src={suitWideImg}
-            alt="Elegant tailored suit"
+            src={tailorHandsImg}
+            alt="Master tailor at work"
             className="w-full h-full object-cover"
           />
           <div className="absolute inset-0 bg-linear-to-r from-black/70 via-black/50 to-transparent" />
         </div>
-        
+
         {/* Vertical Image for Mobile */}
         <div className="md:hidden absolute inset-0">
           <img
-            src={tailorHandsImg}
-            alt="Master tailor at work"
-            className="w-full h-full object-cover"
+            src={suitWideImg}
+            alt="Elegant tailored suit"
+            className="w-full h-full object-cover object-top"
           />
           <div className="absolute inset-0 bg-black/60" />
         </div>
@@ -45,7 +45,7 @@ export const HeroSection: React.FC = () => {
           >
             Sartoria Viorel Danalache
           </motion.h1>
-          
+
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
@@ -55,12 +55,13 @@ export const HeroSection: React.FC = () => {
             <h2 className="font-elegant text-xl md:text-2xl text-gray-200 tracking-wide">
               Maestro Sarto & Alta Moda su Misura
             </h2>
-            
+
             <p className="text-base md:text-lg text-gray-300 leading-relaxed max-w-xl">
-              L'arte della sartoria tradizionale incontra l'eleganza moderna. 
-              Ogni capo è un'opera d'arte realizzata con passione e precisione artigianale.
+              L'arte della sartoria tradizionale incontra l'eleganza moderna.
+              Ogni capo è un'opera d'arte realizzata con passione e precisione
+              artigianale.
             </p>
-            
+
             <div className="flex flex-col sm:flex-row gap-4 pt-4">
               <Button variant="primary" size="lg">
                 Prenota un Appuntamento

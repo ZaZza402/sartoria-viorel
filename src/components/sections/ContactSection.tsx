@@ -18,16 +18,20 @@ export const ContactSection: React.FC = () => {
             <h2 className="font-script text-5xl md:text-6xl leading-tight">
               Prenota il Tuo Appuntamento
             </h2>
-            
-            <div className="w-20 h-1 bg-brand-accent"></div>
-            
-            <p className="text-gray-200 text-lg leading-relaxed">
-              Vieni a trovarci nella nostra sartoria nel cuore di Roma. 
-              Saremo lieti di discutere le tue esigenze e creare insieme 
-              il capo perfetto per te.
+
+            <div className="w-20 h-1 bg-white/50"></div>
+
+            <p className="text-gray-100 text-lg leading-relaxed">
+              Vieni a trovarci nella nostra sartoria nel cuore di Roma. Saremo
+              lieti di discutere le tue esigenze e creare insieme il capo
+              perfetto per te.
             </p>
 
-            <Button variant="outline" size="lg" className="border-white text-white hover:bg-white hover:text-brand-primary">
+            <Button
+              variant="outline"
+              size="lg"
+              className="border-white text-white hover:bg-white hover:text-brand-primary"
+            >
               Contattaci Ora
             </Button>
           </motion.div>
@@ -41,29 +45,29 @@ export const ContactSection: React.FC = () => {
             className="space-y-8"
           >
             <div className="space-y-2">
-              <h3 className="font-elegant text-xl text-brand-accent tracking-wide">
+              <h3 className="font-elegant text-xl text-white tracking-wide uppercase">
                 Indirizzo
               </h3>
-              <p className="text-gray-200 text-lg">Roma, Italia</p>
+              <p className="text-gray-100 text-lg">Roma, Italia</p>
               <p className="text-gray-300 text-sm">Via da definire</p>
             </div>
 
             <div className="space-y-2">
-              <h3 className="font-elegant text-xl text-brand-accent tracking-wide">
+              <h3 className="font-elegant text-xl text-white tracking-wide uppercase">
                 Orari di Apertura
               </h3>
-              <div className="text-gray-200 space-y-1">
+              <div className="text-gray-100 space-y-1">
                 <p>Lunedì - Venerdì: 9:00 - 18:00</p>
                 <p>Sabato: 9:00 - 13:00</p>
-                <p className="text-gray-400">Domenica: Chiuso</p>
+                <p className="text-gray-300">Domenica: Chiuso</p>
               </div>
             </div>
 
             <div className="space-y-2">
-              <h3 className="font-elegant text-xl text-brand-accent tracking-wide">
+              <h3 className="font-elegant text-xl text-white tracking-wide uppercase">
                 Contatti
               </h3>
-              <div className="text-gray-200 space-y-1">
+              <div className="text-gray-100 space-y-1">
                 <p>Tel: +39 XXX XXX XXXX</p>
                 <p>Email: info@viorelsartoria.com</p>
               </div>

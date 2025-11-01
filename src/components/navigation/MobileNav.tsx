@@ -70,7 +70,8 @@ export const MobileNav: React.FC<MobileNavProps> = ({
               animate={{ x: 0 }}
               exit={{ x: "100%" }}
               transition={{ type: "tween", duration: 0.3 }}
-              className="fixed right-0 top-16 bottom-0 w-64 bg-brand-primary shadow-xl z-50 p-6"
+              className="fixed right-0 top-16 bottom-0 w-64 shadow-2xl z-50 p-6"
+              style={{ backgroundColor: '#014421' }}
             >
               <nav className="flex flex-col space-y-4">
                 {links.map((link) => (
@@ -78,7 +79,7 @@ export const MobileNav: React.FC<MobileNavProps> = ({
                     key={link.href}
                     href={link.href}
                     onClick={toggleMenu}
-                    className="text-white hover:text-gray-300 transition-colors duration-200 text-lg font-medium py-2"
+                    className="text-white hover:text-gray-300 transition-colors duration-200 text-lg font-medium py-2 border-b border-white/20"
                   >
                     {link.label}
                   </a>
