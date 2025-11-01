@@ -15,10 +15,10 @@ export const Logo: React.FC<LogoProps> = ({ className = "", size = "md" }) => {
 
   return (
     <h1
-      className={`font-script text-white drop-shadow-lg ${sizes[size]} ${className}`}
-      style={{ textShadow: "2px 2px 4px rgba(0,0,0,0.3)" }}
+      className={`font-elegant ${sizes[size]} ${className}`}
+      style={{ color: '#ffffff', textShadow: "2px 2px 4px rgba(0,0,0,0.5)", fontWeight: 600 }}
     >
-      Sartoria Viorel Danalache
+      Sartoria Viorel D.
     </h1>
   );
 };
