@@ -19,29 +19,31 @@ const navLinks = [
 
 export const Header: React.FC<HeaderProps> = ({ className }) => {
   return (
-    <motion.header
-      initial={{ y: -100, opacity: 0 }}
-      animate={{ y: 0, opacity: 1 }}
-      transition={{ duration: 0.5 }}
-      className={cn(
-        "header fixed top-0 left-0 right-0 z-50 bg-brand-primary backdrop-blur-md border-b border-brand-primary-light shadow-lg",
-        className
-      )}
-    >
-      <nav className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="flex h-16 items-center justify-between">
-          {/* Logo */}
-          <div className="flex items-center">
-            <Logo size="lg" />
+    <>
+      <motion.header
+        initial={{ y: -100, opacity: 0 }}
+        animate={{ y: 0, opacity: 1 }}
+        transition={{ duration: 0.5 }}
+        className={cn(
+          "header fixed top-0 left-0 right-0 z-50 bg-brand-primary backdrop-blur-md border-b border-brand-primary-light shadow-lg",
+          className
+        )}
+      >
+        <nav className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="flex h-16 items-center justify-between">
+            {/* Logo */}
+            <div className="flex items-center">
+              <Logo size="lg" />
+            </div>
+
+            {/* Desktop Navigation */}
+            <DesktopNav links={navLinks} />
+
+            {/* Mobile Navigation Button - Component renders menu outside */}
+            <MobileNav links={navLinks} />
           </div>
-
-          {/* Desktop Navigation */}
-          <DesktopNav links={navLinks} />
-
-          {/* Mobile Navigation */}
-          <MobileNav links={navLinks} />
-        </div>
-      </nav>
-    </motion.header>
+        </nav>
+      </motion.header>
+    </>
   );
 };

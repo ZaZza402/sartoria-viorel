@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import { createPortal } from "react-dom";
 
 interface NavLink {
   href: string;
@@ -20,74 +20,115 @@ export const MobileNav: React.FC<MobileNavProps> = ({
   const toggleMenu = () => setIsOpen(!isOpen);
 
   return (
-    <div className={`md:hidden ${className}`}>
+    <>
       {/* Hamburger Button */}
-      <button
-        onClick={toggleMenu}
-        className="text-white hover:text-gray-300 p-2 transition-colors"
-        aria-label="Toggle menu"
-      >
-        <svg
-          className="h-6 w-6"
-          fill="none"
-          viewBox="0 0 24 24"
-          stroke="currentColor"
+      <div className={`md:hidden ${className}`}>
+        <button
+          onClick={toggleMenu}
+          style={{
+            color: "#ffffff",
+            padding: "8px",
+            background: "transparent",
+            border: "none",
+            cursor: "pointer",
+          }}
+          aria-label="Toggle menu"
         >
-          {isOpen ? (
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth={2}
-              d="M6 18L18 6M6 6l12 12"
-            />
-          ) : (
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth={2}
-              d="M4 6h16M4 12h16M4 18h16"
-            />
-          )}
-        </svg>
-      </button>
+          <svg
+            style={{ width: "24px", height: "24px" }}
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            {isOpen ? (
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M6 18L18 6M6 6l12 12"
+              />
+            ) : (
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M4 6h16M4 12h16M4 18h16"
+              />
+            )}
+          </svg>
+        </button>
+      </div>
 
-      {/* Mobile Menu Overlay */}
-      <AnimatePresence>
-        {isOpen && (
-          <>
+      {/* Mobile Menu - SINGLE WRAPPER - RENDERED AT BODY LEVEL */}
+      {isOpen &&
+        createPortal(
+          <div
+            style={{
+              position: "fixed",
+              top: 0,
+              left: 0,
+              right: 0,
+              bottom: 0,
+              zIndex: 9999,
+              animation: "fadeIn 0.3s ease-out",
+            }}
+          >
             {/* Backdrop */}
-            <motion.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              exit={{ opacity: 0 }}
+            <div
               onClick={toggleMenu}
-              className="fixed inset-0 bg-black/50 z-40 top-16"
+              style={{
+                position: "absolute",
+                top: 0,
+                left: 0,
+                right: 0,
+                bottom: 0,
+                backgroundColor: "rgba(0,0,0,0.7)",
+                zIndex: 1,
+                animation: "fadeIn 0.3s ease-out",
+              }}
             />
 
             {/* Menu Panel */}
-            <motion.div
-              initial={{ x: "100%" }}
-              animate={{ x: 0 }}
-              exit={{ x: "100%" }}
-              transition={{ type: "tween", duration: 0.3 }}
+            <div
               style={{
-                position: "fixed",
+                position: "absolute",
                 right: 0,
-                top: "64px",
+                top: 0,
                 bottom: 0,
-                width: "256px",
-                zIndex: 50,
-                padding: "24px",
+                width: "280px",
                 backgroundColor: "#014421",
-                borderLeft: "1px solid rgba(255,255,255,0.1)",
-                boxShadow: "-4px 0 20px rgba(0,0,0,0.5)",
+                zIndex: 2,
+                padding: "80px 24px 24px 24px",
+                boxShadow: "-4px 0 20px rgba(0,0,0,0.8)",
+                overflowY: "auto",
+                animation: "slideInRight 0.3s ease-out",
               }}
             >
+              {/* Close Button */}
+              <button
+                onClick={toggleMenu}
+                style={{
+                  position: "absolute",
+                  top: "20px",
+                  right: "20px",
+                  background: "transparent",
+                  border: "none",
+                  color: "#ffffff",
+                  fontSize: "32px",
+                  cursor: "pointer",
+                  padding: "0",
+                  lineHeight: "1",
+                }}
+              >
+                ×
+              </button>
+
+              {/* Brand */}
               <div
                 style={{
-                  marginBottom: "24px",
-                  paddingBottom: "16px",
-                  borderBottom: "1px solid rgba(255,255,255,0.2)",
+                  marginBottom: "32px",
+                  paddingBottom: "24px",
+                  borderBottom: "2px solid rgba(255,255,255,0.3)",
                 }}
               >
                 <h2
@@ -95,43 +136,48 @@ export const MobileNav: React.FC<MobileNavProps> = ({
                   style={{
                     color: "#ffffff",
                     fontWeight: 600,
-                    fontSize: "1.25rem",
+                    fontSize: "1.5rem",
+                    margin: 0,
                   }}
                 >
                   Sartoria Viorel D.
                 </h2>
               </div>
+
+              {/* Navigation Links */}
               <nav
                 style={{
                   display: "flex",
                   flexDirection: "column",
-                  gap: "16px",
+                  gap: "0",
                 }}
               >
-                {links.map((link) => (
+                {links.map((link, index) => (
                   <a
                     key={link.href}
                     href={link.href}
                     onClick={toggleMenu}
                     style={{
                       color: "#ffffff",
-                      fontSize: "1.125rem",
+                      fontSize: "1.25rem",
                       fontWeight: 500,
-                      paddingTop: "8px",
-                      paddingBottom: "8px",
-                      borderBottom: "1px solid rgba(255,255,255,0.2)",
+                      padding: "16px 0",
+                      borderBottom:
+                        index < links.length - 1
+                          ? "1px solid rgba(255,255,255,0.2)"
+                          : "none",
                       textDecoration: "none",
-                      transition: "color 0.2s",
+                      display: "block",
                     }}
                   >
                     {link.label}
                   </a>
                 ))}
               </nav>
-            </motion.div>
-          </>
+            </div>
+          </div>,
+          document.body
         )}
-      </AnimatePresence>
-    </div>
+    </>
   );
 };
