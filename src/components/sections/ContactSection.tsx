@@ -5,47 +5,50 @@ import { Button } from "../ui/Button";
 export const ContactSection: React.FC = () => {
   return (
     <section
-      className="py-24 relative overflow-hidden"
+      className="py-32 relative overflow-hidden"
       style={{
         background: "linear-gradient(135deg, #1a2332 0%, #0f1419 100%)",
         color: "#fdfbf7",
       }}
     >
-      <div className="max-w-7xl mx-auto px-6 md:px-12 relative z-10">
-        <div className="grid md:grid-cols-2 gap-16 items-center">
-          {/* Left Content */}
-          <motion.div
-            initial={{ opacity: 0, x: -30 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="space-y-6"
+      <div className="max-w-4xl mx-auto px-6 md:px-12 relative z-10">
+        {/* Centered Content */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          viewport={{ once: true }}
+          className="text-center space-y-8"
+        >
+          <h2
+            className="font-script text-5xl md:text-7xl leading-tight"
+            style={{
+              background: "linear-gradient(135deg, #d4af37 0%, #b8935f 100%)",
+              WebkitBackgroundClip: "text",
+              WebkitTextFillColor: "transparent",
+              backgroundClip: "text",
+            }}
           >
-            <h2
-              className="font-script text-5xl md:text-6xl leading-tight"
-              style={{
-                background: "linear-gradient(135deg, #d4af37 0%, #b8935f 100%)",
-                WebkitBackgroundClip: "text",
-                WebkitTextFillColor: "transparent",
-                backgroundClip: "text",
-              }}
-            >
-              Prenota il Tuo Appuntamento
-            </h2>
+            Prenota il Tuo Appuntamento
+          </h2>
 
-            <div
-              className="w-20 h-1"
-              style={{
-                background: "linear-gradient(90deg, #d4af37 0%, #b8935f 100%)",
-              }}
-            ></div>
+          <div
+            className="w-24 h-1 mx-auto"
+            style={{
+              background: "linear-gradient(90deg, #d4af37 0%, #b8935f 100%)",
+            }}
+          ></div>
 
-            <p className="text-lg leading-relaxed" style={{ color: "#fdfbf7" }}>
-              Vieni a trovarci nella nostra sartoria nel cuore di Roma. Saremo
-              lieti di discutere le tue esigenze e creare insieme il capo
-              perfetto per te.
-            </p>
+          <p 
+            className="text-xl leading-relaxed max-w-2xl mx-auto" 
+            style={{ color: "#fdfbf7" }}
+          >
+            Vieni a trovarci nella nostra sartoria nel cuore di Roma. Saremo
+            lieti di discutere le tue esigenze e creare insieme il capo
+            perfetto per te.
+          </p>
 
+          <div className="pt-6">
             <Button
               variant="outline"
               size="lg"
@@ -55,86 +58,25 @@ export const ContactSection: React.FC = () => {
                 color: "#d4af37",
                 borderWidth: "2px",
                 background: "transparent",
+                padding: "16px 48px",
+                fontSize: "18px",
               }}
             >
               Contattaci Ora
             </Button>
-          </motion.div>
-
-          {/* Right Content - Contact Info */}
-          <motion.div
-            initial={{ opacity: 0, x: 30 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="space-y-8"
-          >
-            <div className="space-y-2">
-              <h3
-                className="font-elegant text-xl tracking-wide uppercase"
-                style={{
-                  background:
-                    "linear-gradient(135deg, #d4af37 0%, #b8935f 100%)",
-                  WebkitBackgroundClip: "text",
-                  WebkitTextFillColor: "transparent",
-                  backgroundClip: "text",
-                }}
-              >
-                Indirizzo
-              </h3>
-              <p className="text-lg" style={{ color: "#fdfbf7" }}>
-                Via Simone Mosca, 16
-              </p>
-              <p className="text-sm" style={{ color: "#f5f1e8" }}>
-                00168 Roma, RM
-              </p>
-            </div>
-
-            <div className="space-y-2">
-              <h3
-                className="font-elegant text-xl tracking-wide uppercase"
-                style={{
-                  background:
-                    "linear-gradient(135deg, #d4af37 0%, #b8935f 100%)",
-                  WebkitBackgroundClip: "text",
-                  WebkitTextFillColor: "transparent",
-                  backgroundClip: "text",
-                }}
-              >
-                Orari di Apertura
-              </h3>
-              <div className="space-y-1" style={{ color: "#fdfbf7" }}>
-                <p>Lunedì - Venerdì: 9:00 - 18:00</p>
-                <p>Sabato: 9:00 - 13:00</p>
-                <p style={{ color: "#f5f1e8" }}>Domenica: Chiuso</p>
-              </div>
-            </div>
-
-            <div className="space-y-2">
-              <h3
-                className="font-elegant text-xl tracking-wide uppercase"
-                style={{
-                  background:
-                    "linear-gradient(135deg, #d4af37 0%, #b8935f 100%)",
-                  WebkitBackgroundClip: "text",
-                  WebkitTextFillColor: "transparent",
-                  backgroundClip: "text",
-                }}
-              >
-                Contatti
-              </h3>
-              <div className="space-y-1" style={{ color: "#fdfbf7" }}>
-                <p>Tel: +39 XXX XXX XXXX</p>
-                <p>Email: info@viorelsartoria.com</p>
-              </div>
-            </div>
-          </motion.div>
-        </div>
+          </div>
+        </motion.div>
       </div>
 
-      {/* Decorative Element */}
+      {/* Decorative Elements */}
       <div
         className="absolute bottom-0 right-0 w-1/3 h-full opacity-10 transform skew-x-12"
+        style={{
+          background: "linear-gradient(135deg, #d4af37 0%, #b8935f 100%)",
+        }}
+      ></div>
+      <div
+        className="absolute top-0 left-0 w-1/4 h-full opacity-5 transform -skew-x-12"
         style={{
           background: "linear-gradient(135deg, #d4af37 0%, #b8935f 100%)",
         }}
