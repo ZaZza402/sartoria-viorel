@@ -4,7 +4,7 @@ import { Button } from "../ui/Button";
 
 export const ContactSection: React.FC = () => {
   return (
-    <section className="py-24 bg-brand-primary text-white relative overflow-hidden">
+    <section className="py-24 relative overflow-hidden" style={{ backgroundColor: '#014421', color: '#ffffff' }}>
       <div className="max-w-7xl mx-auto px-6 md:px-12 relative z-10">
         <div className="grid md:grid-cols-2 gap-16 items-center">
           {/* Left Content */}
@@ -15,13 +15,13 @@ export const ContactSection: React.FC = () => {
             viewport={{ once: true }}
             className="space-y-6"
           >
-            <h2 className="font-script text-5xl md:text-6xl leading-tight">
+            <h2 className="font-script text-5xl md:text-6xl leading-tight" style={{ color: '#ffffff' }}>
               Prenota il Tuo Appuntamento
             </h2>
 
-            <div className="w-20 h-1 bg-white/50"></div>
+            <div className="w-20 h-1" style={{ backgroundColor: 'rgba(255,255,255,0.5)' }}></div>
 
-            <p className="text-gray-100 text-lg leading-relaxed">
+            <p className="text-lg leading-relaxed" style={{ color: '#ffffff' }}>
               Vieni a trovarci nella nostra sartoria nel cuore di Roma. Saremo
               lieti di discutere le tue esigenze e creare insieme il capo
               perfetto per te.
@@ -30,7 +30,8 @@ export const ContactSection: React.FC = () => {
             <Button
               variant="outline"
               size="lg"
-              className="border-white text-white hover:bg-white hover:text-brand-primary"
+              className="hover:bg-white"
+              style={{ borderColor: '#ffffff', color: '#ffffff', borderWidth: '2px' }}
             >
               Contattaci Ora
             </Button>
@@ -45,29 +46,29 @@ export const ContactSection: React.FC = () => {
             className="space-y-8"
           >
             <div className="space-y-2">
-              <h3 className="font-elegant text-xl text-white tracking-wide uppercase">
+              <h3 className="font-elegant text-xl tracking-wide uppercase" style={{ color: '#ffffff' }}>
                 Indirizzo
               </h3>
-              <p className="text-gray-100 text-lg">Roma, Italia</p>
-              <p className="text-gray-300 text-sm">Via da definire</p>
+              <p className="text-lg" style={{ color: '#ffffff' }}>Roma, Italia</p>
+              <p className="text-sm" style={{ color: '#e5e5e5' }}>Via da definire</p>
             </div>
 
             <div className="space-y-2">
-              <h3 className="font-elegant text-xl text-white tracking-wide uppercase">
+              <h3 className="font-elegant text-xl tracking-wide uppercase" style={{ color: '#ffffff' }}>
                 Orari di Apertura
               </h3>
-              <div className="text-gray-100 space-y-1">
+              <div className="space-y-1" style={{ color: '#ffffff' }}>
                 <p>Lunedì - Venerdì: 9:00 - 18:00</p>
                 <p>Sabato: 9:00 - 13:00</p>
-                <p className="text-gray-300">Domenica: Chiuso</p>
+                <p style={{ color: '#d4d4d4' }}>Domenica: Chiuso</p>
               </div>
             </div>
 
             <div className="space-y-2">
-              <h3 className="font-elegant text-xl text-white tracking-wide uppercase">
+              <h3 className="font-elegant text-xl tracking-wide uppercase" style={{ color: '#ffffff' }}>
                 Contatti
               </h3>
-              <div className="text-gray-100 space-y-1">
+              <div className="space-y-1" style={{ color: '#ffffff' }}>
                 <p>Tel: +39 XXX XXX XXXX</p>
                 <p>Email: info@viorelsartoria.com</p>
               </div>
