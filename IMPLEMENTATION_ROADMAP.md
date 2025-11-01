@@ -3,13 +3,16 @@
 ## ⚠️ IMMEDIATE FIXES (Do Now)
 
 ### 1. Text Contrast Check ✅
+
 Current state appears good:
+
 - Hero: Charcoal text (#333) on light gray background - GOOD
-- Header: Light gray text (#EFEFEF) on dark green - GOOD  
+- Header: Light gray text (#EFEFEF) on dark green - GOOD
 - Footer: Light gray text on dark green - GOOD
 - Buttons: Light text on dark green - GOOD
 
 ### 2. Responsive Check
+
 - Logo script font may be too large on mobile
 - Need to test all breakpoints
 
@@ -18,7 +21,9 @@ Current state appears good:
 ## 📅 PHASE 1: Foundation (This Week)
 
 ### Day 1-2: Content Sections
+
 **Priority:** HIGH
+
 ```
 ✅ Create "Chi Sono" (About) section
 ✅ Create "Servizi" (Services) section with 5 cards
@@ -26,12 +31,15 @@ Current state appears good:
 ```
 
 **Files to create/modify:**
+
 - `src/components/sections/About.tsx`
 - `src/components/sections/Services.tsx`
 - Update `App.tsx` to include new sections
 
 ### Day 3-4: Process Timeline
+
 **Priority:** HIGH
+
 ```
 ✅ Create "Il Processo" timeline component
 ✅ Add icons for each step
@@ -39,11 +47,14 @@ Current state appears good:
 ```
 
 **Files to create:**
+
 - `src/components/sections/Process.tsx`
 - `src/assets/icons/` (SVG icons)
 
 ### Day 5: Gallery Placeholder
+
 **Priority:** MEDIUM
+
 ```
 ✅ Basic gallery grid layout
 ✅ Placeholder images with Unsplash
@@ -51,6 +62,7 @@ Current state appears good:
 ```
 
 **Files to create:**
+
 - `src/components/sections/Gallery.tsx`
 - `src/components/ui/Lightbox.tsx`
 
@@ -59,6 +71,7 @@ Current state appears good:
 ## 📅 PHASE 2: Visual Polish (Next Week)
 
 ### Hero Enhancements
+
 ```
 ✅ Add hero background image with overlay
 ✅ Improve mobile responsiveness
@@ -67,6 +80,7 @@ Current state appears good:
 ```
 
 ### Animations
+
 ```
 ✅ Scroll-triggered reveals
 ✅ Card hover effects
@@ -75,6 +89,7 @@ Current state appears good:
 ```
 
 ### Components to create:
+
 - `src/components/ui/Badge.tsx`
 - `src/components/ui/LocationTag.tsx`
 
@@ -83,6 +98,7 @@ Current state appears good:
 ## 📅 PHASE 3: Engagement (Week 3)
 
 ### Contact & Location
+
 ```
 ✅ Contact form with validation
 ✅ Google Maps integration
@@ -91,6 +107,7 @@ Current state appears good:
 ```
 
 ### Social Proof
+
 ```
 ✅ Testimonials carousel
 ✅ Google Reviews integration
@@ -102,6 +119,7 @@ Current state appears good:
 ## 📅 PHASE 4: Refinement (Week 4)
 
 ### Content
+
 ```
 ✅ Real photos from Viorel
 ✅ Authentic copy in Italian
@@ -110,6 +128,7 @@ Current state appears good:
 ```
 
 ### Performance
+
 ```
 ✅ Image optimization
 ✅ Lazy loading
@@ -122,6 +141,7 @@ Current state appears good:
 ## 🎯 WHAT TO START WITH TODAY
 
 ### Option A: Build Complete Section by Section
+
 **Recommended for:** Seeing full progress quickly
 
 1. Start with "Servizi" section (most important for business)
@@ -129,6 +149,7 @@ Current state appears good:
 3. Then "Contatti" (conversion)
 
 ### Option B: Enhance Hero + Add 2 Sections
+
 **Recommended for:** Balanced approach
 
 1. Enhance hero with background image
@@ -140,6 +161,7 @@ Current state appears good:
 ## 📝 Content You'll Need from Viorel
 
 ### Immediate:
+
 - [ ] Years of experience / "Dal" year
 - [ ] Brief bio (2-3 paragraphs)
 - [ ] List of services offered
@@ -149,6 +171,7 @@ Current state appears good:
 - [ ] Opening hours
 
 ### Soon:
+
 - [ ] 3-5 client testimonials
 - [ ] 10-15 professional photos:
   - Himself in the workshop
@@ -158,6 +181,7 @@ Current state appears good:
   - Workshop interior/exterior
 
 ### Later:
+
 - [ ] Logo (if exists)
 - [ ] Social media accounts
 - [ ] Any certifications/awards
@@ -167,14 +191,17 @@ Current state appears good:
 ## 🎨 Design Decisions to Make
 
 1. **Background Image for Hero?**
+
    - Yes → Need to source/shoot image
    - No → Keep current gradient (simpler)
 
 2. **Custom Fonts?**
+
    - Keep current (Italianno, Playfair, Inter) ✅ RECOMMENDED
    - Or purchase premium fonts
 
 3. **Color Accent Addition?**
+
    - Add warm gold/beige accent?
    - Keep current green/silver palette? ✅ RECOMMENDED
 
@@ -188,6 +215,7 @@ Current state appears good:
 ## ⚡ Quick Action Items (Choose ONE to start)
 
 ### A. Add Services Section (45 min)
+
 ```
 Most business value
 Clear structure provided
@@ -195,6 +223,7 @@ Easy to implement
 ```
 
 ### B. Enhance Hero with Image (30 min)
+
 ```
 Immediate visual impact
 Can use stock photo temporarily
@@ -202,6 +231,7 @@ Creates atmosphere
 ```
 
 ### C. Add About Section (60 min)
+
 ```
 Establishes personal connection
 Tells Viorel's story
@@ -213,13 +243,15 @@ Builds trust
 ## 🤔 Which Should We Do First?
 
 **Tell me:**
+
 1. Do you want me to implement **services section** first?
 2. Or enhance the **hero with background image**?
 3. Or create the **about section** with Viorel's story?
 
-**I'll start implementing immediately based on your choice!** 
+**I'll start implementing immediately based on your choice!**
 
 All sections will be:
+
 - Fully responsive
 - Properly animated
 - Brand-color consistent

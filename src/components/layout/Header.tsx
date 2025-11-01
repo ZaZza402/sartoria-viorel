@@ -1,10 +1,21 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { cn } from "../../utils/cn";
+import { Logo } from "../ui/Logo";
+import { DesktopNav } from "../navigation/DesktopNav";
+import { MobileNav } from "../navigation/MobileNav";
 
 interface HeaderProps {
   className?: string;
 }
+
+const navLinks = [
+  { href: "#home", label: "Home" },
+  { href: "#about", label: "Chi Siamo" },
+  { href: "#services", label: "Servizi" },
+  { href: "#gallery", label: "Galleria" },
+  { href: "#contact", label: "Contatti" },
+];
 
 export const Header: React.FC<HeaderProps> = ({ className }) => {
   return (
@@ -13,69 +24,22 @@ export const Header: React.FC<HeaderProps> = ({ className }) => {
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 0.5 }}
       className={cn(
-        "header fixed top-0 left-0 right-0 z-50 bg-brand-primary backdrop-blur-md border-b border-brand-primary-light",
+        "header fixed top-0 left-0 right-0 z-50 bg-brand-primary backdrop-blur-md border-b border-brand-primary-light shadow-lg",
         className
       )}
     >
       <nav className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="flex h-16 items-center justify-between">
+          {/* Logo */}
           <div className="flex items-center">
-            <h1 className="header-logo font-script text-3xl md:text-4xl bg-linear-to-r from-secondary-200 via-secondary-500 to-secondary-600 bg-clip-text text-transparent">
-              Sartoria Viorel Danalache
-            </h1>
+            <Logo size="lg" />
           </div>
 
-          <div className="header-nav hidden md:flex items-center space-x-8">
-            <a
-              href="#home"
-              className="text-brand-base hover:text-brand-accent transition-colors"
-            >
-              Home
-            </a>
-            <a
-              href="#about"
-              className="text-brand-base hover:text-brand-accent transition-colors"
-            >
-              Chi Siamo
-            </a>
-            <a
-              href="#services"
-              className="text-brand-base hover:text-brand-accent transition-colors"
-            >
-              Servizi
-            </a>
-            <a
-              href="#gallery"
-              className="text-brand-base hover:text-brand-accent transition-colors"
-            >
-              Galleria
-            </a>
-            <a
-              href="#contact"
-              className="text-brand-base hover:text-brand-accent transition-colors"
-            >
-              Contatti
-            </a>
-          </div>
+          {/* Desktop Navigation */}
+          <DesktopNav links={navLinks} />
 
-          {/* Mobile menu button */}
-          <div className="md:hidden">
-            <button className="header-mobile-button text-brand-base hover:text-brand-accent">
-              <svg
-                className="h-6 w-6"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M4 6h16M4 12h16M4 18h16"
-                />
-              </svg>
-            </button>
-          </div>
+          {/* Mobile Navigation */}
+          <MobileNav links={navLinks} />
         </div>
       </nav>
     </motion.header>

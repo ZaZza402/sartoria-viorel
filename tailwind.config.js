@@ -49,7 +49,7 @@ export default {
         script: ["Italianno", "cursive"],
       },
       backgroundImage: {
-        'subtle-gradient': 'linear-gradient(180deg, #f5f5f5, #EFEFEF)',
+        "subtle-gradient": "linear-gradient(180deg, #f5f5f5, #EFEFEF)",
       },
       backgroundColor: {
         base: "#EFEFEF",
