@@ -13,15 +13,19 @@ export const HeroSection: React.FC = () => {
 
   // Parallax effect: background moves slower (0.5x speed)
   const backgroundY = useTransform(scrollYProgress, [0, 1], ["0%", "50%"]);
-  const contentOpacity = useTransform(scrollYProgress, [0, 0.5, 1], [1, 0.8, 0]);
+  const contentOpacity = useTransform(
+    scrollYProgress,
+    [0, 0.5, 1],
+    [1, 0.8, 0]
+  );
 
   return (
-    <section ref={ref} className="relative min-h-screen flex items-center pt-16 overflow-hidden">
+    <section
+      ref={ref}
+      className="relative min-h-screen flex items-center pt-16 overflow-hidden"
+    >
       {/* Background Image with Parallax - Wide on Desktop */}
-      <motion.div
-        className="absolute inset-0 z-0"
-        style={{ y: backgroundY }}
-      >
+      <motion.div className="absolute inset-0 z-0" style={{ y: backgroundY }}>
         <div className="hidden md:block absolute inset-0 h-[120vh]">
           <img
             src={tailorHandsImg}
@@ -77,15 +81,22 @@ export const HeroSection: React.FC = () => {
             className="space-y-4 sm:space-y-6"
           >
             <h2
-              className="font-elegant text-lg sm:text-xl md:text-2xl tracking-wide"
-              style={{ color: "#fdfbf7" }}
+              className="font-mono text-lg sm:text-xl md:text-2xl tracking-wide"
+              style={{ 
+                color: "#fdfbf7",
+                fontFamily: "'Xanh Mono', monospace",
+                letterSpacing: "0.02em",
+              }}
             >
               Maestro Sarto & Alta Moda su Misura
             </h2>
 
             <p
-              className="text-sm sm:text-base md:text-lg leading-relaxed max-w-xl"
-              style={{ color: "#f5f1e8" }}
+              className="text-base sm:text-lg md:text-xl leading-relaxed max-w-xl"
+              style={{ 
+                color: "#f5f1e8",
+                fontFamily: "'Cormorant', Georgia, serif",
+              }}
             >
               L'arte della sartoria tradizionale incontra l'eleganza moderna.
               Ogni capo è un'opera d'arte realizzata con passione e precisione
@@ -101,6 +112,7 @@ export const HeroSection: React.FC = () => {
                     "linear-gradient(135deg, #d4af37 0%, #b8935f 100%)",
                   color: "#0f1419",
                   fontWeight: 600,
+                  border: "none",
                 }}
               >
                 Prenota un Appuntamento
@@ -112,6 +124,7 @@ export const HeroSection: React.FC = () => {
                   borderColor: "#d4af37",
                   color: "#d4af37",
                   borderWidth: "2px",
+                  background: "transparent",
                 }}
               >
                 Scopri di Più

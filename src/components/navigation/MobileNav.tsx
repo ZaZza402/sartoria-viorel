@@ -9,11 +9,13 @@ interface NavLink {
 interface MobileNavProps {
   links: NavLink[];
   className?: string;
+  isScrolled?: boolean;
 }
 
 export const MobileNav: React.FC<MobileNavProps> = ({
   links,
   className = "",
+  isScrolled = false,
 }) => {
   const [isOpen, setIsOpen] = useState(false);
   const [isClosing, setIsClosing] = useState(false);
@@ -37,11 +39,12 @@ export const MobileNav: React.FC<MobileNavProps> = ({
         <button
           onClick={toggleMenu}
           style={{
-            color: "#ffffff",
+            color: isScrolled ? "#d4af37" : "#ffffff",
             padding: "8px",
             background: "transparent",
             border: "none",
             cursor: "pointer",
+            transition: "color 0.5s ease",
           }}
           aria-label="Toggle menu"
         >

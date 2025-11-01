@@ -42,12 +42,14 @@ export const ContactSection: React.FC = () => {
           </div>
 
           <h2
-            className="font-script text-3xl sm:text-4xl md:text-5xl lg:text-7xl leading-tight"
+            className="font-mono text-3xl sm:text-4xl md:text-5xl lg:text-7xl leading-tight"
             style={{
               background: "linear-gradient(135deg, #d4af37 0%, #b8935f 100%)",
               WebkitBackgroundClip: "text",
               WebkitTextFillColor: "transparent",
               backgroundClip: "text",
+              fontFamily: "'Xanh Mono', monospace",
+              letterSpacing: "-0.01em",
             }}
           >
             Prenota il Tuo Appuntamento
@@ -61,8 +63,11 @@ export const ContactSection: React.FC = () => {
           ></div>
 
           <p
-            className="text-sm sm:text-base md:text-lg lg:text-xl leading-relaxed max-w-2xl mx-auto"
-            style={{ color: "#fdfbf7" }}
+            className="text-base sm:text-lg md:text-xl lg:text-2xl leading-relaxed max-w-2xl mx-auto"
+            style={{ 
+              color: "#fdfbf7",
+              fontFamily: "'Cormorant', Georgia, serif",
+            }}
           >
             Vieni a trovarci nella nostra sartoria nel cuore di Roma. Saremo
             lieti di discutere le tue esigenze e creare insieme il capo perfetto

@@ -23,12 +23,14 @@ export const WelcomeSection: React.FC = () => {
             className="space-y-4 sm:space-y-6"
           >
             <h2
-              className="font-script text-3xl sm:text-4xl md:text-5xl lg:text-6xl leading-tight"
+              className="font-mono text-3xl sm:text-4xl md:text-5xl lg:text-6xl leading-tight"
               style={{
                 background: "linear-gradient(135deg, #d4af37 0%, #b8935f 100%)",
                 WebkitBackgroundClip: "text",
                 WebkitTextFillColor: "transparent",
                 backgroundClip: "text",
+                fontFamily: "'Xanh Mono', monospace",
+                letterSpacing: "-0.01em",
               }}
             >
               L'Arte della Sartoria
@@ -41,14 +43,23 @@ export const WelcomeSection: React.FC = () => {
               }}
             ></div>
 
-            <p className="text-sm sm:text-base md:text-lg leading-relaxed" style={{ color: "#2a2a2a" }}>
+            <p
+              className="text-base sm:text-lg md:text-xl leading-relaxed"
+              style={{ 
+                color: "#2a2a2a",
+                fontFamily: "'Cormorant', Georgia, serif",
+              }}
+            >
               Nel cuore di Roma, la nostra sartoria rappresenta l'eccellenza
               della tradizione artigianale italiana. Ogni capo è un'opera unica,
               creata con passione e dedizione per soddisfare i più elevati
               standard di qualità.
             </p>
 
-            <p className="text-sm sm:text-base md:text-lg leading-relaxed" style={{ color: "#2a2a2a" }}>
+            <p
+              className="text-sm sm:text-base md:text-lg leading-relaxed"
+              style={{ color: "#2a2a2a" }}
+            >
               Con decenni di esperienza, il Maestro Viorel Danalache unisce
               tecniche sartoriali tradizionali a un'attenzione moderna per il
               dettaglio, garantendo vestibilità perfetta ed eleganza senza

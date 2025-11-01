@@ -49,12 +49,14 @@ export const ServicesSection: React.FC = () => {
           className="text-center mb-8 sm:mb-12 md:mb-16"
         >
           <h2
-            className="font-script text-3xl sm:text-4xl md:text-5xl lg:text-6xl mb-3 sm:mb-4"
+            className="font-mono text-3xl sm:text-4xl md:text-5xl lg:text-6xl mb-3 sm:mb-4"
             style={{
               background: "linear-gradient(135deg, #d4af37 0%, #b8935f 100%)",
               WebkitBackgroundClip: "text",
               WebkitTextFillColor: "transparent",
               backgroundClip: "text",
+              fontFamily: "'Xanh Mono', monospace",
+              letterSpacing: "-0.01em",
             }}
           >
             I Nostri Servizi
@@ -114,13 +116,15 @@ export const ServicesSection: React.FC = () => {
                 </div>
 
                 <h3
-                  className="font-elegant text-2xl sm:text-3xl md:text-4xl"
+                  className="font-mono text-2xl sm:text-3xl md:text-4xl"
                   style={{
                     background:
                       "linear-gradient(135deg, #1a2332 0%, #0f1419 100%)",
                     WebkitBackgroundClip: "text",
                     WebkitTextFillColor: "transparent",
                     backgroundClip: "text",
+                    fontFamily: "'Xanh Mono', monospace",
+                    letterSpacing: "-0.01em",
                   }}
                 >
                   {service.title}
@@ -133,8 +137,11 @@ export const ServicesSection: React.FC = () => {
                   }}
                 ></div>
                 <p
-                  className="leading-relaxed text-sm sm:text-base md:text-lg"
-                  style={{ color: "#2a2a2a" }}
+                  className="leading-relaxed text-base sm:text-lg md:text-xl"
+                  style={{ 
+                    color: "#2a2a2a",
+                    fontFamily: "'Cormorant', Georgia, serif",
+                  }}
                 >
                   {service.description}
                 </p>

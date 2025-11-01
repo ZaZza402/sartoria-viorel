@@ -41,36 +41,34 @@ export const Header: React.FC<HeaderProps> = ({ className }) => {
         )}
         style={{
           background: isScrolled
-            ? "linear-gradient(135deg, #0f1419 0%, #1a2332 100%)"
+            ? "linear-gradient(135deg, rgba(15, 20, 25, 0.6) 0%, rgba(26, 35, 50, 0.6) 100%)"
             : "transparent",
           borderBottom: isScrolled
             ? "1px solid rgba(212, 175, 55, 0.2)"
             : "1px solid transparent",
           backdropFilter: isScrolled ? "blur(12px)" : "none",
-          boxShadow: isScrolled
-            ? "0 4px 20px rgba(0, 0, 0, 0.3)"
-            : "none",
-          paddingTop: isScrolled ? "8px" : "0",
-          paddingBottom: isScrolled ? "8px" : "0",
+          boxShadow: isScrolled ? "0 4px 20px rgba(0, 0, 0, 0.3)" : "none",
+          paddingTop: isScrolled ? "4px" : "0",
+          paddingBottom: isScrolled ? "4px" : "0",
         }}
       >
         <nav className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div
             className="flex items-center justify-between transition-all duration-500"
             style={{
-              height: isScrolled ? "72px" : "64px",
+              height: isScrolled ? "64px" : "72px",
             }}
           >
             {/* Logo */}
             <div className="flex items-center">
-              <Logo size="lg" />
+              <Logo size="lg" isScrolled={isScrolled} />
             </div>
 
             {/* Desktop Navigation */}
             <DesktopNav links={navLinks} />
 
             {/* Mobile Navigation Button - Component renders menu outside */}
-            <MobileNav links={navLinks} />
+            <MobileNav links={navLinks} isScrolled={isScrolled} />
           </div>
         </nav>
       </motion.header>
