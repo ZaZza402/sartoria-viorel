@@ -117,7 +117,7 @@
     @apply font-sans antialiased;
     background-color: var(--color-base);
     color: var(--color-text);
-    font-family: 'Cormorant', Georgia, serif;
+    font-family: "Cormorant", Georgia, serif;
   }
 
   /* Typography */
@@ -125,8 +125,8 @@
   h2 {
     color: var(--color-primary);
     font-weight: 700;
-    font-family: 'Xanh Mono', monospace;
-    letter-spacing: -0.02em;
+    font-family: "Libre Baskerville", Georgia, serif;
+    letter-spacing: -0.01em;
   }
 
   h3,
@@ -134,15 +134,17 @@
   h5,
   h6 {
     color: var(--color-text);
-    font-weight: 600;
-    font-family: 'Xanh Mono', monospace;
+    font-weight: 700;
+    font-family: "Libre Baskerville", Georgia, serif;
   }
 
   p,
   li,
   span {
     color: var(--color-text);
-    font-family: 'Cormorant', Georgia, serif;
+    font-family: "Cormorant", Georgia, serif;
+    font-size: 1.125rem;
+    line-height: 1.8;
   }
 
   /* Links */

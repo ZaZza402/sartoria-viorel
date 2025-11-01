@@ -23,14 +23,14 @@ export const WelcomeSection: React.FC = () => {
             className="space-y-4 sm:space-y-6"
           >
             <h2
-              className="font-mono text-3xl sm:text-4xl md:text-5xl lg:text-6xl leading-tight"
+              className="font-serif text-3xl sm:text-4xl md:text-5xl lg:text-6xl leading-tight"
               style={{
                 background: "linear-gradient(135deg, #d4af37 0%, #b8935f 100%)",
                 WebkitBackgroundClip: "text",
                 WebkitTextFillColor: "transparent",
                 backgroundClip: "text",
-                fontFamily: "'Xanh Mono', monospace",
-                letterSpacing: "-0.01em",
+                fontFamily: "'Libre Baskerville', Georgia, serif",
+                letterSpacing: "0",
               }}
             >
               L'Arte della Sartoria
@@ -44,10 +44,11 @@ export const WelcomeSection: React.FC = () => {
             ></div>
 
             <p
-              className="text-base sm:text-lg md:text-xl leading-relaxed"
-              style={{ 
+              className="text-lg sm:text-xl md:text-2xl leading-relaxed"
+              style={{
                 color: "#2a2a2a",
                 fontFamily: "'Cormorant', Georgia, serif",
+                lineHeight: "1.8",
               }}
             >
               Nel cuore di Roma, la nostra sartoria rappresenta l'eccellenza

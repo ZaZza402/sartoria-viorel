@@ -81,21 +81,22 @@ export const HeroSection: React.FC = () => {
             className="space-y-4 sm:space-y-6"
           >
             <h2
-              className="font-mono text-lg sm:text-xl md:text-2xl tracking-wide"
-              style={{ 
+              className="font-serif text-xl sm:text-2xl md:text-3xl tracking-wide"
+              style={{
                 color: "#fdfbf7",
-                fontFamily: "'Xanh Mono', monospace",
-                letterSpacing: "0.02em",
+                fontFamily: "'Libre Baskerville', Georgia, serif",
+                letterSpacing: "0.01em",
               }}
             >
               Maestro Sarto & Alta Moda su Misura
             </h2>
 
             <p
-              className="text-base sm:text-lg md:text-xl leading-relaxed max-w-xl"
-              style={{ 
+              className="text-lg sm:text-xl md:text-2xl leading-relaxed max-w-xl"
+              style={{
                 color: "#f5f1e8",
                 fontFamily: "'Cormorant', Georgia, serif",
+                lineHeight: "1.8",
               }}
             >
               L'arte della sartoria tradizionale incontra l'eleganza moderna.

@@ -45,8 +45,8 @@ export default {
       },
       fontFamily: {
         sans: ["Cormorant", "Georgia", "serif"],
-        serif: ["Cormorant", "Georgia", "serif"],
-        mono: ["Xanh Mono", "monospace"],
+        serif: ["Libre Baskerville", "Georgia", "serif"],
+        display: ["Libre Baskerville", "Georgia", "serif"],
         script: ["Great Vibes", "cursive"],
       },
       backgroundImage: {
