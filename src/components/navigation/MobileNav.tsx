@@ -70,22 +70,59 @@ export const MobileNav: React.FC<MobileNavProps> = ({
               animate={{ x: 0 }}
               exit={{ x: "100%" }}
               transition={{ type: "tween", duration: 0.3 }}
-              className="fixed right-0 top-16 bottom-0 w-64 shadow-2xl z-50 p-6"
-              style={{ backgroundColor: "#014421", borderLeft: "1px solid rgba(255,255,255,0.1)" }}
+              style={{
+                position: "fixed",
+                right: 0,
+                top: "64px",
+                bottom: 0,
+                width: "256px",
+                zIndex: 50,
+                padding: "24px",
+                backgroundColor: "#014421",
+                borderLeft: "1px solid rgba(255,255,255,0.1)",
+                boxShadow: "-4px 0 20px rgba(0,0,0,0.5)",
+              }}
             >
-              <div className="mb-6 pb-4" style={{ borderBottom: "1px solid rgba(255,255,255,0.2)" }}>
-                <h2 className="font-elegant text-xl" style={{ color: "#ffffff", fontWeight: 600 }}>
+              <div
+                style={{
+                  marginBottom: "24px",
+                  paddingBottom: "16px",
+                  borderBottom: "1px solid rgba(255,255,255,0.2)",
+                }}
+              >
+                <h2
+                  className="font-elegant"
+                  style={{
+                    color: "#ffffff",
+                    fontWeight: 600,
+                    fontSize: "1.25rem",
+                  }}
+                >
                   Sartoria Viorel D.
                 </h2>
               </div>
-              <nav className="flex flex-col space-y-4">
+              <nav
+                style={{
+                  display: "flex",
+                  flexDirection: "column",
+                  gap: "16px",
+                }}
+              >
                 {links.map((link) => (
                   <a
                     key={link.href}
                     href={link.href}
                     onClick={toggleMenu}
-                    className="transition-colors duration-200 text-lg font-medium py-2"
-                    style={{ color: "#ffffff", borderBottom: "1px solid rgba(255,255,255,0.2)" }}
+                    style={{
+                      color: "#ffffff",
+                      fontSize: "1.125rem",
+                      fontWeight: 500,
+                      paddingTop: "8px",
+                      paddingBottom: "8px",
+                      borderBottom: "1px solid rgba(255,255,255,0.2)",
+                      textDecoration: "none",
+                      transition: "color 0.2s",
+                    }}
                   >
                     {link.label}
                   </a>
