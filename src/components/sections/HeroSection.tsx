@@ -73,13 +73,13 @@ export const HeroSection: React.FC = () => {
           >
             <span
               className="block"
-              style={{ fontSize: "clamp(2.5rem, 7vw, 5rem)" }}
+              style={{ fontSize: "clamp(2.5rem, 7vw, 4rem)" }}
             >
               Sartoria
             </span>
             <span
               className="block"
-              style={{ fontSize: "clamp(3rem, 9vw, 7rem)" }}
+              style={{ fontSize: "clamp(3rem, 9vw, 5rem)" }}
             >
               Viorel Danalache
             </span>
@@ -92,13 +92,12 @@ export const HeroSection: React.FC = () => {
             className="space-y-4 sm:space-y-6"
           >
             <h2
-              className="font-serif tracking-wide italic"
+              className="font-serif tracking-wide"
               style={{
                 color: "#fdfbf7",
                 fontFamily: "'Cormorant', Georgia, serif",
                 letterSpacing: "0.01em",
-                fontSize: "clamp(1.5rem, 4vw, 2.5rem)",
-                fontStyle: "italic",
+                fontSize: "clamp(1.5rem, 4vw, 2rem)",
               }}
             >
               Maestro Sarto & Alta Moda su Misura
@@ -110,7 +109,7 @@ export const HeroSection: React.FC = () => {
                 color: "#f5f1e8",
                 fontFamily: "'Libre Baskerville', Georgia, serif",
                 lineHeight: "1.8",
-                fontSize: "clamp(1.125rem, 2.5vw, 1.75rem)",
+                fontSize: "clamp(1.125rem, 2.5vw, 1.5rem)",
                 fontStyle: "italic",
                 opacity: 0.95,
               }}
