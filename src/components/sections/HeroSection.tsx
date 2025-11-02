@@ -48,14 +48,14 @@ export const HeroSection: React.FC = () => {
 
       {/* Content with Parallax Fade */}
       <motion.div
-        className="relative z-10 w-full px-4 sm:px-6 md:px-12 lg:px-24"
+        className="relative z-10 w-full px-4 sm:px-6 md:px-12"
         style={{ opacity: contentOpacity }}
       >
         <motion.div
-          initial={{ opacity: 0, x: -50 }}
-          animate={{ opacity: 1, x: 0 }}
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, ease: "easeOut" }}
-          className="max-w-2xl"
+          className="max-w-4xl mx-auto text-center md:text-left md:ml-0"
         >
           <motion.h1
             initial={{ opacity: 0, y: 20 }}
@@ -69,10 +69,20 @@ export const HeroSection: React.FC = () => {
               WebkitTextFillColor: "transparent",
               backgroundClip: "text",
               filter: "drop-shadow(2px 2px 8px rgba(0,0,0,0.8))",
-              fontSize: "clamp(2.5rem, 8vw, 6rem)",
             }}
           >
-            Sartoria Viorel Danalache
+            <span
+              className="block"
+              style={{ fontSize: "clamp(2.5rem, 7vw, 5rem)" }}
+            >
+              Sartoria
+            </span>
+            <span
+              className="block"
+              style={{ fontSize: "clamp(3rem, 9vw, 7rem)" }}
+            >
+              Viorel Danalache
+            </span>
           </motion.h1>
 
           <motion.div
@@ -82,24 +92,27 @@ export const HeroSection: React.FC = () => {
             className="space-y-4 sm:space-y-6"
           >
             <h2
-              className="font-serif tracking-wide"
+              className="font-serif tracking-wide italic"
               style={{
                 color: "#fdfbf7",
                 fontFamily: "'Cormorant', Georgia, serif",
                 letterSpacing: "0.01em",
                 fontSize: "clamp(1.5rem, 4vw, 2.5rem)",
+                fontStyle: "italic",
               }}
             >
               Maestro Sarto & Alta Moda su Misura
             </h2>
 
             <p
-              className="leading-relaxed max-w-xl"
+              className="leading-relaxed max-w-2xl mx-auto md:mx-0"
               style={{
                 color: "#f5f1e8",
                 fontFamily: "'Libre Baskerville', Georgia, serif",
                 lineHeight: "1.8",
                 fontSize: "clamp(1.125rem, 2.5vw, 1.75rem)",
+                fontStyle: "italic",
+                opacity: 0.95,
               }}
             >
               L'arte della sartoria tradizionale incontra l'eleganza moderna.
@@ -107,7 +120,7 @@ export const HeroSection: React.FC = () => {
               artigianale.
             </p>
 
-            <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 pt-2 sm:pt-4">
+            <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 pt-2 sm:pt-4 justify-center md:justify-start">
               <Button
                 variant="primary"
                 size="lg"

@@ -61,7 +61,7 @@ export const WelcomeSection: React.FC = () => {
 
             <p
               className="leading-relaxed"
-              style={{ 
+              style={{
                 color: "#2a2a2a",
                 fontSize: "clamp(1rem, 2vw, 1.5rem)",
               }}

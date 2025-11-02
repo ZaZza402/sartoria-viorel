@@ -246,4 +246,19 @@
   .border-accent {
     border-color: var(--color-accent);
   }
+
+  /* Footer text size override - keep footer text smaller */
+  footer p,
+  footer li,
+  footer span {
+    font-size: 0.9375rem !important; /* 15px */
+  }
+
+  footer h3 {
+    font-size: 1.5rem !important; /* 24px */
+  }
+
+  footer h4 {
+    font-size: 1.125rem !important; /* 18px */
+  }
 }
