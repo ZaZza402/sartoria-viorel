@@ -116,7 +116,9 @@ export const Footer: React.FC = () => {
               Indirizzo
             </h4>
             <div className="space-y-2" style={{ color: "#d1d5db" }}>
-              <p style={{ fontSize: "16px", fontWeight: 500, color: "#d1d5db" }}>
+              <p
+                style={{ fontSize: "16px", fontWeight: 500, color: "#d1d5db" }}
+              >
                 Via Simone Mosca, 16
               </p>
               <p style={{ fontSize: "15px", color: "#9ca3af" }}>
@@ -181,7 +183,9 @@ export const Footer: React.FC = () => {
               className="space-y-2"
               style={{ color: "#d1d5db", fontSize: "15px" }}
             >
-              <p style={{ fontWeight: 500, color: "#d1d5db" }}>Lunedì - Venerdì</p>
+              <p style={{ fontWeight: 500, color: "#d1d5db" }}>
+                Lunedì - Venerdì
+              </p>
               <p style={{ color: "#9ca3af", marginBottom: "8px" }}>
                 08:30 - 13:00 / 16:00 - 20:00
               </p>
@@ -227,7 +231,9 @@ export const Footer: React.FC = () => {
                 >
                   <Phone size={18} style={{ color: "#d4af37" }} />
                 </div>
-                <span style={{ fontWeight: 500, color: "#d1d5db" }}>+39 327 798 5312</span>
+                <span style={{ fontWeight: 500, color: "#d1d5db" }}>
+                  +39 327 798 5312
+                </span>
               </a>
               <a
                 href="https://wa.me/393277985312"
@@ -249,7 +255,9 @@ export const Footer: React.FC = () => {
                 >
                   <MessageCircle size={18} style={{ color: "#25D366" }} />
                 </div>
-                <span style={{ fontWeight: 500, color: "#d1d5db" }}>WhatsApp</span>
+                <span style={{ fontWeight: 500, color: "#d1d5db" }}>
+                  WhatsApp
+                </span>
               </a>
               <a
                 href="mailto:info@viorelsartoria.com"
@@ -269,7 +277,9 @@ export const Footer: React.FC = () => {
                 >
                   <Mail size={18} style={{ color: "#d4af37" }} />
                 </div>
-                <span style={{ fontWeight: 500, color: "#d1d5db" }}>info@viorelsartoria.com</span>
+                <span style={{ fontWeight: 500, color: "#d1d5db" }}>
+                  info@viorelsartoria.com
+                </span>
               </a>
             </div>
           </div>
@@ -373,9 +383,12 @@ export const Footer: React.FC = () => {
                 </a>
               </li>
             </ul>
-            
+
             {/* Designer Signature */}
-            <div className="mt-6 pt-4" style={{ borderTop: "1px solid rgba(212, 175, 55, 0.15)" }}>
+            <div
+              className="mt-6 pt-4"
+              style={{ borderTop: "1px solid rgba(212, 175, 55, 0.15)" }}
+            >
               <p style={{ color: "#9ca3af", fontSize: "14px" }}>
                 Designed By{" "}
                 <a

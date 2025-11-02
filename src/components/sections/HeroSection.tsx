@@ -61,7 +61,7 @@ export const HeroSection: React.FC = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, delay: 0.3 }}
-            className="font-script text-4xl sm:text-5xl md:text-7xl lg:text-8xl mb-3 sm:mb-4 leading-tight"
+            className="font-script mb-3 sm:mb-4 leading-tight"
             style={{
               background:
                 "linear-gradient(135deg, #fdfbf7 0%, #d4af37 50%, #b8935f 100%)",
@@ -69,6 +69,7 @@ export const HeroSection: React.FC = () => {
               WebkitTextFillColor: "transparent",
               backgroundClip: "text",
               filter: "drop-shadow(2px 2px 8px rgba(0,0,0,0.8))",
+              fontSize: "clamp(2.5rem, 8vw, 6rem)",
             }}
           >
             Sartoria Viorel Danalache
@@ -81,22 +82,24 @@ export const HeroSection: React.FC = () => {
             className="space-y-4 sm:space-y-6"
           >
             <h2
-              className="font-serif text-xl sm:text-2xl md:text-3xl tracking-wide"
+              className="font-serif tracking-wide"
               style={{
                 color: "#fdfbf7",
-                fontFamily: "'Libre Baskerville', Georgia, serif",
+                fontFamily: "'Cormorant', Georgia, serif",
                 letterSpacing: "0.01em",
+                fontSize: "clamp(1.5rem, 4vw, 2.5rem)",
               }}
             >
               Maestro Sarto & Alta Moda su Misura
             </h2>
 
             <p
-              className="text-lg sm:text-xl md:text-2xl leading-relaxed max-w-xl"
+              className="leading-relaxed max-w-xl"
               style={{
                 color: "#f5f1e8",
-                fontFamily: "'Cormorant', Georgia, serif",
+                fontFamily: "'Libre Baskerville', Georgia, serif",
                 lineHeight: "1.8",
+                fontSize: "clamp(1.125rem, 2.5vw, 1.75rem)",
               }}
             >
               L'arte della sartoria tradizionale incontra l'eleganza moderna.

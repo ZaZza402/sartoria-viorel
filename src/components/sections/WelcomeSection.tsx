@@ -23,14 +23,15 @@ export const WelcomeSection: React.FC = () => {
             className="space-y-4 sm:space-y-6"
           >
             <h2
-              className="font-serif text-3xl sm:text-4xl md:text-5xl lg:text-6xl leading-tight"
+              className="font-serif leading-tight"
               style={{
                 background: "linear-gradient(135deg, #d4af37 0%, #b8935f 100%)",
                 WebkitBackgroundClip: "text",
                 WebkitTextFillColor: "transparent",
                 backgroundClip: "text",
-                fontFamily: "'Libre Baskerville', Georgia, serif",
+                fontFamily: "'Cormorant', Georgia, serif",
                 letterSpacing: "0",
+                fontSize: "clamp(2rem, 5vw, 4.5rem)",
               }}
             >
               L'Arte della Sartoria
@@ -44,11 +45,12 @@ export const WelcomeSection: React.FC = () => {
             ></div>
 
             <p
-              className="text-lg sm:text-xl md:text-2xl leading-relaxed"
+              className="leading-relaxed"
               style={{
                 color: "#2a2a2a",
-                fontFamily: "'Cormorant', Georgia, serif",
+                fontFamily: "'Libre Baskerville', Georgia, serif",
                 lineHeight: "1.8",
+                fontSize: "clamp(1.25rem, 2.5vw, 1.875rem)",
               }}
             >
               Nel cuore di Roma, la nostra sartoria rappresenta l'eccellenza
@@ -58,8 +60,11 @@ export const WelcomeSection: React.FC = () => {
             </p>
 
             <p
-              className="text-sm sm:text-base md:text-lg leading-relaxed"
-              style={{ color: "#2a2a2a" }}
+              className="leading-relaxed"
+              style={{ 
+                color: "#2a2a2a",
+                fontSize: "clamp(1rem, 2vw, 1.5rem)",
+              }}
             >
               Con decenni di esperienza, il Maestro Viorel Danalache unisce
               tecniche sartoriali tradizionali a un'attenzione moderna per il

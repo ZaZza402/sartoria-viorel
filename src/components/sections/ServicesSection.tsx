@@ -49,14 +49,15 @@ export const ServicesSection: React.FC = () => {
           className="text-center mb-8 sm:mb-12 md:mb-16"
         >
           <h2
-            className="font-serif text-3xl sm:text-4xl md:text-5xl lg:text-6xl mb-3 sm:mb-4"
+            className="font-serif mb-3 sm:mb-4"
             style={{
               background: "linear-gradient(135deg, #d4af37 0%, #b8935f 100%)",
               WebkitBackgroundClip: "text",
               WebkitTextFillColor: "transparent",
               backgroundClip: "text",
-              fontFamily: "'Libre Baskerville', Georgia, serif",
+              fontFamily: "'Cormorant', Georgia, serif",
               letterSpacing: "0",
+              fontSize: "clamp(2rem, 5vw, 4.5rem)",
             }}
           >
             I Nostri Servizi
@@ -110,15 +111,16 @@ export const ServicesSection: React.FC = () => {
                 </div>
 
                 <h3
-                  className="font-serif text-2xl sm:text-3xl md:text-4xl"
+                  className="font-serif"
                   style={{
                     background:
                       "linear-gradient(135deg, #1a2332 0%, #0f1419 100%)",
                     WebkitBackgroundClip: "text",
                     WebkitTextFillColor: "transparent",
                     backgroundClip: "text",
-                    fontFamily: "'Libre Baskerville', Georgia, serif",
+                    fontFamily: "'Cormorant', Georgia, serif",
                     letterSpacing: "0",
+                    fontSize: "clamp(1.75rem, 3.5vw, 2.5rem)",
                   }}
                 >
                   {service.title}
@@ -131,11 +133,12 @@ export const ServicesSection: React.FC = () => {
                   }}
                 ></div>
                 <p
-                  className="leading-relaxed text-lg sm:text-xl md:text-2xl"
+                  className="leading-relaxed"
                   style={{
                     color: "#2a2a2a",
-                    fontFamily: "'Cormorant', Georgia, serif",
+                    fontFamily: "'Libre Baskerville', Georgia, serif",
                     lineHeight: "1.8",
+                    fontSize: "clamp(1.25rem, 2.5vw, 1.875rem)",
                   }}
                 >
                   {service.description}

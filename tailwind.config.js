@@ -44,9 +44,9 @@ export default {
         },
       },
       fontFamily: {
-        sans: ["Cormorant", "Georgia", "serif"],
-        serif: ["Libre Baskerville", "Georgia", "serif"],
-        display: ["Libre Baskerville", "Georgia", "serif"],
+        sans: ["Libre Baskerville", "Georgia", "serif"],
+        serif: ["Cormorant", "Georgia", "serif"],
+        display: ["Cormorant", "Georgia", "serif"],
         script: ["Great Vibes", "cursive"],
       },
       backgroundImage: {

@@ -117,7 +117,7 @@
     @apply font-sans antialiased;
     background-color: var(--color-base);
     color: var(--color-text);
-    font-family: "Cormorant", Georgia, serif;
+    font-family: "Libre Baskerville", Georgia, serif;
   }
 
   /* Typography */
@@ -125,7 +125,7 @@
   h2 {
     color: var(--color-primary);
     font-weight: 700;
-    font-family: "Libre Baskerville", Georgia, serif;
+    font-family: "Cormorant", Georgia, serif;
     letter-spacing: -0.01em;
   }
 
@@ -135,15 +135,15 @@
   h6 {
     color: var(--color-text);
     font-weight: 700;
-    font-family: "Libre Baskerville", Georgia, serif;
+    font-family: "Cormorant", Georgia, serif;
   }
 
   p,
   li,
   span {
     color: var(--color-text);
-    font-family: "Cormorant", Georgia, serif;
-    font-size: 1.125rem;
+    font-family: "Libre Baskerville", Georgia, serif;
+    font-size: 1.5rem;
     line-height: 1.8;
   }
 
