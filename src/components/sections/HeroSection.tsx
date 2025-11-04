@@ -81,7 +81,7 @@ export const HeroSection: React.FC = () => {
               className="block"
               style={{ fontSize: "clamp(3rem, 9vw, 5rem)" }}
             >
-              Viorel Danalache
+              Viorel D.
             </span>
           </motion.h1>
 
@@ -100,7 +100,7 @@ export const HeroSection: React.FC = () => {
                 fontSize: "clamp(1.5rem, 4vw, 2rem)",
               }}
             >
-              Maestro Sarto & Alta Moda su Misura
+              Elegance & Style su Misura
             </h2>
 
             <p

@@ -96,7 +96,7 @@ export const WelcomeSection: React.FC = () => {
                   }}
                   className="sm:text-xs md:text-sm"
                 >
-                  Dal 1995
+                  Dal 1974
                 </p>
               </div>
               <div className="text-center space-y-1 sm:space-y-2">

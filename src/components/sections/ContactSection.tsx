@@ -8,8 +8,9 @@ export const ContactSection: React.FC = () => {
     <section
       className="py-16 sm:py-24 md:py-32 relative overflow-hidden"
       style={{
-        background: "linear-gradient(135deg, #1a2332 0%, #0f1419 100%)",
-        color: "#fdfbf7",
+        background:
+          "linear-gradient(180deg, #ebe3d0 0%, #e8dcc8 50%, #e0cdb0 100%)",
+        color: "#0f1419",
       }}
     >
       <div className="max-w-4xl mx-auto px-4 sm:px-6 md:px-12 relative z-10">
@@ -25,7 +26,6 @@ export const ContactSection: React.FC = () => {
           <div
             style={{
               display: "inline-flex",
-              animation: "float 4s ease-in-out infinite",
             }}
           >
             <Calendar
@@ -61,7 +61,7 @@ export const ContactSection: React.FC = () => {
           <p
             className="leading-relaxed max-w-2xl mx-auto"
             style={{
-              color: "#fdfbf7",
+              color: "#1a2332",
               fontFamily: "'Libre Baskerville', Georgia, serif",
               lineHeight: "1.8",
               fontSize: "clamp(1.25rem, 2.5vw, 2rem)",
@@ -74,16 +74,15 @@ export const ContactSection: React.FC = () => {
 
           <div className="pt-4 sm:pt-6">
             <Button
-              variant="outline"
+              variant="primary"
               size="lg"
-              className="hover:bg-white"
               style={{
-                borderColor: "#d4af37",
-                color: "#d4af37",
-                borderWidth: "2px",
-                background: "transparent",
+                background: "linear-gradient(135deg, #d4af37 0%, #b8935f 100%)",
+                color: "#0f1419",
+                borderWidth: "0",
                 padding: "12px 32px",
                 fontSize: "16px",
+                fontWeight: 600,
               }}
               data-mobile-responsive="true"
             >
@@ -92,20 +91,6 @@ export const ContactSection: React.FC = () => {
           </div>
         </motion.div>
       </div>
-
-      {/* Decorative Elements */}
-      <div
-        className="absolute bottom-0 right-0 w-1/3 h-full opacity-10 transform skew-x-12"
-        style={{
-          background: "linear-gradient(135deg, #d4af37 0%, #b8935f 100%)",
-        }}
-      ></div>
-      <div
-        className="absolute top-0 left-0 w-1/4 h-full opacity-5 transform -skew-x-12"
-        style={{
-          background: "linear-gradient(135deg, #d4af37 0%, #b8935f 100%)",
-        }}
-      ></div>
     </section>
   );
 };

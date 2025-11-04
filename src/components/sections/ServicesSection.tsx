@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { Scissors, Ruler, Sparkles } from "lucide-react";
+import { Scissors, RulerDimensionLine, Sparkles } from "lucide-react";
 import suit1Img from "../../assets/images/suit-1.jpg";
 import suit3Img from "../../assets/images/suit-3.jpg";
 import suit4Img from "../../assets/images/suit-4.jpg";
@@ -12,16 +12,14 @@ export const ServicesSection: React.FC = () => {
       description:
         "Creazione completa di abiti su misura per ogni occasione. Dalla selezione dei tessuti pregiati alla vestibilità perfetta, ogni dettaglio è curato con maestria artigianale.",
       image: suit1Img,
-      icon: Scissors,
-      animation: "float",
+      icon: RulerDimensionLine,
     },
     {
       title: "Modifiche Sartoriali",
       description:
         "Servizio professionale di modifiche e aggiustamenti per garantire la perfetta vestibilità dei vostri capi. Precisione e attenzione ai dettagli per risultati impeccabili.",
       image: suit3Img,
-      icon: Ruler,
-      animation: "shimmer",
+      icon: Scissors,
     },
     {
       title: "Consulenza & Stile",
@@ -29,7 +27,6 @@ export const ServicesSection: React.FC = () => {
         "Consulenza personalizzata per la scelta di tessuti, colori e stili. Vi guidiamo nella creazione del guardaroba perfetto per ogni evento importante.",
       image: suit4Img,
       icon: Sparkles,
-      animation: "shimmer",
     },
   ];
 
@@ -37,7 +34,8 @@ export const ServicesSection: React.FC = () => {
     <section
       className="py-12 sm:py-16 md:py-24"
       style={{
-        background: "linear-gradient(180deg, #fdfbf7 0%, #f5f1e8 100%)",
+        background:
+          "linear-gradient(180deg, #fdfbf7 0%, #f5f1e8 70%, #ebe3d0 100%)",
       }}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-12">
@@ -95,11 +93,10 @@ export const ServicesSection: React.FC = () => {
 
               {/* Content */}
               <div className="w-full md:w-1/2 space-y-3 sm:space-y-4 md:space-y-6">
-                {/* Icon with animation */}
+                {/* Icon */}
                 <div
                   style={{
                     display: "inline-flex",
-                    animation: `${service.animation} 3s ease-in-out infinite`,
                   }}
                 >
                   <service.icon
