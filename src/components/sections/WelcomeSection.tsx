@@ -1,8 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { Award, TrendingUp, Users } from "lucide-react";
-import rawSuitImg from "../../assets/images/raw-suit-1.jpg";
-import sleeveButtonImg from "../../assets/images/sleeve-button-suit.jpg";
 
 export const WelcomeSection: React.FC = () => {
   return (
@@ -162,16 +160,26 @@ export const WelcomeSection: React.FC = () => {
           >
             <div className="space-y-2 sm:space-y-4">
               <img
-                src={rawSuitImg}
+                src="/gallery-images/red-coat-suit-closeup-collar.webp"
                 alt="Tailoring detail"
-                className="w-full h-48 sm:h-56 md:h-64 object-cover rounded-lg"
+                className="w-full object-cover rounded-lg"
+                style={{
+                  height: "auto",
+                  minHeight: "200px",
+                  maxHeight: "400px",
+                }}
               />
             </div>
             <div className="space-y-2 sm:space-y-4 pt-8 sm:pt-12">
               <img
-                src={sleeveButtonImg}
+                src="/gallery-images/front-store-display-shirt-coat-suit.webp"
                 alt="Suit sleeve detail"
-                className="w-full h-48 sm:h-56 md:h-64 object-cover rounded-lg"
+                className="w-full object-cover rounded-lg"
+                style={{
+                  height: "auto",
+                  minHeight: "200px",
+                  maxHeight: "400px",
+                }}
               />
             </div>
           </motion.div>

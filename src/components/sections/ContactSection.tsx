@@ -9,7 +9,7 @@ export const ContactSection: React.FC = () => {
       className="py-16 sm:py-24 md:py-32 relative overflow-hidden"
       style={{
         background:
-          "linear-gradient(180deg, #ebe3d0 0%, #e8dcc8 50%, #e0cdb0 100%)",
+          "linear-gradient(180deg, #ede8db 0%, #e9e3d6 25%, #e5ddd1 50%, #e0d7cb 75%, #dcd1c6 100%)",
         color: "#0f1419",
       }}
     >

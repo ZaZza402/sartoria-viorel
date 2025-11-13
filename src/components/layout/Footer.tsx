@@ -304,7 +304,7 @@ export const Footer: React.FC = () => {
               style={{ color: "#f5f1e8", lineHeight: "1.6" }}
             >
               Maestro sarto che realizza capi su misura con precisione e
-              passione artigianale. Dal 1995 nel cuore di Roma, portiamo avanti
+              passione artigianale. Dal 1974 nel cuore di Roma, portiamo avanti
               la tradizione dell'alta sartoria italiana.
             </p>
           </div>
@@ -390,7 +390,7 @@ export const Footer: React.FC = () => {
               style={{ borderTop: "1px solid rgba(212, 175, 55, 0.15)" }}
             >
               <p style={{ color: "#9ca3af", fontSize: "14px" }}>
-                Designed By{" "}
+                Sito da{" "}
                 <a
                   href="https://www.alecsdesign.xyz"
                   target="_blank"
@@ -410,7 +410,7 @@ export const Footer: React.FC = () => {
                     e.currentTarget.style.textDecoration = "none";
                   }}
                 >
-                  Alex
+                  alecsdesign.xyz
                 </a>
               </p>
             </div>

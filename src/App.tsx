@@ -3,7 +3,9 @@ import {
   HeroSection,
   WelcomeSection,
   ServicesSection,
+  GallerySection,
   ContactSection,
+  ContactOptionsSection,
 } from "./components/sections";
 
 function App() {
@@ -13,7 +15,9 @@ function App() {
       <HeroSection />
       <WelcomeSection />
       <ServicesSection />
+      <GallerySection />
       <ContactSection />
+      <ContactOptionsSection />
       <Footer />
     </div>
   );

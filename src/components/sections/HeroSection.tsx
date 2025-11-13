@@ -1,7 +1,6 @@
 import React, { useRef } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { Button } from "../ui/Button";
-import suitWideImg from "../../assets/images/suit-2.jpg";
 import tailorHandsImg from "../../assets/images/tailor-hands.jpg";
 
 export const HeroSection: React.FC = () => {
@@ -32,17 +31,17 @@ export const HeroSection: React.FC = () => {
             alt="Master tailor at work"
             className="w-full h-full object-cover"
           />
-          <div className="absolute inset-0 bg-linear-to-r from-black/70 via-black/50 to-transparent" />
+          <div className="absolute inset-0 bg-linear-to-r from-black/80 via-black/65 to-black/20" />
         </div>
 
         {/* Vertical Image for Mobile with Parallax */}
         <div className="md:hidden absolute inset-0 h-[120vh]">
           <img
-            src={suitWideImg}
+            src="/gallery-images/grey-coat-collar.webp"
             alt="Elegant tailored suit"
-            className="w-full h-full object-cover object-top"
+            className="w-full h-full object-cover object-center"
           />
-          <div className="absolute inset-0 bg-black/60" />
+          <div className="absolute inset-0 bg-black/70" />
         </div>
       </motion.div>
 
@@ -61,7 +60,7 @@ export const HeroSection: React.FC = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, delay: 0.3 }}
-            className="font-script mb-3 sm:mb-4 leading-tight"
+            className="font-serif mb-3 sm:mb-4 leading-tight text-center md:text-left"
             style={{
               background:
                 "linear-gradient(135deg, #fdfbf7 0%, #d4af37 50%, #b8935f 100%)",
@@ -69,40 +68,21 @@ export const HeroSection: React.FC = () => {
               WebkitTextFillColor: "transparent",
               backgroundClip: "text",
               filter: "drop-shadow(2px 2px 8px rgba(0,0,0,0.8))",
+              fontFamily: "'Cormorant', Georgia, serif",
+              fontSize: "clamp(2.5rem, 8vw, 5.5rem)",
+              fontWeight: 600,
+              letterSpacing: "0.02em",
             }}
           >
-            <span
-              className="block"
-              style={{ fontSize: "clamp(2.5rem, 7vw, 4rem)" }}
-            >
-              Sartoria
-            </span>
-            <span
-              className="block"
-              style={{ fontSize: "clamp(3rem, 9vw, 5rem)" }}
-            >
-              Viorel D.
-            </span>
+            Eleganza & Stile su Misura
           </motion.h1>
 
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 1, delay: 0.6 }}
-            className="space-y-4 sm:space-y-6"
+            className="space-y-4 sm:space-y-6 mt-6"
           >
-            <h2
-              className="font-serif tracking-wide"
-              style={{
-                color: "#fdfbf7",
-                fontFamily: "'Cormorant', Georgia, serif",
-                letterSpacing: "0.01em",
-                fontSize: "clamp(1.5rem, 4vw, 2rem)",
-              }}
-            >
-              Elegance & Style su Misura
-            </h2>
-
             <p
               className="leading-relaxed max-w-2xl mx-auto md:mx-0"
               style={{
@@ -147,6 +127,49 @@ export const HeroSection: React.FC = () => {
               </Button>
             </div>
           </motion.div>
+        </motion.div>
+      </motion.div>
+
+      {/* Animated Scroll Down Indicator */}
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 1, delay: 1.2 }}
+        className="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-20"
+      >
+        <motion.div
+          animate={{
+            y: [0, 12, 0],
+          }}
+          transition={{
+            duration: 2,
+            repeat: Infinity,
+            ease: "easeInOut",
+          }}
+          className="flex flex-col items-center gap-2"
+        >
+          <span
+            className="text-sm font-serif tracking-wider"
+            style={{
+              color: "#d4af37",
+              fontFamily: "'Cormorant', Georgia, serif",
+              letterSpacing: "0.1em",
+            }}
+          >
+            SCORRI
+          </span>
+          <svg
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="#d4af37"
+            strokeWidth="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          >
+            <path d="M12 5v14M19 12l-7 7-7-7" />
+          </svg>
         </motion.div>
       </motion.div>
     </section>

@@ -1,9 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { Scissors, RulerDimensionLine, Sparkles } from "lucide-react";
-import suit1Img from "../../assets/images/suit-1.jpg";
-import suit3Img from "../../assets/images/suit-3.jpg";
-import suit4Img from "../../assets/images/suit-4.jpg";
 
 export const ServicesSection: React.FC = () => {
   const services = [
@@ -11,21 +8,22 @@ export const ServicesSection: React.FC = () => {
       title: "Abiti su Misura",
       description:
         "Creazione completa di abiti su misura per ogni occasione. Dalla selezione dei tessuti pregiati alla vestibilità perfetta, ogni dettaglio è curato con maestria artigianale.",
-      image: suit1Img,
+      image: "/gallery-images/red-suit-piece-underneath.webp",
       icon: RulerDimensionLine,
     },
     {
       title: "Modifiche Sartoriali",
       description:
         "Servizio professionale di modifiche e aggiustamenti per garantire la perfetta vestibilità dei vostri capi. Precisione e attenzione ai dettagli per risultati impeccabili.",
-      image: suit3Img,
+      image: "/gallery-images/antique-sawing-machine.webp",
       icon: Scissors,
     },
     {
       title: "Consulenza & Stile",
       description:
         "Consulenza personalizzata per la scelta di tessuti, colori e stili. Vi guidiamo nella creazione del guardaroba perfetto per ogni evento importante.",
-      image: suit4Img,
+      image:
+        "/gallery-images/white-coat-red-pants-on-people-couple-showcase.webp",
       icon: Sparkles,
     },
   ];
@@ -35,7 +33,7 @@ export const ServicesSection: React.FC = () => {
       className="py-12 sm:py-16 md:py-24"
       style={{
         background:
-          "linear-gradient(180deg, #fdfbf7 0%, #f5f1e8 70%, #ebe3d0 100%)",
+          "linear-gradient(180deg, #fdfbf7 0%, #faf7f0 25%, #f6f2e9 50%, #f2ede2 75%, #ede8db 100%)",
       }}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-12">
@@ -68,7 +66,7 @@ export const ServicesSection: React.FC = () => {
           ></div>
         </motion.div>
 
-        <div className="space-y-12 sm:space-y-16 md:space-y-24">
+        <div className="space-y-16 sm:space-y-20 md:space-y-28">
           {services.map((service, index) => (
             <motion.div
               key={index}
@@ -82,11 +80,21 @@ export const ServicesSection: React.FC = () => {
             >
               {/* Image */}
               <div className="w-full md:w-1/2">
-                <div className="relative overflow-hidden">
+                <div
+                  className={`relative overflow-hidden rounded-lg ${
+                    service.image.includes("antique-sawing-machine")
+                      ? ""
+                      : "bg-linear-to-br from-gray-50 to-gray-100"
+                  }`}
+                >
                   <img
                     src={service.image}
                     alt={service.title}
-                    className="w-full h-[400px] object-cover"
+                    className={`w-full ${
+                      service.image.includes("antique-sawing-machine")
+                        ? "h-auto object-cover"
+                        : "h-[400px] object-cover"
+                    }`}
                   />
                 </div>
               </div>
