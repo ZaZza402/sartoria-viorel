@@ -24,28 +24,9 @@ export const Logo: React.FC<LogoProps> = ({ className = "", size = "md" }) => {
 
   return (
     <div
-      className="flex items-end gap-3"
+      className="flex items-center gap-3"
       style={{ paddingBottom: "2px", paddingTop: "8px" }}
     >
-      <h1
-        className={`${sizes[size]} ${className} transition-all duration-500`}
-        style={{
-          fontFamily: "'Great Vibes', cursive",
-          background:
-            "linear-gradient(135deg, #fdfbf7 0%, #d4af37 50%, #b8935f 100%)",
-          WebkitBackgroundClip: "text",
-          WebkitTextFillColor: "transparent",
-          backgroundClip: "text",
-          filter: "drop-shadow(2px 2px 4px rgba(0,0,0,0.8))",
-          fontWeight: 400,
-          paddingTop: "4px",
-          paddingBottom: "0px",
-          lineHeight: 1.1,
-        }}
-      >
-        Sartoria
-      </h1>
-
       <div
         style={{
           width: logoSizes[size],
@@ -85,7 +66,7 @@ export const Logo: React.FC<LogoProps> = ({ className = "", size = "md" }) => {
           lineHeight: 1.1,
         }}
       >
-        Viorel D.
+        Sartoria Vio
       </h1>
     </div>
   );
