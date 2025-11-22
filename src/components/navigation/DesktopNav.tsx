@@ -15,7 +15,7 @@ export const DesktopNav: React.FC<DesktopNavProps> = ({
   className = "",
 }) => {
   return (
-    <div className={`hidden md:flex items-center space-x-8 ${className}`}>
+    <div className={`flex items-center space-x-8 ${className}`}>
       {links.map((link) => (
         <a
           key={link.href}

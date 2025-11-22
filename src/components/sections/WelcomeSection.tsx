@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { Award, TrendingUp, Users } from "lucide-react";
+import { Award, Scissors, Ruler } from "lucide-react";
 
 export const WelcomeSection: React.FC = () => {
   return (
@@ -48,27 +48,33 @@ export const WelcomeSection: React.FC = () => {
                 color: "#2a2a2a",
                 fontFamily: "'Libre Baskerville', Georgia, serif",
                 lineHeight: "1.8",
-                fontSize: "clamp(1.25rem, 2.5vw, 1.875rem)",
+                fontSize: "clamp(1rem, 2.5vw, 1.25rem)",
+                textAlign: "left",
               }}
             >
-              Nel cuore di Roma, la nostra sartoria rappresenta l'eccellenza
-              della tradizione artigianale italiana. Ogni capo è un'opera unica,
-              creata con passione e dedizione per soddisfare i più elevati
-              standard di qualità.
+              Nel cuore di Roma, il <strong>Maestro Viorel Danalache</strong>{" "}
+              porta avanti una tradizione di eccellenza. Con oltre 50 anni di
+              esperienza, ogni abito è un pezzo unico: tagliato e cucito a mano
+              con tecniche antiche, ma con un occhio attento allo stile moderno.
             </p>
 
-            <p
-              className="leading-relaxed"
+            <a
+              href="#bio"
               style={{
-                color: "#2a2a2a",
-                fontSize: "clamp(1rem, 2vw, 1.5rem)",
+                display: "inline-block",
+                color: "#d4af37",
+                fontFamily: "'Libre Baskerville', Georgia, serif",
+                fontSize: "clamp(0.875rem, 2vw, 1rem)",
+                fontWeight: 600,
+                textDecoration: "none",
+                marginTop: "12px",
+                transition: "opacity 0.3s ease",
               }}
+              onMouseEnter={(e) => (e.currentTarget.style.opacity = "0.7")}
+              onMouseLeave={(e) => (e.currentTarget.style.opacity = "1")}
             >
-              Con decenni di esperienza, il Maestro Viorel Danalache unisce
-              tecniche sartoriali tradizionali a un'attenzione moderna per il
-              dettaglio, garantendo vestibilità perfetta ed eleganza senza
-              tempo.
-            </p>
+              Scopri la storia →
+            </a>
 
             {/* Feature Icons */}
             <div className="grid grid-cols-3 gap-2 sm:gap-4 pt-4 sm:pt-6">
@@ -104,7 +110,7 @@ export const WelcomeSection: React.FC = () => {
                     animation: "shimmer 3s ease-in-out infinite 0.5s",
                   }}
                 >
-                  <Users
+                  <Ruler
                     size={20}
                     style={{ color: "#d4af37" }}
                     strokeWidth={2}
@@ -119,7 +125,7 @@ export const WelcomeSection: React.FC = () => {
                   }}
                   className="sm:text-xs md:text-sm"
                 >
-                  Clienti Soddisfatti
+                  Su Misura
                 </p>
               </div>
               <div className="text-center space-y-1 sm:space-y-2">
@@ -129,7 +135,7 @@ export const WelcomeSection: React.FC = () => {
                     animation: "shimmer 3s ease-in-out infinite 1s",
                   }}
                 >
-                  <TrendingUp
+                  <Scissors
                     size={20}
                     style={{ color: "#d4af37" }}
                     strokeWidth={2}
@@ -144,7 +150,7 @@ export const WelcomeSection: React.FC = () => {
                   }}
                   className="sm:text-xs md:text-sm"
                 >
-                  Eccellenza
+                  Fatto a Mano
                 </p>
               </div>
             </div>
@@ -160,27 +166,45 @@ export const WelcomeSection: React.FC = () => {
           >
             <div className="space-y-2 sm:space-y-4">
               <img
-                src="/gallery-images/red-coat-suit-closeup-collar.webp"
+                src="/gallery-images/red-suit-piece-underneath.webp"
                 alt="Tailoring detail"
-                className="w-full object-cover rounded-lg"
+                className="w-full object-cover"
                 style={{
                   height: "auto",
                   minHeight: "200px",
                   maxHeight: "400px",
+                  border: "2px solid #d4af37",
+                  borderRadius: "12px",
                 }}
               />
             </div>
             <div className="space-y-2 sm:space-y-4 pt-8 sm:pt-12">
-              <img
-                src="/gallery-images/front-store-display-shirt-coat-suit.webp"
-                alt="Suit sleeve detail"
-                className="w-full object-cover rounded-lg"
-                style={{
-                  height: "auto",
-                  minHeight: "200px",
-                  maxHeight: "400px",
-                }}
-              />
+              <div>
+                <img
+                  src="/gallery-images/front-store-display-shirt-coat-suit.webp"
+                  alt="Our atelier in Rome"
+                  className="w-full object-cover"
+                  style={{
+                    height: "auto",
+                    minHeight: "200px",
+                    maxHeight: "400px",
+                    border: "2px solid #d4af37",
+                    borderRadius: "12px",
+                  }}
+                />
+                <p
+                  style={{
+                    fontSize: "0.75rem",
+                    color: "#666666",
+                    fontStyle: "italic",
+                    marginTop: "8px",
+                    textAlign: "center",
+                    fontFamily: "'Libre Baskerville', Georgia, serif",
+                  }}
+                >
+                  Il nostro Atelier a Roma
+                </p>
+              </div>
             </div>
           </motion.div>
         </div>

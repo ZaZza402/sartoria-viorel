@@ -152,13 +152,13 @@ export const GallerySection = () => {
         {galleryImages.map((image, index) => (
           <motion.div
             key={index}
-            initial={{ opacity: 0, x: 50 }}
+            initial={{ opacity: 0, x: 20 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{
-              duration: 0.6,
-              delay: Math.min(index * 0.05, 1),
+              duration: 0.3,
+              delay: 0,
             }}
-            viewport={{ once: true, margin: "-100px" }}
+            viewport={{ once: true, margin: "200px" }}
             className="shrink-0"
           >
             <img

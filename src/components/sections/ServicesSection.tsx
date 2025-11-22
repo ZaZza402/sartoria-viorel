@@ -7,21 +7,21 @@ export const ServicesSection: React.FC = () => {
     {
       title: "Abiti su Misura",
       description:
-        "Creazione completa di abiti su misura per ogni occasione. Dalla selezione dei tessuti pregiati alla vestibilità perfetta, ogni dettaglio è curato con maestria artigianale.",
-      image: "/gallery-images/red-suit-piece-underneath.webp",
+        "Dalla presa delle misure alla scelta del tessuto, realizziamo abiti che vestono come una seconda pelle. Taglio classico o moderno, costruito interamente attorno alla tua figura.",
+      image: "/gallery-images/red-suit-standing-near-head-statues.webp",
       icon: RulerDimensionLine,
     },
     {
       title: "Modifiche Sartoriali",
       description:
-        "Servizio professionale di modifiche e aggiustamenti per garantire la perfetta vestibilità dei vostri capi. Precisione e attenzione ai dettagli per risultati impeccabili.",
+        "Diamo nuova vita ai tuoi capi preferiti. Che sia un orlo, una riparazione o una rimessa a modello completa, garantiamo un risultato invisibile e duraturo.",
       image: "/gallery-images/antique-sawing-machine.webp",
       icon: Scissors,
     },
     {
-      title: "Consulenza & Stile",
+      title: "Cerimonie ed Eventi",
       description:
-        "Consulenza personalizzata per la scelta di tessuti, colori e stili. Vi guidiamo nella creazione del guardaroba perfetto per ogni evento importante.",
+        "L'abito giusto per le tue occasioni speciali. Creiamo capi unici per cerimonie, eventi a tema e serate di gala, dove l'eleganza incontra la tua personalità.",
       image:
         "/gallery-images/white-coat-red-pants-on-people-couple-showcase.webp",
       icon: Sparkles,
@@ -76,31 +76,30 @@ export const ServicesSection: React.FC = () => {
               viewport={{ once: true }}
               className={`flex flex-col ${
                 index % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse"
-              } gap-12 items-center`}
+              } gap-8 md:gap-12 items-center`}
             >
-              {/* Image */}
-              <div className="w-full md:w-1/2">
+              {/* Image - Always first on mobile */}
+              <div className="w-full md:w-1/2 order-1">
                 <div
                   className={`relative overflow-hidden rounded-lg ${
                     service.image.includes("antique-sawing-machine")
                       ? ""
                       : "bg-linear-to-br from-gray-50 to-gray-100"
                   }`}
+                  style={{
+                    border: "2px solid #d4af37",
+                  }}
                 >
                   <img
                     src={service.image}
                     alt={service.title}
-                    className={`w-full ${
-                      service.image.includes("antique-sawing-machine")
-                        ? "h-auto object-cover"
-                        : "h-[400px] object-cover"
-                    }`}
+                    className="w-full h-auto object-cover"
                   />
                 </div>
               </div>
 
-              {/* Content */}
-              <div className="w-full md:w-1/2 space-y-3 sm:space-y-4 md:space-y-6">
+              {/* Content - Always second on mobile */}
+              <div className="w-full md:w-1/2 space-y-3 sm:space-y-4 md:space-y-6 order-2">
                 {/* Icon */}
                 <div
                   style={{
@@ -143,7 +142,8 @@ export const ServicesSection: React.FC = () => {
                     color: "#2a2a2a",
                     fontFamily: "'Libre Baskerville', Georgia, serif",
                     lineHeight: "1.8",
-                    fontSize: "clamp(1.25rem, 2.5vw, 1.875rem)",
+                    fontSize: "clamp(1rem, 2.5vw, 1.25rem)",
+                    textAlign: "left",
                   }}
                 >
                   {service.description}

@@ -41,7 +41,7 @@ export const Header: React.FC<HeaderProps> = ({ className }) => {
         )}
         style={{
           background: isScrolled
-            ? "linear-gradient(135deg, rgba(15, 20, 25, 0.6) 0%, rgba(26, 35, 50, 0.6) 100%)"
+            ? "linear-gradient(135deg, rgba(15, 20, 25, 0.4) 0%, rgba(26, 35, 50, 0.45) 100%)"
             : "transparent",
           borderBottom: isScrolled
             ? "1px solid rgba(212, 175, 55, 0.2)"
@@ -54,24 +54,75 @@ export const Header: React.FC<HeaderProps> = ({ className }) => {
       >
         <nav className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div
-            className="flex items-center justify-between transition-all duration-500"
+            className="flex items-center"
             style={{
-              height: isScrolled ? "64px" : "72px",
+              height: "72px",
             }}
           >
-            {/* Logo */}
-            <div className="flex items-center">
-              <Logo size="lg" isScrolled={isScrolled} />
+            {/* Logo - Left aligned on all screens */}
+            <div className="flex items-center shrink-0">
+              <Logo size="lg" />
             </div>
 
-            {/* Desktop Navigation */}
-            <DesktopNav links={navLinks} />
+            {/* Desktop Navigation - Centered */}
+            <div className="hidden md:flex grow justify-center">
+              <DesktopNav links={navLinks} />
+            </div>
+
+            {/* Phone CTA - Desktop only, right aligned */}
+            <div className="hidden md:flex items-center shrink-0 ml-8">
+              <a
+                href="tel:+393277985312"
+                className="flex items-center gap-2 transition-all duration-300 phone-cta"
+                style={{
+                  background:
+                    "linear-gradient(135deg, #fdfbf7 0%, #d4af37 50%, #b8935f 100%)",
+                  WebkitBackgroundClip: "text",
+                  WebkitTextFillColor: "transparent",
+                  backgroundClip: "text",
+                }}
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="18"
+                  height="18"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="#d4af37"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  className="shrink-0"
+                >
+                  <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
+                </svg>
+                <span className="font-medium whitespace-nowrap">
+                  +39 327 798 5312
+                </span>
+              </a>
+            </div>
 
             {/* Mobile Navigation Button - Component renders menu outside */}
-            <MobileNav links={navLinks} isScrolled={isScrolled} />
+            <div className="md:hidden ml-auto">
+              <MobileNav links={navLinks} isScrolled={isScrolled} />
+            </div>
           </div>
         </nav>
       </motion.header>
+      <style>{`
+        .phone-cta:hover {
+          opacity: 0.8;
+          transform: translateY(-1px);
+          filter: drop-shadow(0 2px 8px rgba(212, 175, 55, 0.3));
+        }
+        
+        @media (max-width: 767px) {
+          .header {
+            background: rgba(10, 35, 66, 0.3) !important;
+            backdrop-filter: blur(8px) !important;
+          }
+        }
+      `}</style>
     </>
   );
 };
