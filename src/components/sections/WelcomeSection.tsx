@@ -59,7 +59,7 @@ export const WelcomeSection: React.FC = () => {
             </p>
 
             <a
-              href="#bio"
+              href="/chi-siamo"
               style={{
                 display: "inline-block",
                 color: "#d4af37",
@@ -88,7 +88,7 @@ export const WelcomeSection: React.FC = () => {
                   <Award
                     size={20}
                     style={{ color: "#d4af37" }}
-                    strokeWidth={2}
+                    strokeWidth={2.5}
                     className="sm:w-6 sm:h-6"
                   />
                 </div>
@@ -96,7 +96,7 @@ export const WelcomeSection: React.FC = () => {
                   style={{
                     fontSize: "11px",
                     color: "#666666",
-                    fontWeight: 500,
+                    fontWeight: 600,
                   }}
                   className="sm:text-xs md:text-sm"
                 >
@@ -113,7 +113,7 @@ export const WelcomeSection: React.FC = () => {
                   <Ruler
                     size={20}
                     style={{ color: "#d4af37" }}
-                    strokeWidth={2}
+                    strokeWidth={2.5}
                     className="sm:w-6 sm:h-6"
                   />
                 </div>
@@ -121,7 +121,7 @@ export const WelcomeSection: React.FC = () => {
                   style={{
                     fontSize: "11px",
                     color: "#666666",
-                    fontWeight: 500,
+                    fontWeight: 600,
                   }}
                   className="sm:text-xs md:text-sm"
                 >
@@ -138,7 +138,7 @@ export const WelcomeSection: React.FC = () => {
                   <Scissors
                     size={20}
                     style={{ color: "#d4af37" }}
-                    strokeWidth={2}
+                    strokeWidth={2.5}
                     className="sm:w-6 sm:h-6"
                   />
                 </div>
@@ -146,7 +146,7 @@ export const WelcomeSection: React.FC = () => {
                   style={{
                     fontSize: "11px",
                     color: "#666666",
-                    fontWeight: 500,
+                    fontWeight: 600,
                   }}
                   className="sm:text-xs md:text-sm"
                 >

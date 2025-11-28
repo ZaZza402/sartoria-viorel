@@ -1,49 +1,104 @@
 import React, { useState, useEffect } from "react";
-import { Phone, Mail, MessageCircle, MapPin, Clock } from "lucide-react";
+import {
+  Phone,
+  Mail,
+  MessageCircle,
+  MapPin,
+  Clock,
+  Facebook,
+  Instagram,
+} from "lucide-react";
 
 export const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear();
   const [isOpen, setIsOpen] = useState(false);
+  const [nextOpenText, setNextOpenText] = useState("");
 
   useEffect(() => {
-    const checkIfOpen = () => {
+    const checkStatus = () => {
       const now = new Date();
       const day = now.getDay(); // 0 = Sunday, 1 = Monday, ..., 6 = Saturday
       const hours = now.getHours();
       const minutes = now.getMinutes();
       const currentTime = hours * 60 + minutes;
 
-      // Sunday (0) - Closed
+      let open = false;
+      let nextOpen = "";
+
+      // Schedule
+      // Mon-Fri: 09:00-13:00, 16:00-20:00
+      // Sat: 09:00-13:30
+      // Sun: Closed
+
+      const weekdayMorningStart = 9 * 60; // 09:00
+      const weekdayMorningEnd = 13 * 60; // 13:00
+      const weekdayAfternoonStart = 16 * 60; // 16:00
+      const weekdayAfternoonEnd = 20 * 60; // 20:00
+
+      const saturdayStart = 9 * 60; // 09:00
+      const saturdayEnd = 13 * 60 + 30; // 13:30
+
       if (day === 0) {
-        setIsOpen(false);
-        return;
+        // Sunday
+        open = false;
+        nextOpen = "Apre Lunedì 09:00";
+      } else if (day >= 1 && day <= 5) {
+        // Mon-Fri
+        if (
+          currentTime >= weekdayMorningStart &&
+          currentTime < weekdayMorningEnd
+        ) {
+          open = true;
+        } else if (
+          currentTime >= weekdayAfternoonStart &&
+          currentTime < weekdayAfternoonEnd
+        ) {
+          open = true;
+        } else {
+          open = false;
+          if (currentTime < weekdayMorningStart) {
+            // Before 09:00
+            const diff = weekdayMorningStart - currentTime;
+            const h = Math.floor(diff / 60);
+            const m = diff % 60;
+            nextOpen = `Apre tra ${h > 0 ? h + "h " : ""}${m}m`;
+          } else if (
+            currentTime >= weekdayMorningEnd &&
+            currentTime < weekdayAfternoonStart
+          ) {
+            // Lunch break (13:00 - 16:00)
+            const diff = weekdayAfternoonStart - currentTime;
+            const h = Math.floor(diff / 60);
+            const m = diff % 60;
+            nextOpen = `Apre tra ${h > 0 ? h + "h " : ""}${m}m`;
+          } else {
+            // After 20:00
+            nextOpen = day === 5 ? "Apre Sabato 09:00" : "Apre domani 09:00";
+          }
+        }
+      } else if (day === 6) {
+        // Saturday
+        if (currentTime >= saturdayStart && currentTime < saturdayEnd) {
+          open = true;
+        } else {
+          open = false;
+          if (currentTime < saturdayStart) {
+            const diff = saturdayStart - currentTime;
+            const h = Math.floor(diff / 60);
+            const m = diff % 60;
+            nextOpen = `Apre tra ${h > 0 ? h + "h " : ""}${m}m`;
+          } else {
+            nextOpen = "Apre Lunedì 09:00";
+          }
+        }
       }
 
-      // Monday to Friday (1-5): 08:30-13:00 and 16:00-20:00
-      if (day >= 1 && day <= 5) {
-        const morningStart = 8 * 60 + 30; // 08:30
-        const morningEnd = 13 * 60; // 13:00
-        const afternoonStart = 16 * 60; // 16:00
-        const afternoonEnd = 20 * 60; // 20:00
-
-        setIsOpen(
-          (currentTime >= morningStart && currentTime < morningEnd) ||
-            (currentTime >= afternoonStart && currentTime < afternoonEnd)
-        );
-        return;
-      }
-
-      // Saturday (6): 09:00-13:30
-      if (day === 6) {
-        const saturdayStart = 9 * 60; // 09:00
-        const saturdayEnd = 13 * 60 + 30; // 13:30
-        setIsOpen(currentTime >= saturdayStart && currentTime < saturdayEnd);
-        return;
-      }
+      setIsOpen(open);
+      setNextOpenText(nextOpen);
     };
 
-    checkIfOpen();
-    const interval = setInterval(checkIfOpen, 60000); // Check every minute
+    checkStatus();
+    const interval = setInterval(checkStatus, 60000); // Check every minute
 
     return () => clearInterval(interval);
   }, []);
@@ -116,51 +171,79 @@ export const Footer: React.FC = () => {
               Indirizzo
             </h4>
             <div className="space-y-2" style={{ color: "#d1d5db" }}>
-              <p
-                style={{ fontSize: "16px", fontWeight: 500, color: "#d1d5db" }}
+              <a
+                href="https://www.google.com/maps/place/Via+Simone+Mosca,+16,+00168+Roma+RM,+Italy"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block transition-colors hover:text-[#d4af37]"
+                style={{ textDecoration: "none", color: "inherit" }}
               >
-                Via Simone Mosca, 16
-              </p>
-              <p style={{ fontSize: "15px", color: "#9ca3af" }}>
-                00168 Roma, RM
-              </p>
-
-              {/* Live Open/Closed Indicator */}
-              <div
-                className="mt-4 inline-flex items-center gap-2 px-4 py-2"
-                style={{
-                  background: isOpen
-                    ? "rgba(34, 197, 94, 0.15)"
-                    : "rgba(239, 68, 68, 0.15)",
-                  border: `1px solid ${
-                    isOpen ? "rgba(34, 197, 94, 0.3)" : "rgba(239, 68, 68, 0.3)"
-                  }`,
-                  borderRadius: "8px",
-                }}
-              >
-                <span
+                <p
                   style={{
-                    width: "8px",
-                    height: "8px",
-                    borderRadius: "50%",
-                    background: isOpen ? "#22c55e" : "#ef4444",
-                    boxShadow: isOpen
-                      ? "0 0 8px rgba(34, 197, 94, 0.6)"
-                      : "0 0 8px rgba(239, 68, 68, 0.6)",
-                    animation: "pulse 2s infinite",
-                  }}
-                />
-                <span
-                  style={{
-                    fontSize: "14px",
-                    fontWeight: 600,
-                    color: isOpen ? "#22c55e" : "#ef4444",
-                    textTransform: "uppercase",
-                    letterSpacing: "0.5px",
+                    fontSize: "16px",
+                    fontWeight: 500,
+                    color: "inherit",
                   }}
                 >
-                  {isOpen ? "Aperto" : "Chiuso"}
-                </span>
+                  Via Simone Mosca, 16
+                </p>
+                <p style={{ fontSize: "15px", color: "#9ca3af" }}>
+                  00168 Roma, RM
+                </p>
+              </a>
+
+              {/* Live Open/Closed Indicator */}
+              <div className="mt-4 flex flex-col items-start gap-1">
+                <div
+                  className="inline-flex items-center gap-2 px-4 py-2"
+                  style={{
+                    background: isOpen
+                      ? "rgba(34, 197, 94, 0.15)"
+                      : "rgba(239, 68, 68, 0.15)",
+                    border: `1px solid ${
+                      isOpen
+                        ? "rgba(34, 197, 94, 0.3)"
+                        : "rgba(239, 68, 68, 0.3)"
+                    }`,
+                    borderRadius: "8px",
+                  }}
+                >
+                  <span
+                    style={{
+                      width: "8px",
+                      height: "8px",
+                      borderRadius: "50%",
+                      background: isOpen ? "#22c55e" : "#ef4444",
+                      boxShadow: isOpen
+                        ? "0 0 8px rgba(34, 197, 94, 0.6)"
+                        : "0 0 8px rgba(239, 68, 68, 0.6)",
+                      animation: "pulse 2s infinite",
+                    }}
+                  />
+                  <span
+                    style={{
+                      fontSize: "14px",
+                      fontWeight: 600,
+                      color: isOpen ? "#22c55e" : "#ef4444",
+                      textTransform: "uppercase",
+                      letterSpacing: "0.5px",
+                    }}
+                  >
+                    {isOpen ? "Aperto" : "Chiuso"}
+                  </span>
+                </div>
+                {!isOpen && nextOpenText && (
+                  <span
+                    style={{
+                      fontSize: "13px",
+                      color: "#9ca3af",
+                      marginLeft: "4px",
+                      fontStyle: "italic",
+                    }}
+                  >
+                    {nextOpenText}
+                  </span>
+                )}
               </div>
             </div>
           </div>
@@ -187,7 +270,7 @@ export const Footer: React.FC = () => {
                 Lunedì - Venerdì
               </p>
               <p style={{ color: "#9ca3af", marginBottom: "8px" }}>
-                08:30 - 13:00 / 16:00 - 20:00
+                09:00 - 13:00 / 16:00 - 20:00
               </p>
               <p style={{ fontWeight: 500, color: "#d1d5db" }}>Sabato</p>
               <p style={{ color: "#9ca3af", marginBottom: "8px" }}>
@@ -214,7 +297,7 @@ export const Footer: React.FC = () => {
             </h4>
             <div className="space-y-3" style={{ fontSize: "15px" }}>
               <a
-                href="tel:+393277985312"
+                href="tel:+393247985312"
                 className="flex items-center gap-3 transition-colors group"
                 style={{ color: "#d1d5db", textDecoration: "none" }}
                 onMouseEnter={(e) => (e.currentTarget.style.color = "#d4af37")}
@@ -232,11 +315,11 @@ export const Footer: React.FC = () => {
                   <Phone size={18} style={{ color: "#d4af37" }} />
                 </div>
                 <span style={{ fontWeight: 500, color: "#d1d5db" }}>
-                  +39 327 798 5312
+                  +39 324 798 5312
                 </span>
               </a>
               <a
-                href="https://wa.me/393277985312"
+                href="https://wa.me/393247985312"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center gap-3 transition-colors group"
@@ -257,6 +340,54 @@ export const Footer: React.FC = () => {
                 </div>
                 <span style={{ fontWeight: 500, color: "#d1d5db" }}>
                   WhatsApp
+                </span>
+              </a>
+              <a
+                href="https://facebook.com/sartoriaviorel"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-3 transition-colors group"
+                style={{ color: "#d1d5db", textDecoration: "none" }}
+                onMouseEnter={(e) => (e.currentTarget.style.color = "#1877F2")}
+                onMouseLeave={(e) => (e.currentTarget.style.color = "#d1d5db")}
+              >
+                <div
+                  style={{
+                    padding: "8px",
+                    borderRadius: "8px",
+                    background: "rgba(24, 119, 242, 0.1)",
+                    transition: "all 0.3s ease",
+                  }}
+                  className="group-hover:bg-[rgba(24,119,242,0.2)]"
+                >
+                  <Facebook size={18} style={{ color: "#1877F2" }} />
+                </div>
+                <span style={{ fontWeight: 500, color: "#d1d5db" }}>
+                  Facebook
+                </span>
+              </a>
+              <a
+                href="https://instagram.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-3 transition-colors group"
+                style={{ color: "#d1d5db", textDecoration: "none" }}
+                onMouseEnter={(e) => (e.currentTarget.style.color = "#E4405F")}
+                onMouseLeave={(e) => (e.currentTarget.style.color = "#d1d5db")}
+              >
+                <div
+                  style={{
+                    padding: "8px",
+                    borderRadius: "8px",
+                    background: "rgba(228, 64, 95, 0.1)",
+                    transition: "all 0.3s ease",
+                  }}
+                  className="group-hover:bg-[rgba(228,64,95,0.2)]"
+                >
+                  <Instagram size={18} style={{ color: "#E4405F" }} />
+                </div>
+                <span style={{ fontWeight: 500, color: "#d1d5db" }}>
+                  Instagram
                 </span>
               </a>
               <a
@@ -297,7 +428,7 @@ export const Footer: React.FC = () => {
                 backgroundClip: "text",
               }}
             >
-              Sartoria Viorel Danalache
+              Viorel Danalache
             </h3>
             <p
               className="footer-text"
@@ -324,7 +455,7 @@ export const Footer: React.FC = () => {
             <ul className="space-y-3">
               <li>
                 <a
-                  href="#home"
+                  href="/"
                   className="footer-link transition-colors"
                   style={{ color: "#f5f1e8", fontSize: "15px" }}
                   onMouseEnter={(e) =>
@@ -339,7 +470,7 @@ export const Footer: React.FC = () => {
               </li>
               <li>
                 <a
-                  href="#about"
+                  href="/chi-siamo"
                   className="footer-link transition-colors"
                   style={{ color: "#f5f1e8", fontSize: "15px" }}
                   onMouseEnter={(e) =>
@@ -354,7 +485,7 @@ export const Footer: React.FC = () => {
               </li>
               <li>
                 <a
-                  href="#services"
+                  href="/#services"
                   className="footer-link transition-colors"
                   style={{ color: "#f5f1e8", fontSize: "15px" }}
                   onMouseEnter={(e) =>
@@ -369,7 +500,7 @@ export const Footer: React.FC = () => {
               </li>
               <li>
                 <a
-                  href="#contact"
+                  href="/#contact"
                   className="footer-link transition-colors"
                   style={{ color: "#f5f1e8", fontSize: "15px" }}
                   onMouseEnter={(e) =>
@@ -380,6 +511,21 @@ export const Footer: React.FC = () => {
                   }
                 >
                   Contatti
+                </a>
+              </li>
+              <li>
+                <a
+                  href="/privacy-policy"
+                  className="footer-link transition-colors"
+                  style={{ color: "#f5f1e8", fontSize: "15px" }}
+                  onMouseEnter={(e) =>
+                    (e.currentTarget.style.color = "#d4af37")
+                  }
+                  onMouseLeave={(e) =>
+                    (e.currentTarget.style.color = "#f5f1e8")
+                  }
+                >
+                  Privacy & Cookie Policy
                 </a>
               </li>
             </ul>

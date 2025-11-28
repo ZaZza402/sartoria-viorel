@@ -21,9 +21,8 @@ export const ServicesSection: React.FC = () => {
     {
       title: "Cerimonie ed Eventi",
       description:
-        "L'abito giusto per le tue occasioni speciali. Creiamo capi unici per cerimonie, eventi a tema e serate di gala, dove l'eleganza incontra la tua personalità.",
-      image:
-        "/gallery-images/white-coat-red-pants-on-people-couple-showcase.webp",
+        "Sposo, Testimoni e Galà. Realizziamo abiti esclusivi per il tuo giorno più importante e per ogni occasione che richiede un'eleganza impeccabile.",
+      image: "/gallery-images/grey-suit-showcase-couple.webp",
       icon: Sparkles,
     },
   ];

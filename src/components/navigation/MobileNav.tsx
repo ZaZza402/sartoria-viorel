@@ -49,7 +49,7 @@ export const MobileNav: React.FC<MobileNavProps> = ({
           aria-label="Toggle menu"
         >
           <svg
-            style={{ width: "24px", height: "24px" }}
+            style={{ width: "32px", height: "32px" }}
             fill="none"
             viewBox="0 0 24 24"
             stroke="currentColor"
@@ -58,15 +58,15 @@ export const MobileNav: React.FC<MobileNavProps> = ({
               <path
                 strokeLinecap="round"
                 strokeLinejoin="round"
-                strokeWidth={2}
+                strokeWidth={1.5}
                 d="M6 18L18 6M6 6l12 12"
               />
             ) : (
               <path
                 strokeLinecap="round"
                 strokeLinejoin="round"
-                strokeWidth={2}
-                d="M4 6h16M4 12h16M4 18h16"
+                strokeWidth={1.5}
+                d="M2 8h20M2 16h20"
               />
             )}
           </svg>

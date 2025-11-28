@@ -14,7 +14,7 @@ export const Logo: React.FC<LogoProps> = ({ className = "" }) => {
 
   return (
     <a
-      href="#home"
+      href="/"
       className="flex items-center logo-link"
       style={{ paddingBottom: "0", paddingTop: "4px" }}
     >

@@ -10,11 +10,11 @@ interface HeaderProps {
 }
 
 const navLinks = [
-  { href: "#home", label: "Home" },
-  { href: "#about", label: "Chi Siamo" },
-  { href: "#services", label: "Servizi" },
-  { href: "#gallery", label: "Galleria" },
-  { href: "#contact", label: "Contatti" },
+  { href: "/", label: "Home" },
+  { href: "/chi-siamo", label: "Chi Siamo" },
+  { href: "/#services", label: "Servizi" },
+  { href: "/#gallery", label: "Galleria" },
+  { href: "/#contact", label: "Contatti" },
 ];
 
 export const Header: React.FC<HeaderProps> = ({ className }) => {
@@ -40,16 +40,12 @@ export const Header: React.FC<HeaderProps> = ({ className }) => {
           className
         )}
         style={{
-          background: isScrolled
-            ? "linear-gradient(135deg, rgba(15, 20, 25, 0.4) 0%, rgba(26, 35, 50, 0.45) 100%)"
-            : "transparent",
-          borderBottom: isScrolled
-            ? "1px solid rgba(212, 175, 55, 0.2)"
-            : "1px solid transparent",
-          backdropFilter: isScrolled ? "blur(12px)" : "none",
-          boxShadow: isScrolled ? "0 4px 20px rgba(0, 0, 0, 0.3)" : "none",
-          paddingTop: isScrolled ? "4px" : "0",
-          paddingBottom: isScrolled ? "4px" : "0",
+          background: "linear-gradient(135deg, #0f1419 0%, #1a2332 100%)",
+          borderBottom: "1px solid rgba(212, 175, 55, 0.2)",
+          backdropFilter: "none",
+          boxShadow: "0 4px 20px rgba(0, 0, 0, 0.3)",
+          paddingTop: "4px",
+          paddingBottom: "4px",
         }}
       >
         <nav className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
@@ -72,7 +68,7 @@ export const Header: React.FC<HeaderProps> = ({ className }) => {
             {/* Phone CTA - Desktop only, right aligned */}
             <div className="hidden md:flex items-center shrink-0 ml-8">
               <a
-                href="tel:+393277985312"
+                href="tel:+393247985312"
                 className="flex items-center gap-2 transition-all duration-300 phone-cta"
                 style={{
                   background:
@@ -97,7 +93,7 @@ export const Header: React.FC<HeaderProps> = ({ className }) => {
                   <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
                 </svg>
                 <span className="font-medium whitespace-nowrap">
-                  +39 327 798 5312
+                  +39 324 798 5312
                 </span>
               </a>
             </div>
@@ -114,13 +110,6 @@ export const Header: React.FC<HeaderProps> = ({ className }) => {
           opacity: 0.8;
           transform: translateY(-1px);
           filter: drop-shadow(0 2px 8px rgba(212, 175, 55, 0.3));
-        }
-        
-        @media (max-width: 767px) {
-          .header {
-            background: rgba(10, 35, 66, 0.3) !important;
-            backdrop-filter: blur(8px) !important;
-          }
         }
       `}</style>
     </>

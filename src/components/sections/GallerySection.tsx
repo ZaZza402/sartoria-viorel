@@ -1,5 +1,7 @@
 import { motion } from "framer-motion";
-import { useRef } from "react";
+import { useRef, useState } from "react";
+import Lightbox from "yet-another-react-lightbox";
+import "yet-another-react-lightbox/styles.css";
 
 const galleryImages = [
   "white-coat.webp",
@@ -63,6 +65,7 @@ const galleryImages = [
 
 export const GallerySection = () => {
   const scrollRef = useRef<HTMLDivElement>(null);
+  const [index, setIndex] = useState(-1);
 
   return (
     <section
@@ -165,11 +168,12 @@ export const GallerySection = () => {
               src={`/gallery-images/${image}`}
               alt=""
               loading="lazy"
-              className="h-64 md:h-80 lg:h-96 w-auto object-cover rounded-lg shadow-lg"
+              className="h-64 md:h-80 lg:h-96 w-auto object-cover rounded-lg shadow-lg cursor-pointer"
               style={{
                 border: "2px solid rgba(212, 175, 55, 0.3)",
                 transition: "transform 0.3s ease, box-shadow 0.3s ease",
               }}
+              onClick={() => setIndex(index)}
               onMouseEnter={(e) => {
                 e.currentTarget.style.transform = "scale(1.05)";
                 e.currentTarget.style.boxShadow =
@@ -184,6 +188,15 @@ export const GallerySection = () => {
           </motion.div>
         ))}
       </motion.div>
+
+      <Lightbox
+        index={index}
+        open={index >= 0}
+        close={() => setIndex(-1)}
+        slides={galleryImages.map((image) => ({
+          src: `/gallery-images/${image}`,
+        }))}
+      />
 
       <style>{`
         .overflow-x-auto::-webkit-scrollbar {

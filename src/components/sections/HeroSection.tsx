@@ -1,10 +1,12 @@
-import React, { useRef } from "react";
+import React, { useRef, useState } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { Button } from "../ui/Button";
 import tailorHandsImg from "../../assets/images/tailor-hands.jpg";
+import { ContactModal } from "../ui/ContactModal";
 
 export const HeroSection: React.FC = () => {
   const ref = useRef<HTMLElement>(null);
+  const [isModalOpen, setIsModalOpen] = useState(false);
   const { scrollYProgress } = useScroll({
     target: ref,
     offset: ["start start", "end start"],
@@ -145,26 +147,30 @@ export const HeroSection: React.FC = () => {
               className="pt-4 flex justify-center md:justify-start"
               style={{ marginTop: "30px" }}
             >
-              <a href="#contact" style={{ textDecoration: "none" }}>
-                <Button
-                  variant="primary"
-                  size="lg"
-                  style={{
-                    background: "#d4af37",
-                    color: "#0f1419",
-                    fontWeight: 600,
-                    border: "none",
-                    padding: "16px 40px",
-                    fontSize: "clamp(1rem, 2.5vw, 1.125rem)",
-                  }}
-                >
-                  Contattaci
-                </Button>
-              </a>
+              <Button
+                variant="primary"
+                size="lg"
+                onClick={() => setIsModalOpen(true)}
+                style={{
+                  background: "#d4af37",
+                  color: "#0f1419",
+                  fontWeight: 600,
+                  border: "none",
+                  padding: "16px 40px",
+                  fontSize: "clamp(1rem, 2.5vw, 1.125rem)",
+                }}
+              >
+                Contattaci
+              </Button>
             </motion.div>
           </motion.div>
         </motion.div>
       </motion.div>
+
+      <ContactModal
+        isOpen={isModalOpen}
+        onClose={() => setIsModalOpen(false)}
+      />
     </section>
   );
 };

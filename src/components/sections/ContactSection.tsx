@@ -1,9 +1,12 @@
-import React from "react";
+import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { Calendar } from "lucide-react";
 import { Button } from "../ui/Button";
+import { ContactModal } from "../ui/ContactModal";
 
 export const ContactSection: React.FC = () => {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
   return (
     <section
       className="py-16 sm:py-24 md:py-32 relative overflow-hidden"
@@ -76,6 +79,7 @@ export const ContactSection: React.FC = () => {
             <Button
               variant="primary"
               size="lg"
+              onClick={() => setIsModalOpen(true)}
               style={{
                 background: "linear-gradient(135deg, #d4af37 0%, #b8935f 100%)",
                 color: "#0f1419",
@@ -91,6 +95,11 @@ export const ContactSection: React.FC = () => {
           </div>
         </motion.div>
       </div>
+
+      <ContactModal
+        isOpen={isModalOpen}
+        onClose={() => setIsModalOpen(false)}
+      />
     </section>
   );
 };
