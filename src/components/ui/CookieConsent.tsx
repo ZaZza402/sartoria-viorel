@@ -33,8 +33,8 @@ export const CookieConsent: React.FC = () => {
           animate={{ opacity: 1, y: 0 }}
           exit={{ opacity: 0, y: 50 }}
           transition={{ duration: 0.5 }}
-          className="fixed bottom-4 left-4 right-4 md:left-auto md:right-4 md:max-w-md bg-brand-text-light text-[#fdfbf7] p-6 rounded-lg shadow-2xl border border-[#d4af37]/30"
-          style={{ zIndex: 60 }}
+          className="fixed bottom-4 left-4 right-4 md:left-auto md:right-4 md:max-w-md text-[#fdfbf7] p-6 rounded-lg shadow-2xl border border-[#d4af37]/30"
+          style={{ zIndex: 60, backgroundColor: "var(--color-text)" }}
         >
           <button
             onClick={() => setIsVisible(false)}
