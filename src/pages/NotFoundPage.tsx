@@ -33,7 +33,7 @@ export const NotFoundPage: React.FC = () => {
           <div className="relative">
             <Scissors size={80} className="text-[#d4af37]" strokeWidth={1} />
             <motion.div
-              className="absolute -right-4 -top-4 text-6xl font-serif font-bold text-[#1a2332]"
+              className="absolute -right-4 -top-4 text-6xl font-serif font-bold text-brand-text-light"
               initial={{ opacity: 0, x: -20 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ delay: 0.5, duration: 0.5 }}
@@ -47,7 +47,7 @@ export const NotFoundPage: React.FC = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.3, duration: 0.8 }}
-          className="font-serif text-4xl md:text-5xl mb-4 text-[#1a2332]"
+          className="font-serif text-4xl md:text-5xl mb-4 text-brand-text-light"
           style={{ fontFamily: "'Cormorant', Georgia, serif" }}
         >
           Pagina Non Trovata
@@ -75,7 +75,7 @@ export const NotFoundPage: React.FC = () => {
               size="lg"
               style={{
                 background: "#d4af37",
-                color: "#0f1419",
+                color: "var(--color-text)",
                 fontWeight: 600,
               }}
             >

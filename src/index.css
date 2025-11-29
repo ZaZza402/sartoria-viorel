@@ -98,16 +98,12 @@
    CSS Variables - Brand Color Palette
    ======================================== */
 :root {
-  --color-primary: #d4af37; /* Luxury Gold */
-  --color-base: #fdfbf7; /* Warm Cream */
-  --color-accent: #b8935f; /* Muted Gold */
-  --color-text: #0f1419; /* Deep Navy */
-
-  /* Derived Colors for Better UX */
-  --color-primary-hover: #b8935f;
-  --color-primary-light: #e6c766;
-  --color-accent-dark: #9a7a4c;
-  --color-text-light: #1a2332;
+  --color-gold: #d4af37;
+  --color-gold-light: #fdfbf7;
+  --color-cabernet: #3b0c10; /* Deep Oxblood (Slightly lighter than original) */
+  --color-marsala: #59161c; /* Rich Burgundy */
+  --color-text: var(--color-cabernet);
+  --color-text-light: var(--color-marsala);
 }
 
 @layer base {

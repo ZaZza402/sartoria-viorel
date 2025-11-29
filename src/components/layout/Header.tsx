@@ -40,7 +40,8 @@ export const Header: React.FC<HeaderProps> = ({ className }) => {
           className
         )}
         style={{
-          background: "linear-gradient(135deg, #0f1419 0%, #1a2332 100%)",
+          background:
+            "linear-gradient(135deg, var(--color-text) 0%, var(--color-text-light) 100%)",
           borderBottom: "1px solid rgba(212, 175, 55, 0.2)",
           backdropFilter: "none",
           boxShadow: "0 4px 20px rgba(0, 0, 0, 0.3)",

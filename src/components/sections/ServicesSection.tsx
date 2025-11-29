@@ -116,11 +116,7 @@ export const ServicesSection: React.FC = () => {
                 <h3
                   className="font-serif"
                   style={{
-                    background:
-                      "linear-gradient(135deg, #1a2332 0%, #0f1419 100%)",
-                    WebkitBackgroundClip: "text",
-                    WebkitTextFillColor: "transparent",
-                    backgroundClip: "text",
+                    color: "var(--color-text)",
                     fontFamily: "'Cormorant', Georgia, serif",
                     letterSpacing: "0",
                     fontSize: "clamp(1.75rem, 3.5vw, 2.5rem)",

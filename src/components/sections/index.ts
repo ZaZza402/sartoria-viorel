@@ -3,4 +3,3 @@ export { WelcomeSection } from "./WelcomeSection";
 export { ServicesSection } from "./ServicesSection";
 export { GallerySection } from "./GallerySection";
 export { ContactSection } from "./ContactSection";
-export { ContactOptionsSection } from "./ContactOptionsSection";

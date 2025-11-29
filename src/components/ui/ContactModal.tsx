@@ -56,12 +56,12 @@ export const ContactModal: React.FC<ContactModalProps> = ({
                 >
                   <X size={20} />
                 </button>
-                <h3
-                  className="font-serif text-2xl font-semibold text-[#1a2332] mb-2"
+                <h2
+                  className="font-serif text-2xl font-semibold text-brand-text-light mb-2"
                   style={{ fontFamily: "'Cormorant', Georgia, serif" }}
                 >
                   Contattaci
-                </h3>
+                </h2>
                 <p className="text-gray-600 text-sm">
                   Scegli come preferisci parlare con noi
                 </p>
@@ -81,7 +81,7 @@ export const ContactModal: React.FC<ContactModalProps> = ({
                     />
                   </div>
                   <div className="flex-1">
-                    <div className="font-semibold text-[#1a2332] text-lg">
+                    <div className="font-semibold text-brand-text-light text-lg">
                       Chiama
                     </div>
                     <div className="text-sm text-gray-500">
@@ -104,7 +104,7 @@ export const ContactModal: React.FC<ContactModalProps> = ({
                     />
                   </div>
                   <div className="flex-1">
-                    <div className="font-semibold text-[#1a2332] text-lg">
+                    <div className="font-semibold text-brand-text-light text-lg">
                       WhatsApp
                     </div>
                     <div className="text-sm text-gray-500">Chatta con noi</div>

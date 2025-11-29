@@ -33,7 +33,7 @@ export const CookieConsent: React.FC = () => {
           animate={{ opacity: 1, y: 0 }}
           exit={{ opacity: 0, y: 50 }}
           transition={{ duration: 0.5 }}
-          className="fixed bottom-4 left-4 right-4 md:left-auto md:right-4 md:max-w-md bg-[#1a2332] text-[#fdfbf7] p-6 rounded-lg shadow-2xl border border-[#d4af37]/30"
+          className="fixed bottom-4 left-4 right-4 md:left-auto md:right-4 md:max-w-md bg-brand-text-light text-[#fdfbf7] p-6 rounded-lg shadow-2xl border border-[#d4af37]/30"
           style={{ zIndex: 60 }}
         >
           <button
@@ -74,7 +74,7 @@ export const CookieConsent: React.FC = () => {
               onClick={handleAccept}
               style={{
                 background: "#d4af37",
-                color: "#0f1419",
+                color: "var(--color-text)",
                 fontSize: "0.875rem",
                 padding: "8px 20px",
               }}

@@ -107,7 +107,8 @@ export const Footer: React.FC = () => {
     <footer
       className="footer"
       style={{
-        background: "linear-gradient(180deg, #0f1419 0%, #1a2332 100%)",
+        background:
+          "linear-gradient(180deg, var(--color-text) 0%, var(--color-text-light) 100%)",
         color: "#fdfbf7",
       }}
     >

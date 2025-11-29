@@ -89,7 +89,7 @@ export const AboutPage: React.FC = () => {
                   <Award size={32} className="text-[#d4af37]" />
                 </div>
                 <h3
-                  className="text-2xl font-serif font-semibold mb-4 text-[#1a2332]"
+                  className="text-2xl font-serif font-semibold mb-4 text-brand-text"
                   style={{ fontFamily: "'Cormorant', Georgia, serif" }}
                 >
                   Dal 1974
@@ -114,7 +114,7 @@ export const AboutPage: React.FC = () => {
                   <Scissors size={32} className="text-[#d4af37]" />
                 </div>
                 <h3
-                  className="text-2xl font-serif font-semibold mb-4 text-[#1a2332]"
+                  className="text-2xl font-serif font-semibold mb-4 text-brand-text"
                   style={{ fontFamily: "'Cormorant', Georgia, serif" }}
                 >
                   Maestria Artigianale
@@ -139,7 +139,7 @@ export const AboutPage: React.FC = () => {
                   <Ruler size={32} className="text-[#d4af37]" />
                 </div>
                 <h3
-                  className="text-2xl font-serif font-semibold mb-4 text-[#1a2332]"
+                  className="text-2xl font-serif font-semibold mb-4 text-brand-text"
                   style={{ fontFamily: "'Cormorant', Georgia, serif" }}
                 >
                   Solo Su Misura
@@ -177,7 +177,7 @@ export const AboutPage: React.FC = () => {
                   onClick={() => setIsModalOpen(true)}
                   style={{
                     background: "#d4af37",
-                    color: "#0f1419",
+                    color: "var(--color-text)",
                     fontWeight: 600,
                     border: "none",
                     padding: "16px 40px",

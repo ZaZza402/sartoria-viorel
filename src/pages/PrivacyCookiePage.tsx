@@ -17,14 +17,14 @@ export const PrivacyCookiePage: React.FC = () => {
           transition={{ duration: 0.8 }}
         >
           <h1
-            className="font-serif text-4xl md:text-5xl mb-8 text-[#1a2332]"
+            className="font-serif text-3xl md:text-4xl mb-8 text-brand-text-light"
             style={{ fontFamily: "'Cormorant', Georgia, serif" }}
           >
             Privacy & Cookie Policy
           </h1>
 
           <div
-            className="prose prose-lg text-gray-600"
+            className="prose text-gray-600"
             style={{ fontFamily: "'Libre Baskerville', Georgia, serif" }}
           >
             <p className="text-sm text-gray-500 mb-8">
@@ -33,12 +33,12 @@ export const PrivacyCookiePage: React.FC = () => {
 
             <section className="mb-12">
               <h2
-                className="text-2xl font-serif text-[#1a2332] mb-4"
+                className="text-xl font-serif text-brand-text-light mb-4"
                 style={{ fontFamily: "'Cormorant', Georgia, serif" }}
               >
                 1. Introduzione
               </h2>
-              <p className="mb-4">
+              <p className="mb-4 text-base">
                 Benvenuti sul sito web di Sartoria Viorel Danalache. La tua
                 privacy è importante per noi. Questa politica spiega come
                 raccogliamo, utilizziamo e proteggiamo i tuoi dati personali e
@@ -48,16 +48,16 @@ export const PrivacyCookiePage: React.FC = () => {
 
             <section className="mb-12">
               <h2
-                className="text-2xl font-serif text-[#1a2332] mb-4"
+                className="text-xl font-serif text-brand-text-light mb-4"
                 style={{ fontFamily: "'Cormorant', Georgia, serif" }}
               >
                 2. Dati che Raccogliamo
               </h2>
-              <p className="mb-4">
+              <p className="mb-4 text-base">
                 Raccogliamo solo i dati necessari per fornirti i nostri servizi,
                 come:
               </p>
-              <ul className="list-disc pl-6 mb-4 space-y-2">
+              <ul className="list-disc pl-6 mb-4 space-y-2 text-base">
                 <li>
                   Informazioni di contatto (nome, email, numero di telefono)
                   quando ci contatti o prenoti un appuntamento.
@@ -71,32 +71,32 @@ export const PrivacyCookiePage: React.FC = () => {
 
             <section className="mb-12">
               <h2
-                className="text-2xl font-serif text-[#1a2332] mb-4"
+                className="text-xl font-serif text-brand-text-light mb-4"
                 style={{ fontFamily: "'Cormorant', Georgia, serif" }}
               >
                 3. Cookie Policy
               </h2>
-              <p className="mb-4">
+              <p className="mb-4 text-base">
                 Questo sito utilizza cookie per migliorare la tua esperienza di
                 navigazione.
               </p>
               <h3
-                className="text-xl font-serif text-[#1a2332] mb-2 mt-6"
+                className="text-lg font-serif text-brand-text-light mb-2 mt-6"
                 style={{ fontFamily: "'Cormorant', Georgia, serif" }}
               >
                 Cosa sono i cookie?
               </h3>
-              <p className="mb-4">
+              <p className="mb-4 text-base">
                 I cookie sono piccoli file di testo che vengono salvati sul tuo
                 dispositivo quando visiti un sito web.
               </p>
               <h3
-                className="text-xl font-serif text-[#1a2332] mb-2 mt-6"
+                className="text-lg font-serif text-brand-text-light mb-2 mt-6"
                 style={{ fontFamily: "'Cormorant', Georgia, serif" }}
               >
                 Tipologie di cookie utilizzati
               </h3>
-              <ul className="list-disc pl-6 mb-4 space-y-2">
+              <ul className="list-disc pl-6 mb-4 space-y-2 text-base">
                 <li>
                   <strong>Cookie Tecnici:</strong> Necessari per il
                   funzionamento del sito. Non possono essere disattivati.
@@ -106,7 +106,7 @@ export const PrivacyCookiePage: React.FC = () => {
                   gli utenti interagiscono con il sito (in forma anonima).
                 </li>
               </ul>
-              <p className="mb-4">
+              <p className="mb-4 text-base">
                 Puoi gestire le tue preferenze sui cookie in qualsiasi momento
                 attraverso le impostazioni del tuo browser.
               </p>
@@ -114,16 +114,16 @@ export const PrivacyCookiePage: React.FC = () => {
 
             <section className="mb-12">
               <h2
-                className="text-2xl font-serif text-[#1a2332] mb-4"
+                className="text-xl font-serif text-brand-text-light mb-4"
                 style={{ fontFamily: "'Cormorant', Georgia, serif" }}
               >
                 4. Contatti
               </h2>
-              <p className="mb-4">
+              <p className="mb-4 text-base">
                 Per qualsiasi domanda riguardante la tua privacy o questa
                 politica, puoi contattarci a:
               </p>
-              <p className="font-semibold">
+              <p className="font-semibold text-base">
                 Sartoria Viorel Danalache
                 <br />
                 Via Simone Mosca, 16, 00168 Roma RM

@@ -60,7 +60,6 @@ const galleryImages = [
   "blue-coat-with-red-tie-showcase.webp",
   "blue-coat-display-showcase.webp",
   "antique-sawing-machine.webp",
-  "3-unfinished-suites-on-display.webp",
 ];
 
 export const GallerySection = () => {
@@ -87,7 +86,7 @@ export const GallerySection = () => {
           style={{
             fontSize: "clamp(2rem, 5vw, 3.5rem)",
             fontWeight: 600,
-            color: "#0f1419",
+            color: "var(--color-text)",
             letterSpacing: "0.02em",
           }}
         >
@@ -97,7 +96,7 @@ export const GallerySection = () => {
           className="font-body text-center mx-auto max-w-2xl"
           style={{
             fontSize: "clamp(1rem, 2.5vw, 1.25rem)",
-            color: "#1a2332",
+            color: "var(--color-text-light)",
             opacity: 0.85,
           }}
         >
@@ -116,7 +115,7 @@ export const GallerySection = () => {
         <span
           className="text-sm font-serif tracking-wider"
           style={{
-            color: "#1a2332",
+            color: "var(--color-text-light)",
             fontFamily: "'Cormorant', Georgia, serif",
             letterSpacing: "0.05em",
             fontSize: "0.875rem",
@@ -130,7 +129,7 @@ export const GallerySection = () => {
           height="20"
           viewBox="0 0 24 24"
           fill="none"
-          stroke="#1a2332"
+          stroke="var(--color-text-light)"
           strokeWidth="2"
           strokeLinecap="round"
           strokeLinejoin="round"

@@ -26,14 +26,20 @@ export const HeroSection: React.FC = () => {
       className="relative min-h-screen flex items-center pt-16 overflow-hidden"
     >
       {/* Background Image with Parallax - Wide on Desktop */}
-      <motion.div className="absolute inset-0 z-1" style={{ y: backgroundY }}>
+      <motion.div className="absolute inset-0 z-0" style={{ y: backgroundY }}>
         <div className="hidden md:block absolute inset-0 h-[120vh]">
           <img
             src={tailorHandsImg}
             alt="Master tailor at work"
             className="w-full h-full object-cover"
           />
-          <div className="absolute inset-0 bg-linear-to-r from-black/80 via-black/65 to-black/20" />
+          <div
+            className="absolute inset-0"
+            style={{
+              background:
+                "linear-gradient(90deg, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0.6) 50%, transparent 100%)",
+            }}
+          />
         </div>
 
         {/* Vertical Image for Mobile with Parallax */}
@@ -43,7 +49,13 @@ export const HeroSection: React.FC = () => {
             alt="Elegant tailored suit"
             className="w-full h-full object-cover object-center"
           />
-          <div className="absolute inset-0 bg-black/70" />
+          <div
+            className="absolute inset-0"
+            style={{
+              backgroundColor: "#000000",
+              opacity: 0.6,
+            }}
+          />
         </div>
       </motion.div>
 
@@ -153,7 +165,7 @@ export const HeroSection: React.FC = () => {
                 onClick={() => setIsModalOpen(true)}
                 style={{
                   background: "#d4af37",
-                  color: "#0f1419",
+                  color: "var(--color-text)",
                   fontWeight: 600,
                   border: "none",
                   padding: "16px 40px",

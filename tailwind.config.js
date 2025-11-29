@@ -4,7 +4,7 @@ export default {
   theme: {
     extend: {
       colors: {
-        // Brand Color Palette - Navy/Cream/Gold
+        // Brand Color Palette - Oxblood/Cream/Gold
         brand: {
           primary: "#d4af37", // Luxury Gold
           "primary-hover": "#b8935f",
@@ -12,8 +12,8 @@ export default {
           base: "#fdfbf7", // Warm Cream
           accent: "#b8935f", // Muted Gold
           "accent-dark": "#9a7a4c",
-          text: "#0f1419", // Deep Navy
-          "text-light": "#1a2332",
+          text: "var(--color-text)", // Deep Cabernet
+          "text-light": "var(--color-text-light)", // Marsala
         },
         // Keep existing for backward compatibility
         primary: {
@@ -59,7 +59,7 @@ export default {
         base: "#fdfbf7",
         primary: "#d4af37",
         accent: "#b8935f",
-        default: "#0f1419",
+        default: "var(--color-text)",
       },
     },
   },

@@ -114,7 +114,8 @@ export const MobileNav: React.FC<MobileNavProps> = ({
                 top: 0,
                 bottom: 0,
                 width: "280px",
-                background: "linear-gradient(180deg, #0f1419 0%, #1a2332 100%)",
+                background:
+                  "linear-gradient(180deg, var(--color-text) 0%, var(--color-text-light) 100%)",
                 zIndex: 2,
                 padding: "80px 24px 24px 24px",
                 boxShadow: "-4px 0 20px rgba(0,0,0,0.8)",

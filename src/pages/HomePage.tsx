@@ -6,7 +6,6 @@ import {
   ServicesSection,
   GallerySection,
   ContactSection,
-  ContactOptionsSection,
 } from "../components/sections";
 
 export const HomePage: React.FC = () => {
@@ -32,7 +31,6 @@ export const HomePage: React.FC = () => {
       <div id="contact">
         <ContactSection />
       </div>
-      <ContactOptionsSection />
     </>
   );
 };
