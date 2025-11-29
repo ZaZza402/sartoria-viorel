@@ -2,6 +2,7 @@ import React, { useRef, useState } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { Button } from "../ui/Button";
 import tailorHandsImg from "../../assets/images/tailor-hands.jpg";
+import suit4Img from "../../assets/images/suit-4.jpg";
 import { ContactModal } from "../ui/ContactModal";
 
 export const HeroSection: React.FC = () => {
@@ -45,7 +46,7 @@ export const HeroSection: React.FC = () => {
         {/* Vertical Image for Mobile with Parallax */}
         <div className="md:hidden absolute inset-0 h-[120vh]">
           <img
-            src="/gallery-images/blue-suit-tailor-workshop.webp"
+            src={suit4Img}
             alt="Elegant tailored suit"
             className="w-full h-full object-cover object-center"
           />
