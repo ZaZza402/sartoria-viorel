@@ -114,6 +114,8 @@
     background-color: var(--color-base);
     color: var(--color-text);
     font-family: "Libre Baskerville", Georgia, serif;
+    overflow-x: hidden;
+    width: 100%;
   }
 
   /* Typography */

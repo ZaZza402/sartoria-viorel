@@ -11,7 +11,7 @@ function App() {
     <HelmetProvider>
       <Router>
         <ScrollToTop />
-        <div className="min-h-screen text-brand-text relative">
+        <div className="min-h-screen text-brand-text relative overflow-x-hidden w-full">
           <Header />
           <Routes>
             <Route path="/" element={<HomePage />} />

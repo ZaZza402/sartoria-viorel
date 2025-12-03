@@ -27,8 +27,11 @@ export const HeroSection: React.FC = () => {
       className="relative min-h-screen flex items-center pt-16 overflow-hidden"
     >
       {/* Background Image with Parallax - Wide on Desktop */}
-      <motion.div className="absolute inset-0 z-0" style={{ y: backgroundY }}>
-        <div className="hidden md:block absolute inset-0 h-[120vh]">
+      <motion.div
+        className="hidden md:block absolute inset-0 z-0"
+        style={{ y: backgroundY }}
+      >
+        <div className="absolute inset-0 h-[120vh]">
           <img
             src={tailorHandsImg}
             alt="Master tailor at work"
@@ -42,23 +45,23 @@ export const HeroSection: React.FC = () => {
             }}
           />
         </div>
-
-        {/* Vertical Image for Mobile with Parallax */}
-        <div className="md:hidden absolute inset-0 h-[120vh]">
-          <img
-            src={suit4Img}
-            alt="Elegant tailored suit"
-            className="w-full h-full object-cover object-center"
-          />
-          <div
-            className="absolute inset-0"
-            style={{
-              backgroundColor: "#000000",
-              opacity: 0.6,
-            }}
-          />
-        </div>
       </motion.div>
+
+      {/* Vertical Image for Mobile - Static (No Parallax) & Full Height */}
+      <div className="md:hidden absolute inset-0 z-0 h-full">
+        <img
+          src={suit4Img}
+          alt="Elegant tailored suit"
+          className="w-full h-full object-cover object-center"
+        />
+        <div
+          className="absolute inset-0"
+          style={{
+            backgroundColor: "#000000",
+            opacity: 0.6,
+          }}
+        />
+      </div>
 
       {/* Content with Parallax Fade */}
       <motion.div
