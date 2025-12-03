@@ -1,8 +1,8 @@
 import React, { useRef, useState } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { Button } from "../ui/Button";
-import tailorHandsImg from "../../assets/images/tailor-hands.jpg";
-import suit4Img from "../../assets/images/suit-4.jpg";
+import tailorHandsImg from "../../assets/images/tailor-hands.webp";
+import suit4Img from "../../assets/images/orange-suit.webp";
 import { ContactModal } from "../ui/ContactModal";
 
 export const HeroSection: React.FC = () => {

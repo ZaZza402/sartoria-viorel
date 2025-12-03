@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { Scissors, Ruler, Award } from "lucide-react";
 import { SEO } from "../components/seo/SEO";
-import tailorHands from "../assets/images/tailor-hands.jpg";
+import tailorHands from "../assets/images/sarto-table.webp";
 import { Button } from "../components/ui/Button";
 import { ContactModal } from "../components/ui/ContactModal";
 
