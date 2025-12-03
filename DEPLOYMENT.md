@@ -79,7 +79,7 @@ vercel --prod
 Se hai un dominio personalizzato:
 
 1. Vai su Vercel Dashboard → Project Settings → Domains
-2. Aggiungi il tuo dominio (es. `www.viorelsartoria.com`)
+2. Aggiungi il tuo dominio (es. `www.sartoriaviorel.it`)
 3. Configura i DNS records come indicato da Vercel
 4. Attendi la propagazione DNS (5-30 minuti)
 

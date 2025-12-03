@@ -18,7 +18,7 @@ export const SEO: React.FC<SEOProps> = ({
 }) => {
   const siteTitle = "Sartoria Viorel Danalache";
   const fullTitle = title === siteTitle ? title : `${title} | ${siteTitle}`;
-  const siteUrl = "https://www.viorelsartoria.com"; // Replace with actual domain when ready
+  const siteUrl = "https://www.sartoriaviorel.it";
   const fullUrl = canonical ? `${siteUrl}${canonical}` : siteUrl;
   const fullImage = image.startsWith("http") ? image : `${siteUrl}${image}`;
 

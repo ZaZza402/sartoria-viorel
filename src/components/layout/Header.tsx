@@ -35,10 +35,7 @@ export const Header: React.FC<HeaderProps> = ({ className }) => {
         initial={{ y: -100, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         transition={{ duration: 0.5 }}
-        className={cn(
-          "header fixed top-0 left-0 right-0 z-50",
-          className
-        )}
+        className={cn("header fixed top-0 left-0 right-0 z-50", className)}
         style={{
           background:
             "linear-gradient(135deg, var(--color-text) 0%, var(--color-text-light) 100%)",

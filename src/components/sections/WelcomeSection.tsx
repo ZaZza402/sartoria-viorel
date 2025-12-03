@@ -157,14 +157,14 @@ export const WelcomeSection: React.FC = () => {
           </motion.div>
 
           {/* Images */}
-          <motion.div
-            initial={{ opacity: 0, x: 30 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="grid grid-cols-2 gap-2 sm:gap-4"
-          >
-            <div className="space-y-2 sm:space-y-4">
+          <div className="grid grid-cols-2 gap-2 sm:gap-4">
+            <motion.div
+              initial={{ opacity: 0, x: -50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
+              className="space-y-2 sm:space-y-4"
+            >
               <img
                 src="/gallery-images/red-suit-piece-underneath.webp"
                 alt="Tailoring detail"
@@ -177,8 +177,14 @@ export const WelcomeSection: React.FC = () => {
                   borderRadius: "12px",
                 }}
               />
-            </div>
-            <div className="space-y-2 sm:space-y-4 pt-8 sm:pt-12">
+            </motion.div>
+            <motion.div
+              initial={{ opacity: 0, x: 50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
+              className="space-y-2 sm:space-y-4 pt-8 sm:pt-12"
+            >
               <div>
                 <img
                   src="/gallery-images/front-store-display-shirt-coat-suit.webp"
@@ -205,8 +211,8 @@ export const WelcomeSection: React.FC = () => {
                   Il nostro Atelier a Roma
                 </p>
               </div>
-            </div>
-          </motion.div>
+            </motion.div>
+          </div>
         </div>
       </div>
     </section>

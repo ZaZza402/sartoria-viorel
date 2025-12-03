@@ -221,7 +221,7 @@ plugins: {
 
 ## 📞 Informazioni Contatto (Da Aggiornare)
 
-**Email:** info@viorelsartoria.com  
+**Email:** info@sartoriaviorel.it  
 **Telefono:** +39 XXX XXX XXXX  
 **Indirizzo:** Da definire
 

@@ -28,7 +28,7 @@ export const PrivacyCookiePage: React.FC = () => {
             style={{ fontFamily: "'Libre Baskerville', Georgia, serif" }}
           >
             <p className="text-sm text-gray-500 mb-8">
-              Ultimo aggiornamento: 28 Novembre 2025
+              Ultimo aggiornamento: 03 Dicembre 2025
             </p>
 
             <section className="mb-12">
@@ -128,7 +128,7 @@ export const PrivacyCookiePage: React.FC = () => {
                 <br />
                 Via Simone Mosca, 16, 00168 Roma RM
                 <br />
-                Email: info@viorelsartoria.com
+                Email: vioreldanroma@gmail.com
               </p>
             </section>
           </div>
