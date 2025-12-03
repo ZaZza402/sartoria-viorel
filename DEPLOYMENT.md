@@ -79,9 +79,13 @@ vercel --prod
 Se hai un dominio personalizzato:
 
 1. Vai su Vercel Dashboard → Project Settings → Domains
-2. Aggiungi il tuo dominio (es. `www.sartoriaviorel.it`)
-3. Configura i DNS records come indicato da Vercel
-4. Attendi la propagazione DNS (5-30 minuti)
+2. Aggiungi il tuo dominio principale (es. `www.sartoriaviorel.it`)
+3. Aggiungi anche il dominio senza www (es. `sartoriaviorel.it`)
+4. Vercel ti chiederà se vuoi reindirizzare `sartoriaviorel.it` a `www.sartoriaviorel.it`. Conferma questa opzione.
+5. Configura i DNS records come indicato da Vercel per entrambi i domini.
+6. Attendi la propagazione DNS (5-30 minuti)
+
+> **Nota:** Abbiamo anche aggiunto una regola di redirect nel file `vercel.json` per forzare il redirect a `www` lato server, ma la configurazione nel pannello Vercel è fondamentale.
 
 ## 📱 Step 4: Verifica Social Sharing
 
