@@ -392,7 +392,7 @@ export const Footer: React.FC = () => {
                 </span>
               </a>
               <a
-                href="mailto:info@viorelsartoria.com"
+                href="mailto:vioreldanroma@gmail.com"
                 className="flex items-center gap-3 transition-colors group"
                 style={{ color: "#d1d5db", textDecoration: "none" }}
                 onMouseEnter={(e) => (e.currentTarget.style.color = "#d4af37")}
@@ -410,7 +410,7 @@ export const Footer: React.FC = () => {
                   <Mail size={18} style={{ color: "#d4af37" }} />
                 </div>
                 <span style={{ fontWeight: 500, color: "#d1d5db" }}>
-                  info@viorelsartoria.com
+                  vioreldanroma@gmail.com
                 </span>
               </a>
             </div>
