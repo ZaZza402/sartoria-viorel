@@ -368,7 +368,7 @@ export const Footer: React.FC = () => {
                 </span>
               </a>
               <a
-                href="https://www.instagram.com/vioreldanroma?igsh=MXhqYjYxbDQyamN2Zw=="
+                href="https://www.instagram.com/vioreldanroma/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center gap-3 transition-colors group"

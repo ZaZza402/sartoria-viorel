@@ -23,7 +23,7 @@ export const ContactSection: React.FC = () => {
       icon: Instagram,
       label: "Instagram",
       value: "Seguici",
-      href: "https://www.instagram.com/vioreldanroma?igsh=MXhqYjYxbDQyamN2Zw==",
+      href: "https://www.instagram.com/vioreldanroma/",
     },
   ];
 
