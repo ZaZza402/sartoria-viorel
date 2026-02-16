@@ -17,13 +17,13 @@ export const ContactSection: React.FC = () => {
       icon: Facebook,
       label: "Facebook",
       value: "Seguici",
-      href: "https://facebook.com/sartoriaviorel",
+      href: "https://www.facebook.com/share/1FLArhSXxh/",
     },
     {
       icon: Instagram,
       label: "Instagram",
       value: "Seguici",
-      href: "https://instagram.com",
+      href: "https://www.instagram.com/vioreldanroma?igsh=MXhqYjYxbDQyamN2Zw==",
     },
   ];
 
